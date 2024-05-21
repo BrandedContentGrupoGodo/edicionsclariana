@@ -39,6 +39,7 @@ video {
   height: 15px;
   width: 100%;
   text-align: center;
+      margin-bottom: 8px;
 }
 .barra-b{
   margin-top: 15px;
@@ -58,7 +59,7 @@ video {
   text-align: center;
   color: white;
   font-size: 14px!important;
-  padding: 3px;
+     padding: 5px;
 }
 .majus b{
   color: #00529b;
@@ -434,7 +435,6 @@ text-align: left;
 	 }
 .headlogo{
 background: white;
-border-bottom: 4px solid #00529b;
 
 
 
