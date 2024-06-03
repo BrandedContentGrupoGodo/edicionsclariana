@@ -19,6 +19,9 @@ sup{font-size: 12px!important;}
 	margin-bottom: 0px;
 	font-size: 0.9em;
 }
+footer .breadcrumb {
+    display: none!important;
+}
 .mr-auto li{
 	font-size:20px!important;
 }
