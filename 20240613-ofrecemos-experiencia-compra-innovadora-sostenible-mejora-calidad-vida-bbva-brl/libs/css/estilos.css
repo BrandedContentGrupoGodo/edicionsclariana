@@ -34,6 +34,9 @@ video {
     height: 40px;
     margin-left: 5px;
 }
+footer .breadcrumb {
+    display: none !important;
+}
 .barra-a{
   background-color: #00529b;
   height: 22px;
