@@ -11,7 +11,9 @@
 
 }
 
- 
+ .navbar{
+	display: block!important;
+}
 
 .visual-article-free .col-12 {
 
