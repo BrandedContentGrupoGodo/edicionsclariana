@@ -10,7 +10,9 @@
   display: none!important;
 
 }
-
+header{
+	background: inherit!important;
+}
  footer .breadcrumb {
     display: none !important;
 }
