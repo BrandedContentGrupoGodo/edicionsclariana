@@ -10,7 +10,9 @@
   display: none!important;
 
 }
-
+footer .breadcrumb {
+    display: none !important;
+}
  .navbar{
 	display: block!important;
 }
