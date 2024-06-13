@@ -10,11 +10,9 @@
   display: none!important;
 
 }
-footer .breadcrumb {
+
+ footer .breadcrumb {
     display: none !important;
-}
- .navbar{
-	display: block!important;
 }
 
 .visual-article-free .col-12 {
@@ -281,7 +279,7 @@ background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclarian
 	font-size: 0.7em;
 }
 .letrai{  color: #284055;
-	float: left;       margin-left: -145px;
+	float: left;       margin-left: -100px;
     margin-top: -81px;
     font-size: 8.5em; font-family: 'Playfair Display', serif;
 }
@@ -507,7 +505,9 @@ background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclarian
   pointer-events: none;
 }
 
-
+.navbar{
+	display: block!important;
+}
 #slide-show {
   height: 95vh;
   min-height: 95vh;
