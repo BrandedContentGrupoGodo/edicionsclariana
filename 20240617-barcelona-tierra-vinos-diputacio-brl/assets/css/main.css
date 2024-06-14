@@ -790,10 +790,9 @@ header {
   padding-right: 1em;
   padding-bottom: 1em;
   padding-left: 1em;
-  display: inline-block!important;
+  display: flex;
   align-items: center;
   transition: all 0.15s ease-in-out;
-  margin-bottom: 30px;
 }
 header .header-text {
   display: flex;
