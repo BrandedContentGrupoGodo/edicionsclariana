@@ -34,6 +34,9 @@ html[xmlns] .clrfx {
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
+.super-header-full-container{
+	display: none!important;
+}
  header{
 	background: inherit!important;
 }
