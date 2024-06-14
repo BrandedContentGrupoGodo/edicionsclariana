@@ -39,14 +39,12 @@ html[xmlns] .clrfx {
 .super-header-full-container{
 	display: none!important;
 }
- header{
+header{
 	background: inherit!important;
 }
-
-footer .breadcrumb {
+ footer .breadcrumb {
     display: none !important;
 }
-
 .banner{
 	border: 4px solid #e10451; padding: 20px 10px;
 	color: #e10451;
@@ -792,9 +790,9 @@ header {
   padding-right: 1em;
   padding-bottom: 1em;
   padding-left: 1em;
-  display: flex;
   align-items: center;
   transition: all 0.15s ease-in-out;
+  margin-bottom: 30px;
 }
 header .header-text {
   display: flex;
