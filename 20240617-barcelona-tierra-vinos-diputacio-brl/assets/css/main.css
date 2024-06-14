@@ -34,7 +34,11 @@ html[xmlns] .clrfx {
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
- footer .breadcrumb {
+ header{
+	background: inherit!important;
+}
+
+footer .breadcrumb {
     display: none !important;
 }
 
