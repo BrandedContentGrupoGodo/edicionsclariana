@@ -34,7 +34,9 @@ html[xmlns] .clrfx {
 
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;800;900&display=swap");
-
+ footer .breadcrumb {
+    display: none !important;
+}
 
 .banner{
 	border: 4px solid #e10451; padding: 20px 10px;
