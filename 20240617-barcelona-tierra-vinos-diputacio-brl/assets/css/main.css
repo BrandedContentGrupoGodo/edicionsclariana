@@ -48,6 +48,11 @@ header{
 .article-page .header{
 	display: block;
 }
+.banners{
+text-align: center;
+	margin: 0 auto;
+
+}
 .banner{
 	color: #e10451;
 	border-radius: 20px;
