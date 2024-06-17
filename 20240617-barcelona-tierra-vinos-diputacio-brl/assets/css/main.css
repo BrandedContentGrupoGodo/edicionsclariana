@@ -45,6 +45,9 @@ header{
  footer .breadcrumb {
     display: none !important;
 }
+.article-page .header{
+	display: block;
+}
 .banner{
 	color: #e10451;
 	border-radius: 20px;
