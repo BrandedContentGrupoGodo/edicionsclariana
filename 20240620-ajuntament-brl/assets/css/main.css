@@ -11,6 +11,9 @@ body {
   position: relative
 }
 sup{font-size: 12px!important;}
+footer .breadcrumb {
+    display: none !important;
+}
 .glutt{
 	color: white;
 }
