@@ -3545,7 +3545,9 @@ blockquote {
         padding-top: 16px
     }
     .foto-peu embed{
-        height: 350px!important;
+                    height: 700px !important;
+            margin-bottom: 30px;
+            margin-top: 30px;
     }
     .mb-5, .my-5 {
     margin-bottom: 1rem!important;
