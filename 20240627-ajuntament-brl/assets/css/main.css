@@ -204,7 +204,12 @@ height:20.6875em;
 .ndeep div div {
 	background-color: rgb(255 0 0 / 15%)!important;
 }
-
+.super-header-full-container{
+	display: none!important;
+}
+.navbar-text {
+    width: 145px;
+}
 .video-responsive {
 	height: 0;
 	overflow: hidden;
