@@ -22,7 +22,15 @@ footer .breadcrumb {
   line-height: 0;
   height: 0;
 }
- 
+ footer .footer-copyright-text {
+
+    margin: 0 auto;
+    text-align: center;
+    max-width: 100%;
+}
+body.wf-editor footer {
+    padding-bottom: 20px;
+}
 .clrfx {
   display: inline-block;
 }
@@ -363,6 +371,15 @@ blockquote{max-width: 400px;font-family: 'Montserrat', sans-serif!important;marg
  
  	font-family: "PT Serif", serif!important;
  }
+
+ body.wf-editor footer {
+    padding-bottom: 0px; 
+}
+.wf-fallback-slugs{
+	display: none;
+}
+
+
 .bg1, .bg2, .bg3, .bg4, .bg5, .bg6{
 	box-shadow: inset 0 0 0 1000px rgba(0,0,0,.3);
   background-repeat: no-repeat !important;
@@ -1154,6 +1171,19 @@ html {
     .row {
         margin-right: -20px;
         margin-left: -20px
+    }
+        footer .footer-copyright {
+        display: inline-block;
+        max-width: 100%;
+        padding-left: 0px; 
+        background-color: #242626;
+    }
+        footer .box-footer {
+        padding: 20px 5px;
+        max-width: 1008px;
+        margin: 0 auto;
+         display: inherit!important; 
+        text-align: center;
     }
 }
 
