@@ -24,9 +24,12 @@ footer .breadcrumb {
 }
  footer .footer-copyright-text {
 
-    margin: 0 auto;
-    text-align: center;
+    margin: 0 auto!important;
+    text-align: center!important;
     max-width: 100%;
+}
+.wf-fallback-slugs {
+    display: block;
 }
 body.wf-editor footer {
     padding-bottom: 20px;
