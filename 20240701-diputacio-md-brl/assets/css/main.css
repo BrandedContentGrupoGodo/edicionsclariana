@@ -29,7 +29,7 @@ footer .breadcrumb {
     max-width: 100%;
 }
 .wf-fallback-slugs {
-    display: block;
+    display: block!important;
 }
 body.wf-editor footer {
     padding-bottom: 20px;
