@@ -28,6 +28,9 @@ footer .breadcrumb {
     text-align: center!important;
     max-width: 100%;
 }
+.main-content{
+	margin-top: 72px;
+}
 .wf-fallback-slugs {
     display: block!important;
 }
@@ -1174,6 +1177,24 @@ html {
     .row {
         margin-right: -20px;
         margin-left: -20px
+    }
+        footer .footer-logo-container {
+        display: inline-block;
+        float: right;
+        width: 100%!important;
+    }
+        footer .footer-logo-container .logo {
+        position: relative;
+        height: 60px;
+        max-width: calc(1008px / 2);
+        width: 100%;
+        padding: 24px 15px;
+        color: #fff;
+        background-position: center!important;
+        background-position-y: -1.5px;
+        background-size: auto;
+        text-align: center!important;
+        margin: 0 auto!important;
     }
         footer .footer-copyright {
         display: inline-block;
