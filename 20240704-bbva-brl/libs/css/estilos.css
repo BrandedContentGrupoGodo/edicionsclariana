@@ -9,6 +9,31 @@ b{font-family: 'Open Sans', sans-serif!important; font-weight: 700 !important;}
 .barra-a{
   text-transform: uppercase;
 }
+
+.wallpaper-inverted-ad{
+  display: none!important;
+}
+
+.visual-article-free .col-12 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  margin-top: 0 !important;
+}
+.content-free-html {
+  margin:0 !important;
+}
+.container-fluid {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+.visual__story--free .content-free-html {
+  margin: 0px !important;
+}
+.row>* {
+  padding-right: 0!important;
+  padding-left: 0!important;
+  margin-top: 0!important;
+}
 video {
   max-width: 100%;
   height: auto;
