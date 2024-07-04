@@ -649,6 +649,9 @@ blockquote{max-width: 400px;font-family: 'Montserrat', sans-serif!important;marg
 
 
 @media (max-width: 700px) {
+	.collapse {
+    margin-top: -32px;
+}
 	.lateral{border-left: inherit!important}
     .peufoto p {
     font-size: 16px;
