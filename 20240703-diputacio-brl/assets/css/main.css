@@ -22,7 +22,19 @@ footer .breadcrumb {
   line-height: 0;
   height: 0;
 }
- 
+    .bg-light {
+        padding-bottom: 15px;
+    }
+ .wallpaper-inverted-ad{
+ 	display: none!important;
+ }
+     .collapse {
+        display: inline-block;
+        float: right;
+    }
+    .mr-auto{
+        display: none;
+    }
 .clrfx {
   display: inline-block;
 }
@@ -1044,7 +1056,7 @@ a:hover {
 }
 
 article a {
-    color: #e4d961;
+    color: #b4453d;
     
 }
 .wow a {
