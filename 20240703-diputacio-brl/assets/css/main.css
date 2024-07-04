@@ -29,7 +29,7 @@ footer .breadcrumb {
  	display: none!important;
  }
      .collapse {
-        display: inline-block;
+        display: inline-block!important;
         float: right;
     }
     .mr-auto{
