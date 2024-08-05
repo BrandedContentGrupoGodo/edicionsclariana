@@ -40,7 +40,9 @@ footer .breadcrumb {
     src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-MediumItalic-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-MediumItalic-Lite.woff) format("woff");
     font-display: optional;
 }
-
+.bottom-ad-module {
+	display: none!important;
+}
 
 .avt{
 	text-transform: uppercase;
