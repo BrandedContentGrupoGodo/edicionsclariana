@@ -730,8 +730,11 @@ position: absolute;
     max-height: 23px!important;
 }
 #slide-show {
-                   height: 69vh;
+                           height: 40vh;
         min-height: 34vh;
+    }
+    .slider span p{
+    	font-size: 16px;
     }
   .bg0, .bg1, .bg2, .bg3, .bg4{
     	 height: 60vh;
@@ -3433,7 +3436,13 @@ details[open] summary:before {
 }
 .text.open .slider > span {
 	padding: 3em 2em 1em;
-    font-size: 0.95em;
+    font-size: 0.75em;
+}
+.column.left > * {
+    float: inline-end;
+}
+.column.right > * {
+    float: inline-end;
 }
 .text.open .slider {
  width: 100%;
