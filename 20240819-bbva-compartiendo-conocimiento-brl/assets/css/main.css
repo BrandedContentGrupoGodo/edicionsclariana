@@ -17,27 +17,27 @@ footer .breadcrumb {
 
 @font-face {
     font-family: BentonSansBBVA-Bold;
-    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Bold-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Bold-Lite.woff) format("woff");
+    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Bold-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Bold-Lite.woff) format("woff");
     font-display: optional;
 }
 @font-face {
     font-family: BentonSansBBVA-Book;
-    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Book-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Book-Lite.woff) format("woff");
+    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Book-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Book-Lite.woff) format("woff");
     font-display: optional;
 }
 @font-face {
     font-family: BentonSansBBVA-Medium;
-    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Medium-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Medium-Lite.woff) format("woff");
+    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Medium-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-Medium-Lite.woff) format("woff");
     font-display: optional;
 }
 @font-face {
     font-family: BentonSansBBVA-BookItalic;
-    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-BookItalic-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-BookItalic-Lite.woff) format("woff");
+    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-BookItalic-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-BookItalic-Lite.woff) format("woff");
     font-display: optional;
 }
 @font-face {
     font-family: BentonSansBBVA-MediumItalic;
-    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-MediumItalic-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240805-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-MediumItalic-Lite.woff) format("woff");
+    src: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-MediumItalic-Lite.woff2) format("woff2"), url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20240819-bbva-compartiendo-conocimiento-brl/assets/fonts/BentonSansBBVA-MediumItalic-Lite.woff) format("woff");
     font-display: optional;
 }
 .bottom-ad-module {
@@ -3765,8 +3765,21 @@ details[open] summary:before {
 	color: black
 
 }
+.relacionats img {
+   max-width: 136px;
+    float: inherit;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.lee {
+    margin-left: 20px;
+}
+.entrada {
+    margin-left: 20px;
+}
 .blue{
-	margin-bottom: 30px;
+	min-height: 350px;
 }
 .blue2{
 	margin-bottom: 30px;
