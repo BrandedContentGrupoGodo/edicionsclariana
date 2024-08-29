@@ -26,6 +26,9 @@ footer .breadcrumb {
 	color: black
 	
 } 
+.container-fluid {
+	background-color: #1c2f27;
+}
 #maincontainer{
 	background-color: #1c2f27;
 }
