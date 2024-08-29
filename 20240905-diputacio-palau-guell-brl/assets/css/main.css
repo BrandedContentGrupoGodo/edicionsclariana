@@ -72,7 +72,7 @@ footer .breadcrumb {
 	margin-bottom: 15px;
 	margin-top: 15px;
 }
-.row{
+#maincontainer .row{
 	background-color: #1c2f27;
 	color: white;
 }
@@ -825,6 +825,8 @@ blockquote{max-width: 400px;font-family: "Mukta Mahee", sans-serif!important;mar
 #slide-show {
                    height: 69vh;
         min-height: 34vh;
+        margin-left: -35px;
+
     }
   .bg0, .bg1, .bg2, .bg3, .bg4{
     	 height: 66vh;
