@@ -14,6 +14,66 @@ sup{font-size: 12px!important;}
 footer .breadcrumb {
     display: none !important;
 }
+
+/* estilos para que en LV se muestre el contenido sin margenes */
+
+.wallpaper-inverted-ad{
+
+  display: none!important;
+
+}
+
+ 
+
+.visual-article-free .col-12 {
+
+  padding-right: 0 !important;
+
+  padding-left: 0 !important;
+
+  margin-top: 0 !important;
+
+}
+
+.content-free-html {
+
+  margin:0 !important;
+
+}
+
+.container-fluid {
+
+  padding-right: 0 !important;
+
+  padding-left: 0 !important;
+
+}
+
+.visual__story--free .content-free-html {
+
+  margin: 0px !important;
+
+}
+
+.row>* {
+
+  padding-right: 0!important;
+
+  padding-left: 0!important;
+
+  margin-top: 0!important;
+
+}
+
+.article-default a:hover {
+
+  text-decoration: none;
+
+  box-shadow: none;
+
+}
+
+
 .clrfx:after, .clrfx:after {
   content: ".";
   display: block;
