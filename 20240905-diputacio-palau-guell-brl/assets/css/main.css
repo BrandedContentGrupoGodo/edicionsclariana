@@ -997,7 +997,14 @@ blockquote{max-width: 400px;font-family: "Mukta Mahee", sans-serif!important;mar
 .peufoto p{
  padding: 10px;line-height: 20px;font-size: 1rem;
 }
-.navbar{width: 100%}
+    .navbar {
+        width: 88%;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    .navbar-toggler{
+    	display: none!important;
+    }
 html {
     line-height: 1.15;
     -webkit-text-size-adjust: 100%
