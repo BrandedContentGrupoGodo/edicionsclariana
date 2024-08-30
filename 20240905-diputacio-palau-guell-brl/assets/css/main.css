@@ -31,7 +31,7 @@ footer .breadcrumb {
 
   padding-left: 0 !important;
 
-  margin-top: 0 !important;
+
 
 }
 
@@ -61,7 +61,6 @@ footer .breadcrumb {
 
   padding-left: 0!important;
 
-  margin-top: 0!important;
 
 }
 
@@ -155,7 +154,9 @@ footer .breadcrumb {
 	margin: 0 auto;
 	margin-bottom: 30px;
 }
-
+.destacatss {
+	padding-right: 30px!important;
+}
 .destacatss h3{
 	font-size: 2em;
 }
