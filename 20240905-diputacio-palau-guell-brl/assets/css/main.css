@@ -23,8 +23,12 @@ footer .breadcrumb {
 
 }
 
- 
-
+ .h1r4xvfx{
+ 	 display: none!important;
+ }
+.bottom-ad-module {
+	display: none!important;
+}
 .visual-article-free .col-12 {
 
   padding-right: 0 !important;
@@ -55,14 +59,7 @@ footer .breadcrumb {
 
 }
 
-.row>* {
 
-  padding-right: 0!important;
-
-  padding-left: 0!important;
-
-
-}
 
 .article-default a:hover {
 
@@ -831,6 +828,11 @@ blockquote{max-width: 400px;font-family: "Mukta Mahee", sans-serif!important;mar
 
 
 @media (max-width: 700px) {
+	#section04 a span {
+
+    bottom: 40px;
+
+}
 	.collapse {
     margin-top: -32px;
 }
@@ -3545,8 +3547,8 @@ details[open] summary:before {
     }
 
 	 .slider-center {
-    width: 90%!important;
-    bottom: -20%!important;
+    width: 100% !important;
+            bottom: -35% !important;
 }
 .logo-b{
 	color: black
@@ -3981,9 +3983,9 @@ blockquote {
 
 .slide-text h2 {
     font-weight: bold;
-    font-size: 20px!important;
+    font-size: 17px!important;
     text-align: center;
-    line-height: 25px!important;
+    line-height: 20px!important;
     margin-bottom: 15px;
     }
     .mt-5, .my-5 {
