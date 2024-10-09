@@ -1173,6 +1173,9 @@ html {
         padding-right: 24px;
         padding-left: 24px
     }
+    .article-default .content-border, .article-default .content-free-html {
+        margin: 80px auto;
+    }
 }
 
 .container-sm {
