@@ -46,9 +46,7 @@ footer .breadcrumb {
 }
  footer .footer-copyright-text {
 
-    margin: 0 auto!important;
-    text-align: center!important;
-    max-width: 100%;
+
 }
 .leyenda{
 	font-size: 16px;
@@ -1222,28 +1220,13 @@ html {
         margin-left: -20px
     }
         footer .footer-logo-container {
-        display: inline-block;
-        float: right;
-        width: 100%!important;
+  
     }
         footer .footer-logo-container .logo {
-        position: relative;
-        height: 60px;
-        max-width: calc(1008px / 2);
-        width: 100%;
-        padding: 24px 15px;
-        color: #fff;
-        background-position: center!important;
-        background-position-y: -1.5px;
-        background-size: auto;
-        text-align: center!important;
-        margin: 0 auto!important;
+
     }
         footer .footer-copyright {
-        display: inline-block;
-        max-width: 100%;
-        padding-left: 0px; 
-        background-color: #242626;
+ 
     }
         footer .box-footer {
         padding: 20px 5px;
