@@ -8,7 +8,10 @@
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
 }
-
+.header-menu-container {
+    display: contents;
+    justify-content: center;
+}
 .gris1 {
     text-align: center;
     margin: 0 auto;
