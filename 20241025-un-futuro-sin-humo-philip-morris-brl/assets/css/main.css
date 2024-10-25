@@ -12,6 +12,9 @@
     display: contents;
     justify-content: center;
 }
+.subscription{
+	display: none!important;
+}
 .gris1 {
     text-align: center;
     margin: 0 auto;
