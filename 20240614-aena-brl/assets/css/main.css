@@ -114,7 +114,7 @@ header{
 
 .cta svg {
   position: relative;
-  top: -3px;
+  top: -3;
   margin-left: 10px;
   fill: none;
   stroke-linecap: round;
@@ -3708,6 +3708,9 @@ blockquote {
 	body {
     font-size: 1.4rem;
 
+}
+.destacat {
+    left: 0%!important;
 }
 .destacat2{
 	    padding-bottom: 30px;
