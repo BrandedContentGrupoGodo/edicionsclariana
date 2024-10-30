@@ -1254,6 +1254,7 @@ position: absolute;
  	position: inherit!important;
  	margin-bottom: 100px;
  }
+ .row {font-size:16px;}
 .e9 {
 
     font-size: 20px;
@@ -1281,7 +1282,8 @@ position: absolute;
     }
 
 .entre h2 {
-    font-size: 1em;
+
+    font-size: 0.9em;
 
 }
 .foto-peu{
@@ -1297,6 +1299,7 @@ position: absolute;
     z-index: 9;
     pointer-events: none;
             margin-bottom: 30px;
+            margin-top: 30px;
 }
 .card-border2 {
     position: relative;
