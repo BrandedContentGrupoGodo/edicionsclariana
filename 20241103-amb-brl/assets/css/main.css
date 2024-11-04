@@ -4044,6 +4044,22 @@ details[open] summary:before {
     width: 90%!important;
     bottom: -20%!important;
 }
+.blue {
+
+    background-position: bottom;
+}
+.bluex {
+
+    background-position: bottom;
+}
+.bluey {
+
+    background-position: bottom;
+}
+.bluez {
+
+    background-position: bottom;
+}
 .grist {
     padding: 5px 40px !important;
     color: black;
