@@ -14,7 +14,11 @@ sup{font-size: 12px!important;}
 footer .breadcrumb {
     display: none !important;
 }
-
+.imagen-suscripcion-newsletter-la-contra {
+    height: 50px;
+    position: absolute;
+    width: auto;
+}
 @keyframes fadeIn
   to { 
      opacity: 1; }
