@@ -901,6 +901,27 @@ blockquote{max-width: 400px;font-family: "Mukta Mahee", sans-serif!important;mar
     bottom: 40px;
 
 }
+footer div{
+	    padding: 20px !important;
+}
+.cover-photo {
+    height: 400px;
+    width: auto;
+    background-size: cover;
+    background-position: bottom;
+}
+.cover-photo2 {
+    height: 400px;
+    width: auto;
+    background-size: cover;
+    background-position: bottom;
+}
+.cover-photo3 {
+    height: 400px;
+    width: auto;
+    background-size: cover;
+    background-position: bottom;
+}
 	.collapse {
     margin-top: -32px;
 }
