@@ -23,6 +23,9 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+footer .container nav{
+	display: none!important;
+}
 .gris1 img {
     max-width: 150px;
     display: inline-block;
@@ -943,7 +946,7 @@ html {
     box-sizing: inherit
 }
 
-.container {
+.totto .container {
     max-width: 816px;
     padding-right: 20px;
     padding-left: 20px;
@@ -952,6 +955,9 @@ html {
 }
 .paises {
     max-width: 1216px;
+}
+.header .container{
+	width: 100%;
 }
 .container2 {
     max-width: 1416px;
