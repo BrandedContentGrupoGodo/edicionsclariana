@@ -17,7 +17,9 @@ footer .breadcrumb {
 
 
 
-
+marfeel-flowcards div svg{
+	display: none!important;
+}
 
 
 
@@ -2005,6 +2007,7 @@ blockquote{max-width: 400px;font-family: 'Montserrat', sans-serif!important;marg
 #slide-show {
                    height: 69vh;
         min-height: 34vh;
+                margin-left: -20px;
     }
   .bg0, .bg1, .bg2, .bg3, .bg4{
     	 height: 60vh;
