@@ -4777,12 +4777,15 @@ blockquote {
 .destacat2{
 	    padding-bottom: 30px;
 }
-.portada h1{
-	margin-top: 20px!important;
-	font-size: 1.3em;
-	        max-width: 90%;
+    .portada h1 {
+        text-shadow: inherit;
+        margin-top: 20px !important;
+        font-size: 1.8em;
+        max-width: 90%;
         margin: 0 auto;
-}
+        color: black;
+        font-weight: bold;
+    }
 .portada .casa {
     margin-left: auto;
     margin-right: auto;
@@ -4792,7 +4795,7 @@ blockquote {
     font-weight: bold;
     margin: 0 auto;
     color: white;
-    position: absolute;
+    position: relative;
     bottom: 10px;
 }
 .nav-item{
