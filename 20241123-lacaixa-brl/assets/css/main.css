@@ -4739,7 +4739,10 @@ blockquote {
 	    position: inherit!important;
 	    top: inherit!important;
 }
-
+.article-default ol li, .article-default ul li {
+    font-size: 17px;
+    line-height: 22px;
+}
     .navmob {
         display: inherit!important;
     }
