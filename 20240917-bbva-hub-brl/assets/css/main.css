@@ -231,12 +231,12 @@ footer .breadcrumb {
 }
 
 .audio img{
-	display: inline-block; max-width: 30px; float: left; margin-right: 10px;    margin-bottom: 30px;
+	display: inline-block; max-width: 30px; float: left; margin-right: 10px;  
 }
 
 .audio p{
 	display: inline-block;
-	color: #103567;
+	color: #103567;    margin-top: 10px;
 }
 
 
