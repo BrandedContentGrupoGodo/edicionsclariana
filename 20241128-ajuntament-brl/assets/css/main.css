@@ -2035,8 +2035,15 @@ blockquote{max-width: 400px;font-family: 'Montserrat', sans-serif!important;marg
 #slide-show {
                    height: 63vh;
         min-height: 34vh;
+        margin-left: -19px;
              
     }
+    .column.left > * {
+    float: inherit;
+}
+.column.right > * {
+    float: right;
+}
   .bg0, .bg1, .bg2, .bg3, .bg4{
     	 height: 60vh;
     min-height: 60vh;
@@ -4723,7 +4730,7 @@ details[open] summary:before {
     height: 25.6875em;
 }
 .text.open .slider > span {
-	padding: 3em 2em 1em;
+	padding: 20px;
     font-size: 0.95em;
 }
 .text.open .slider {
@@ -4738,7 +4745,7 @@ details[open] summary:before {
 }
  .text h3 {
     font-size: 1em!important;
-    right: 0px;
+    right: -14px;
     padding: 25px;
 }   
 .slide-text h1 {
@@ -4747,6 +4754,10 @@ details[open] summary:before {
     text-align: center;
     line-height: 30px;
     }
+    .text h3 {
+
+    width: 110%;
+}
 
 .slide-text h2 {
     font-weight: bold;
