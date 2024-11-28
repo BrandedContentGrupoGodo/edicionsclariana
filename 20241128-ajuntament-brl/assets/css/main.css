@@ -455,6 +455,9 @@ marfeel-flowcards div svg{
         .daltt {
             margin-top: -46px!important;
         }
+        .text {
+    line-height: 21px;
+}
                 .baixx7 {
             margin-bottom: 67px!important;
         }
@@ -4717,7 +4720,7 @@ details[open] summary:before {
     	height: inherit;
     }
     .text.open {
-    height: 22.6875em;
+    height: 25.6875em;
 }
 .text.open .slider > span {
 	padding: 3em 2em 1em;
