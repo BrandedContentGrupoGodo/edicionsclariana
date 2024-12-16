@@ -5193,7 +5193,8 @@ blockquote{max-width: 400px;font-family: "BentonSansBBVA-Medium", sans-serif!imp
 
     padding-top: 50px;
     height: 361px;
-            background-position: 67% -105px;
+            background-position: 67% 0px;
+            background-attachment: inherit!important;
     background-size: cover;
 }
 
@@ -5201,7 +5202,8 @@ blockquote{max-width: 400px;font-family: "BentonSansBBVA-Medium", sans-serif!imp
 
     padding-top: 50px;
     height: 361px;
-           background-position: 67% -105px;
+           background-position: 67% 0px;
+           background-attachment: inherit!important;
     background-size: cover;
 }
 
@@ -5209,7 +5211,8 @@ blockquote{max-width: 400px;font-family: "BentonSansBBVA-Medium", sans-serif!imp
   
     padding-top: 50px;
     height: 361px;
-            background-position: 67% -105px;
+            background-position: 67% 0px;
+            background-attachment: inherit!important;
     background-size: cover;
 }
 
@@ -5217,12 +5220,14 @@ blockquote{max-width: 400px;font-family: "BentonSansBBVA-Medium", sans-serif!imp
 
     padding-top: 50px;
     height: 361px;
-            background-position: 67% -105px;
+            background-position: 67% 0px;
+            background-attachment: inherit!important;
     background-size: cover;
 }
 
 #welcome5 {
-    background-position: 67% -105px;
+    background-position: 67% 0px;
+    background-attachment: inherit!important;
     padding-top: 50px;
     height: 361px;
    
@@ -5233,7 +5238,8 @@ blockquote{max-width: 400px;font-family: "BentonSansBBVA-Medium", sans-serif!imp
 
     padding-top: 50px;
     height: 361px;
-          background-position: 67% -105px;
+          background-position: 67% 0px;
+          background-attachment: inherit!important;
     background-size: cover;
 }
 .destacatss2 .infoitem h2 {
@@ -5434,6 +5440,13 @@ blockquote{max-width: 400px;font-family: "BentonSansBBVA-Medium", sans-serif!imp
   .video_ttl {
     font-size: calc(1.05rem + ((1vw - 0.2em) * 1.157));
   }
+    .container-fluid {
+        width: 100%;
+        padding-right: 5px!important; 
+        padding-left: 5px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
   .video_ttl::before,
 .video_ttl::after {
@@ -5454,6 +5467,7 @@ blockquote{max-width: 400px;font-family: "BentonSansBBVA-Medium", sans-serif!imp
   max-width: 720px;
   width: 100%;
 
+}
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -8040,6 +8054,23 @@ details[open] summary:before {
 	 .slider-center {
     width: 90%!important;
     bottom: -20%!important;
+}
+#welcome {
+background-attachment: inherit!important; 
+
+}
+ .container-fluid {
+        width: 100%;
+        padding-right: 5px!important; 
+        padding-left: 5px!important;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .toping h3 {
+    margin-top: 50px;
+    font-size: 2.2em!important;
+    letter-spacing: 2px;
+    font-family: "Eksell Display";
 }
 .idioma {
 
