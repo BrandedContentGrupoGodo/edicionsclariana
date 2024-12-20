@@ -7,7 +7,7 @@
 @layer base.override-normalize {
   :root {
         view-transition-name: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald', sans-serif!important;
 
     --font-size-0: 0.875rem;
     --radius-3: 8px;
