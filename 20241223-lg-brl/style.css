@@ -39,7 +39,7 @@
   h1,
   h2,
   h3 {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', sans-serif!important;
     font-weight: normal;
   }
 }
@@ -322,7 +322,7 @@ section{
     position: sticky;
     inset-block-start: 0;
     z-index: var(--layer-3);
-    background-color: black;
+    background-color: black!important;
     block-size: var(--nav-block-size);
 
     .container {
@@ -343,7 +343,7 @@ section{
     .menu {
       list-style: none;
       display: flex;
-      background-color: black;
+      background-color: black!important;
 
       > header {
         display: flex;
@@ -402,7 +402,7 @@ section{
 
     & h1 {
       text-align: center;
-      font-family: 'Bebas Neue', sans-serif;
+      font-family: 'Bebas Neue', sans-serif!important;
       font-weight: normal;
       font-size: 5rem;
       text-transform: uppercase;
@@ -503,7 +503,7 @@ section{
   .showcase {
     display: grid;
     overflow: hidden;
-    background-color: black;
+    background-color: black!important;
 
     > * {
       grid-area: 1/1;
@@ -526,7 +526,7 @@ section{
   }
 
   .about {
-    background-color: black;
+    background-color: black!important;
     padding-inline: var(--size-3);
 
     display: grid;
@@ -554,7 +554,7 @@ section{
 @layer components {
   .Card {
     display: grid;
-    background-color: black;
+    background-color: black!important;
     color: var(--text-1);
     gap: calc(var(--gap) / 2);
     align-content: start;
@@ -659,7 +659,7 @@ section{
   }
 
   .Logo {
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', sans-serif!important;
     font-weight: var(--font-weight-9);
 
     font-size: 1.5rem;
@@ -670,7 +670,7 @@ section{
 
   .NavButton {
     padding: var(--size-2);
-    background-color: black;
+    background-color: black!important;
     > i {
       font-size: var(--font-size-6);
     }
@@ -705,7 +705,7 @@ section{
     }
 
     .about {
-      background-color: black;
+      background-color: black!important;
       animation: to-black linear both;
       animation-timeline: view();
       animation-range-start: 4%;
@@ -734,7 +734,7 @@ section{
 
     @keyframes to-black {
       to {
-        background-color: black;
+        background-color: black!important;
       }
     }
   }
