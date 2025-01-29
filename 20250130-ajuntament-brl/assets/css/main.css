@@ -418,7 +418,7 @@ marfeel-flowcards div svg{
   100% {transform: translateX(0);}
 }
 .bodys {
-  background-image: url("../img/fondo.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20250130-ajuntament-brl/assets/img/fondo.jpg");
   background-position: center;
   display: grid;
   place-items: center;
@@ -743,7 +743,7 @@ marfeel-flowcards div svg{
   display: inline-block;
 }
 .cover-photo{
-	background-image: url("../img/photo-2.jpg");
+	background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20250130-ajuntament-brl/assets/img/photo-2.jpg");
 	    height: auto;
     width: auto;
     background-size: cover;
@@ -1846,7 +1846,7 @@ blockquote{max-width: 400px;font-family: 'Montserrat', sans-serif!important;marg
   background-attachment: scroll !important;
   background-position: center center !important;
   background-size: cover !important;
-  background-image: url("../img/bg1.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20250130-ajuntament-brl/assets/img/bg1.jpg");
   height: 90vh;
   min-height: 90vh;
   overflow: hidden;
@@ -1858,19 +1858,19 @@ blockquote{max-width: 400px;font-family: 'Montserrat', sans-serif!important;marg
 }
 .bg2{
 
-  background-image: url("../img/bg3.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20250130-ajuntament-brl/assets/img/bg3.jpg");
 
 }
 
 .bg3{
 
-  background-image: url("../img/bg2.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20250130-ajuntament-brl/assets/img/bg2.jpg");
 
 }
 
 .bg4{
 
-  background-image: url("../img/bg4.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20250130-ajuntament-brl/assets/img/bg4.jpg");
 
 }
 
