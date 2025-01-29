@@ -13,7 +13,9 @@
   100% { opacity: 1; }
 }
 
-
+.qualifi{
+	max-width: 100%!important;
+}
 .wow h2{
 	font-family: 'Playfair Display', serif;
 	font-style: italic;
