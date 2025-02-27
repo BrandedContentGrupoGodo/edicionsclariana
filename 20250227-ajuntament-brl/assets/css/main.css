@@ -4798,7 +4798,7 @@ details[open] summary:before {
     }
 }
 
-@media (max-width:1450px) {
+@media (max-width:1500px) {
     .is-open {
         position: fixed;
         display: block !important;
@@ -4806,6 +4806,13 @@ details[open] summary:before {
         left: 0;
         width: 100%;
         z-index: 9999
+    }
+    .slide-text h1 {
+                      font-weight: bold;
+            font-size: 60px;
+            text-align: center;
+            line-height: 63px;
+            padding-left: 10px;
     }
     .is-open li {
         background-color: #2a344f;
