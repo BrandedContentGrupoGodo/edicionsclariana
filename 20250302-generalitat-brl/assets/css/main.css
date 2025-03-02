@@ -4397,9 +4397,18 @@ h2 {
 }
 .h3,
 h3 {
-    font-size: 25px!important;
+    font-size: 32px!important;
     margin-bottom: 10px!important;font-weight: bold; color: white; padding: 10px!important;
     margin-top: 30px;
+}
+.avantol h4 {
+    text-align: left;
+    font-size: 1.4em !important;
+    line-height: 1.2em;
+    font-weight: 600;
+    color: #4d4d4d;
+    padding-top: 15px;
+    max-width: 450px;
 }
 .fotofons h1 {
 	font-size: 1.7em;
