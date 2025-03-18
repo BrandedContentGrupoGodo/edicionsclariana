@@ -2037,7 +2037,7 @@ font-size: 78px;
   float: right; margin-right: 15px;
 }
 .titolillo{font-size: 1.2rem; color:#ce132c }
-.bg1{
+.bg1, .bg2, .bg3, .bg4{
 
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
@@ -2052,11 +2052,7 @@ font-size: 78px;
   position: absolute;
   top:150;
   left:0;
-
-
 }
-
-
 
 
 .bg2{
