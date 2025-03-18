@@ -2007,7 +2007,7 @@ font-size: 78px;
   z-index: -1;
    height: 90vh;
   min-height: 90vh;
-      position: relative;
+   
     overflow: hidden;
 }
 .vermell{
@@ -2037,7 +2037,7 @@ font-size: 78px;
   float: right; margin-right: 15px;
 }
 .titolillo{font-size: 1.2rem; color:#ce132c }
-.bg1, .bg2, .bg3, .bg4{
+.bg1{
 
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
@@ -2052,6 +2052,20 @@ font-size: 78px;
   position: absolute;
   top:150;
   left:0;
+
+    animation: zoomEffect 10s infinite alternate linear;
+}
+
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta el zoom al 120% */
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 
