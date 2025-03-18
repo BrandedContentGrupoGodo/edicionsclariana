@@ -2053,20 +2053,10 @@ font-size: 78px;
   top:150;
   left:0;
 
-    animation: zoomEffect 10s infinite alternate linear;
+
 }
 
-@keyframes zoomEffect {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1); /* Aumenta el zoom al 120% */
-  }
-  100% {
-    transform: scale(1);
-  }
-}
+
 
 
 .bg2{
