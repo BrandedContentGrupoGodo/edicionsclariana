@@ -11,14 +11,30 @@ video {
 }
 
 
+.bg-light {
+    background-color: #f8f9fa !important;
+}
 
+.navbar {
+    display: block !important;
+}
+.subtitulo{
+	   
+}
+.barras{
+	position: fixed;
+	height: 50px;
+	z-index: 300;
+	width: 100%;
+}
 
+.navbar li{
+	list-style: none;
+}
 
-
-
-
-
-
+.pujj{
+	margin-top: 50px;
+}
 
 .inicit{
     position: relative;
@@ -155,7 +171,7 @@ video {
 	text-align: justify;
 }
 .joieria div p{
-	line-height: 1.3;    font-size: 1.2em;
+	line-height: 1.4;    font-size: 1.1em;
 }
 .cuadro{
 	position: absolute;
@@ -167,10 +183,9 @@ video {
 
 }
 .arrow {
-  position: absolute;
-  bottom: -80px;
-  left: 50%;
-  margin-left: -20px;
+	    text-align: center;
+    margin: 0 auto;
+    margin-top: 45px;
   width: 40px;
   height: 40px;
   background-image: "../img/abajo.png";
@@ -271,7 +286,7 @@ video {
 	    position: absolute;
     bottom: 15%;
     z-index: 300;
-    color: white;
+    color: black;
     width: 100%;
     text-align: center;
     max-width: 676px;
@@ -286,6 +301,7 @@ margin-right:auto;
 
 .prin h1{
 	font-size: 30pt;font-family: "Montserrat", sans-serif; font-weight: bold;  max-width: 515px; margin: 0 auto; margin-bottom: 30px;
+
 } 
 
 .prin h2{
@@ -1226,10 +1242,17 @@ a:hover {
 }
 
 article a {
-    color: #28a780;
+    color: #159f9b;
+    font-weight: bold;
+    transition: 1s;
     
 }
-
+article a:hover {
+    color: #3367d1;
+    font-weight: bold;
+    transition: 1s;
+    
+}
 figure {
     margin: 0
 }
@@ -1239,7 +1262,8 @@ svg,
 video {
     vertical-align: middle;
     max-width: 100%;
-    height: auto
+       
+
 }
 
 .img-fluid {
@@ -1248,7 +1272,7 @@ video {
 }
 
 ::selection {
-    background: #da322a;
+    background: #3367d1;
     color: #fff
 }
 
@@ -3164,8 +3188,8 @@ h2 {
 
 .h3,
 h3 {
-    font-size: clamp(2.1rem, 1.357rem + 0.71vw, 1.9rem)!important;
-    margin-bottom: 30px!important; font-weight: 700!important; line-height: 1.2em!important;
+    font-size: clamp(1.6rem, 1.357rem + 0.71vw, 1.5rem)!important;
+    margin-bottom: 20px!important; font-weight: 700!important; line-height: 1.2em!important;
     font-size: 14pt;font-family: "Montserrat", sans-serif; text-align: left;
 }
 
@@ -3178,7 +3202,7 @@ h4 {
 @media (min-width:576px) {
     .h4,
     h4 {
-        font-size: 30px;
+            font-size: clamp(1.6rem, 1.357rem + 0.71vw, 1.5rem) !important;
         margin-bottom: 16px
     }
 }
@@ -3428,15 +3452,13 @@ details[open] summary:before {
     color: white!important;
 }
 .arrow {
-    position: absolute;
-    bottom: -60px;
-    left: 50%;
-    margin-left: -20px;
-    width: 30px;
-    height: 30px;
-    background-image: "../img/abajo.png";
-    background-size: contain;
-    margin-bottom: 20px;
+
+        width: 30px;
+        height: 30px;
+        background-image: "../img/abajo.png";
+        background-size: contain;
+        margin-bottom: 20px;
+        z-index: 200;
 }
 .prin h1{
 	font-size: 2.3em;
@@ -3852,9 +3874,19 @@ blockquote {
     padding-top: 16px;
     padding-bottom: 24px
 }
-@media (max-width:1290px) {
+@media (max-width:1090px) {
 	.h2, h2 {
     font-size: clamp(1rem, 1.714rem + 1.43vw, 1.5rem);
+}
+.inicit {
+    position: relative;
+    height: 700px;
+    max-height: 100%;
+    width: 100%;
+}
+.subtitulo{
+	margin-bottom: 10px!important;
+	text-shadow: inherit!important;
 }
 .prin{
 
@@ -3865,9 +3897,14 @@ blockquote {
 
 }
 .prin h1 {
-
+text-shadow: inherit!important;
     margin-bottom: 10px;
 }
+.prin h2 {
+text-shadow: inherit!important;
+ 
+}
+
 .mobil{
 	display: inherit!important;
 }
@@ -3902,6 +3939,13 @@ background-color: transparent!important;
     
 
 }
+.barras {
+    position: inherit;
+    height: 25px;
+}
+    .arrow {
+    	display: none!important;
+    }
 
 .descripcio h5{
 	 font-size: 1.2em!important;
@@ -3948,7 +3992,7 @@ background-color: transparent!important;
     	height: 440px!important;
     }
     .h3, h3 {
-    font-size: clamp(1.5rem, 1.357rem + 0.71vw, 1rem);
+    font-size: clamp(1.6rem, 1.357rem + 0.71vw, 1.2rem)!important;
 }
     .e9 {
     font-size: 19px!important;
@@ -3960,7 +4004,7 @@ background-color: transparent!important;
      margin-bottom: 20px!important;
 }
 .mt-8 {
-    margin-top: 24px!important;
+    
 }
     .mb-5 {
     margin-bottom: 20px!important;
@@ -3972,12 +4016,23 @@ background-color: transparent!important;
     font-size: 14px!important;
     line-height: 18px!important;
 }
+.inicit{
+	    margin-top: -55px;
+	    height: 380px;
+}
+#myVideo {
+    position: inherit;
+ 
+}
+.diamante{
+	margin-top: 390px!important;
+}
 .prin {
     position: initial!important;
     top: 55%;
     z-index: 300;
     color: #0a0a0a;
-    width: 100%;
+    width: 90%;
     text-align: center;
     max-width: 676px;
     /* margin: 0 auto; */
@@ -3985,7 +4040,7 @@ background-color: transparent!important;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 94px;
+            margin-top: -20px;
 }
     .nav-link {
   transition: all 0.4s;
@@ -4013,7 +4068,7 @@ background-color: transparent!important;
     margin-top: 10px!important;
 }
 .mt-12 {
-    margin-top: 30px!important;
+    margin-top: 65px!important;
 }
 .cuadro {
     position: static;
@@ -4027,6 +4082,13 @@ background-color: transparent!important;
     font-size: clamp(1.6rem, 1.357rem + 0.71vw, 1.2rem);
     margin-bottom: 9px;
     font-weight: bold;
+    margin-top: 30px;
+}
+.pujj{
+	margin-top: 0px!important;
+}
+.col-lg-5{
+	margin-bottom: 20px;
 }
 .slide-text b {
   font-weight: 400; 
