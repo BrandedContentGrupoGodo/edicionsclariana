@@ -262,119 +262,6 @@ width: 100%!important;
 height: 100%!important;
 
 }
-@media screen and (max-width:800px){
-
-	.arriba h1{    font-size: 34px !important;
-    line-height: 37px !important;
-    /* text-align: center!important; */
-    margin-top: 20px!important;
-    margin-bottom: -1px!important;}
-    .pregunta{line-height: 27px;font-size: 18px!important}
-    .respuesta{font-size: 18px!important}
-    .contenido{padding-left: 10px!important; padding-right: 10px!important;}
-    .barri {    margin-left: 0px!important;
-    margin-right: 0px!important;}
-    .pantalla{
-      display: none!important;
-    }
-    .abajo .esquerra{
-
-  text-align: left!important;
-  padding-right: inherit!important;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border-right: inherit!important;
-
-}
-
-.abajo .dreta{
-
-  text-align: left;
-  padding-left: inherit!important;
-  padding-top: 30px;
-  padding-bottom: 10px;
-
-}
-}
-
-@media screen and (max-width:470px){
-  .fcb{
-    height: 227px;
-  }
-	.indice{padding-right: 24px;
-padding-left: 23px;}
-.portadas .bigone {
-    font-size: 110%;
-}
-.portadas .tidobledos {
-	font-size: 110%!important;
-}
-
-.foto-bbva .peufoto {
-  position: inherit;
-}
-.bef:before {
-      width: 15%!important;
-      font-size: 80px!important;display: inline-block!important;
-}
-.contenido{padding-left: 15px!important; padding-right: 15px!important;}
-.peufoto {
-    position: absolute;
-    top: initial;
-    right: initial;
-    bottom: 4px;
-        width: 100%;
-}
-.despiece{
-    padding: 20px!important;}
-.peufoto p{
-    background-color: black;
-    color: white;
-    padding: 7px;
-    max-width: 100%;
-    line-height: 14px !important;
-    font-size: 12px!important;
-}
-.portadas .tidoblealtodos {
-    bottom: 61%!important;}
-.portadas h5{ 
-font-size: 70%!important ;
-line-height: 110%!important;
-margin-top: 17px!important;}
-.portadas h3 {
-	font-size: 110%!important;
-}
-	.arriba h1{font-size: 28px !important;
-    padding-right: 4px !important;
-    padding-left: 4px !important;}
-.patrocinio {
-    height: 41px;
-    margin-bottom: 10px;
-}
-.destacado{margin-bottom: 40px;font-size: 21px;width: 85%!important;display: inline-block;}
-.contenido p {
-    font-size: 17px;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-.frase{padding-top: 0px;
-margin-top: -20%!important;
-font-size: 13px!important;
-line-height: 15px!important;}
-.arriba h2{font-size: 1.2em!important;}
-.majus{font-size: 15px!important;}
-.idiomes {
-    padding-top: 10px!important;
-    padding-bottom: 10px;
-}
-.line {
-    margin-bottom: 35px!important;
-}
-.destacado{
-	font-size: 20px!important;
-	line-height: 28px!important;
-}
-}
 
 
 .hover13 figure:hover img {
@@ -1017,3 +904,139 @@ padding-right: 30px;
 
 
 
+@media screen and (max-width:800px){
+    .cometes {
+    float: left;
+    margin-right: 19px;
+    max-width: 70px;
+    padding-bottom: 125px;
+}
+.foto-bbva p {
+    margin-top: 0px;
+}
+    .arriba h1{    font-size: 34px !important;
+    line-height: 37px !important;
+    /* text-align: center!important; */
+    margin-top: 20px!important;
+    margin-bottom: -1px!important;}
+    .pregunta{line-height: 27px;font-size: 18px!important}
+    .respuesta{font-size: 18px!important}
+    .contenido{padding-left: 10px!important; padding-right: 10px!important;}
+    .barri {    margin-left: 0px!important;
+    margin-right: 0px!important;}
+    .pantalla{
+      display: none!important;
+    }
+    .abajo .esquerra{
+
+  text-align: left!important;
+  padding-right: inherit!important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-right: inherit!important;
+
+}
+
+.abajo .dreta{
+
+  text-align: left;
+  padding-left: inherit!important;
+  padding-top: 30px;
+  padding-bottom: 10px;
+
+}
+}
+
+@media screen and (max-width:470px){
+  .fcb{
+    height: 227px;
+  }
+    .indice{padding-right: 24px;
+padding-left: 23px;}
+.portadas .bigone {
+    font-size: 110%;
+}
+.portadas .tidobledos {
+    font-size: 110%!important;
+}
+
+.foto-bbva .peufoto {
+  position: inherit;
+}
+.bef:before {
+      width: 15%!important;
+      font-size: 80px!important;display: inline-block!important;
+}
+.contenido{padding-left: 15px!important; padding-right: 15px!important;}
+.peufoto {
+    position: absolute;
+    top: initial;
+    right: initial;
+    bottom: 4px;
+        width: 100%;
+}
+.despiece{
+    padding: 20px!important;}
+.peufoto p{
+    background-color: black;
+    color: white;
+    padding: 7px;
+    max-width: 100%;
+    line-height: 14px !important;
+    font-size: 12px!important;
+}
+.portadas .tidoblealtodos {
+    bottom: 61%!important;}
+.portadas h5{ 
+font-size: 70%!important ;
+line-height: 110%!important;
+margin-top: 17px!important;}
+.portadas h3 {
+    font-size: 110%!important;
+}
+    .arriba h1{font-size: 25px !important;
+    padding-right: 4px !important;
+    padding-left: 4px !important;}
+.patrocinio {
+    height: 41px;
+    margin-bottom: 10px;
+}
+.destacado{margin-bottom: 40px;font-size: 21px;width: 100%!important;}
+.contenido p {
+    font-size: 17px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.frase{padding-top: 0px;
+margin-top: -20%!important;
+font-size: 13px!important;
+line-height: 15px!important;}
+.arriba h2{font-size: 1.1em!important;}
+.majus{font-size: 15px!important;}
+.idiomes {
+    padding-top: 10px!important;
+    padding-bottom: 10px;
+}
+.line {
+    margin-bottom: 35px!important;
+}
+.destacado{
+    font-size: 22px!important;
+    line-height: 28px!important;
+}
+.col-xs-4 {
+    width: 100%!important;
+}
+.idiomes p {
+
+    font-size: 13px!important;
+
+}
+.barra-a p {
+    text-align: center;
+    color: white;
+    font-size: 12px !important;
+    padding: 5px;
+    padding-top: 10px;
+}
+}
