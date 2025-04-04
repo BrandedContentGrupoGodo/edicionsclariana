@@ -9,9 +9,7 @@ b{font-family: "STIX Two Text", serif!important; font-weight: 700 !important;}
   .footer-copyright a{
   color: white;
 }
-.mobil{
-      display: none!important;
-    }
+
 video {
   max-width: 100%;
   height: auto;
@@ -27,7 +25,7 @@ video {
   font-style: italic;
 }
 .firma-x{
-  padding-bottom: 50px;
+  padding-bottom: 20px;
 }
 .data-f{font-weight: 100;padding-bottom: 15px!important; font-size: 14px!important;margin-bottom: -10px;
     margin-top: 11px;}
@@ -201,7 +199,6 @@ margin-top: 15px; margin-bottom: 10px;
   padding-top: 10px; font-weight: bold; font-size: 1.2em!important; padding-bottom: 15px; line-height: 1.2em;
 
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
   margin-top: 10px;font-family: "STIX Two Text", serif!important;
 }
 .imageentre img{
@@ -494,8 +491,22 @@ color: white;
     margin-top: -10px;
     margin-right: 10px;
     max-width: 70px;
-    padding-bottom: 180px;
 }
+
+
+.linea2{
+    padding-bottom: 70px;
+}
+
+.linea3{
+    padding-bottom: 110px;
+}
+
+.linea4{
+    padding-bottom: 160px;
+}
+
+
 .cometes2 img{
     width: 100%;
     max-width: 100px;
@@ -939,6 +950,10 @@ padding-right: 30px;
     .cometes {
     display: none;
 }
+.titolentre{
+  border-bottom: 1px solid black;
+
+}
 .foto-bbva p {
     margin-top: 0px;
 }
@@ -954,9 +969,6 @@ padding-right: 30px;
     margin-right: 0px!important;}
     .pantalla{
       display: none!important;
-    }
-    .mobil{ 
-        display:inline!important; 
     }
     .abajo .esquerra{
 
