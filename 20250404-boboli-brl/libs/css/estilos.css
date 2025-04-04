@@ -9,7 +9,9 @@ b{font-family: "STIX Two Text", serif!important; font-weight: 700 !important;}
   .footer-copyright a{
   color: white;
 }
-
+.mobil{
+      display: none!important;
+    }
 video {
   max-width: 100%;
   height: auto;
@@ -25,7 +27,7 @@ video {
   font-style: italic;
 }
 .firma-x{
-  padding-bottom: 20px;
+  padding-bottom: 50px;
 }
 .data-f{font-weight: 100;padding-bottom: 15px!important; font-size: 14px!important;margin-bottom: -10px;
     margin-top: 11px;}
@@ -491,22 +493,8 @@ color: white;
     margin-top: -10px;
     margin-right: 10px;
     max-width: 70px;
+    padding-bottom: 180px;
 }
-
-
-.linea2{
-    padding-bottom: 70px;
-}
-
-.linea3{
-    padding-bottom: 110px;
-}
-
-.linea4{
-    padding-bottom: 160px;
-}
-
-
 .cometes2 img{
     width: 100%;
     max-width: 100px;
@@ -951,11 +939,13 @@ padding-right: 30px;
     display: none;
 }
 .titolentre{
-  border-bottom: 1px solid black;
-
+  border-top: 1px solid black;
 }
 .foto-bbva p {
     margin-top: 0px;
+}
+.mobil{
+    display: contents!important;
 }
     .arriba h1{    font-size: 34px !important;
     line-height: 37px !important;
@@ -970,6 +960,7 @@ padding-right: 30px;
     .pantalla{
       display: none!important;
     }
+  
     .abajo .esquerra{
 
   text-align: left!important;
