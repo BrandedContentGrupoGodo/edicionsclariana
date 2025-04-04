@@ -956,7 +956,7 @@ padding-right: 30px;
       display: none!important;
     }
     .mobil{ 
-        display:inherit!important; 
+        display:inline!important; 
     }
     .abajo .esquerra{
 
