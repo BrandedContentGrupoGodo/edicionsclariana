@@ -9,7 +9,9 @@ b{font-family: "STIX Two Text", serif!important; font-weight: 700 !important;}
   .footer-copyright a{
   color: white;
 }
-
+.mobil{
+      display: none!important;
+    }
 video {
   max-width: 100%;
   height: auto;
@@ -952,6 +954,9 @@ padding-right: 30px;
     margin-right: 0px!important;}
     .pantalla{
       display: none!important;
+    }
+    .mobil{ 
+        display:inherit!important; 
     }
     .abajo .esquerra{
 
