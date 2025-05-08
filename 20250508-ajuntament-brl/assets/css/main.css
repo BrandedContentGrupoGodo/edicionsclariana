@@ -14,6 +14,8 @@ sup{font-size: 12px!important;}
 footer .breadcrumb {
     display: none !important;
 }
+
+
  .grid2 {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1919,7 +1921,7 @@ height:16.6875em;
 
 
 @media only screen and (max-width: 1900px) {
-  .row {font-size:19px;}
+  .row {font-size:17px;}
 }
 
      .column {
@@ -2514,6 +2516,11 @@ width: 100%;
     .peufoto p {
     font-size: 16px;
     line-height: 20px;
+}
+.autora {
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.1em;
 }
 .containerx {
 
