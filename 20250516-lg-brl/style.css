@@ -122,6 +122,7 @@
   float: left;
   width: 400px;
   margin-right: 30px;
+  margin-bottom: 30px;
 }
 .consulta-btn {
       background: linear-gradient(to bottom, #ff0000, #990000);
