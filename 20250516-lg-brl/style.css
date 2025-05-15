@@ -1270,8 +1270,12 @@ section{
     margin-bottom: 20px;
   }
 
-  h1, h2 {
-    font-size: 1.5rem;
+  h1 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+h2 {
+    font-size: 1.3rem;
     text-align: center;
   }
 }
