@@ -189,6 +189,7 @@ body{
   max-width: 1000px!important;
          width: 100%;
          padding: 40px 0px;
+             margin: 0 auto;
 }
 .subt .subject p a{
   color: rgb(253, 49, 46);font-weight: bold;
