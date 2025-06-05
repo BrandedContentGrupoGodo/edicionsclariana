@@ -1023,6 +1023,9 @@
   .third-stats-table tr {
     margin-bottom: 1rem;
   }
+  .cabesa{
+   margin-top: 80px !important;
+  }
   .third-label {
     /* La etiqueta va arriba y ocupa todo el ancho */
     display: block;
