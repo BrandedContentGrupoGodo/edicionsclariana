@@ -19,6 +19,9 @@
 .article-top-header{
     display: none!important;
 }
+.article-info{
+    display: none!important;
+}
 #section04 a span {
     position: absolute;
     bottom: 80px;
