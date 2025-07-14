@@ -2094,7 +2094,6 @@ font-size: 78px;
 .slidex {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
-  z-index: -1;
    height: 90vh;
   min-height: 90vh;
   position: relative;
@@ -2144,7 +2143,7 @@ font-size: 78px;
   top:150;
   left:0;
 
-
+    animation: zoomEffect 10s infinite alternate linear;
 }
 .bg2{
   background-repeat: no-repeat !important;
@@ -2161,7 +2160,7 @@ font-size: 78px;
   top:150;
   left:0;
 
-
+    animation: zoomEffect 10s infinite alternate linear;
 }
 .bg3{
   background-repeat: no-repeat !important;
@@ -2178,9 +2177,19 @@ font-size: 78px;
   top:150;
   left:0;
 
-
+    animation: zoomEffect 10s infinite alternate linear;
 }
-
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta el zoom al 120% */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 
 
