@@ -4466,18 +4466,18 @@ h2 {
 .h3,
 h3 {
     font-size: 25px!important;
-    margin-bottom: 10px!important;font-weight: bold; color: white; padding: 10px!important;
+    margin-bottom: 10px!important;font-weight: bold;
     margin-top: 30px;
 }
 .fotofons h1 {
-	font-size: 2.5em;
-    left: 50px;
+	font-size: 2.3em;
+    left: 30px;
     top: 180px;
     position: absolute;
 }
 .fotofons .titolet {
     font-size: 1.2em;
-    left: 50px;
+    left: 30px;
     top: 120px;
   
 }
@@ -4847,7 +4847,7 @@ blockquote {
         padding-top: 16px
     }
     .foto-peu embed{
-        height: 750px!important;
+        height: 400px!important;
                     margin-bottom: -100px;
     }
     .mb-5, .my-5 {
