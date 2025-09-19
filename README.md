@@ -5,7 +5,7 @@ _Contenidos externos_
 
 ## 📁 Acceso al proyecto 
 ```
-RUTA ASSETS: https://brandedcontentgrupogodo.github.io/edicionsclariana/
+https://brandedcontentgrupogodo.github.io/edicionsclariana/
 ```
 
 
