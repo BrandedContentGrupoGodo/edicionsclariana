@@ -5676,6 +5676,9 @@ blockquote {
     font-size: 1.3rem;
 
 }
+.seguro-salud-new {
+    display: block!important;
+}
 .portada h2 {
     margin-bottom: 20px;
     color: black!important;
