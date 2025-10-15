@@ -1,0 +1,363 @@
+/* ======== RESET I BASE ======== */
+body {
+  color: black;
+  font-family: "STIX Two Text", serif;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6em;
+  color: black;
+}
+
+b {
+  font-weight: 700;
+}
+
+/* ======== ESTRUCTURA GENERAL ======== */
+.main {
+  width: 100%;
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+}
+.mobil{
+    display: none;
+}
+.contenido {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.blanco {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ======== CAPÇALERA ======== */
+.headlogo {
+  background: white;
+}
+
+.idiomes {
+  padding-top: 20px;
+  text-align: right;
+}
+
+.idiomes p {
+  font-size: 13px;
+  font-family: "STIX Two Text", serif;
+  margin-bottom: 10px;
+}
+
+.idiomes a {
+  color: #00529b;
+  text-decoration: none;
+}
+
+.idiomes a:hover {
+  text-decoration: underline;
+}
+
+/* ======== BARRA SUPERIOR ======== */
+.barra-a {
+  background-color: #001c4c;
+  height: 35px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.barra-a p {
+  color: white;
+  font-size: 15px;
+  padding-top: 10px;
+  font-family: "STIX Two Text", serif;
+}
+
+/* ======== TÍTOLS I ENTREVISTA ======== */
+.majus {
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.majus b {
+  color: #00529b;
+}
+
+.arriba h2 {
+  font-size: 1.2em;
+  font-weight: 400;
+  font-family: "STIX Two Text", serif;
+  margin-bottom: 5px;
+  padding-top: 10px;
+  line-height: 1.2em;
+}
+
+.arriba h1 {
+  font-size: 2.9em;
+  font-weight: bolder;
+  font-family: "STIX Two Text", serif;
+  line-height: 1.2em;
+  color: black;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+.cometes {
+  float: left;
+  margin-right: 10px;
+  max-width: 100px;
+}
+
+.cometes img {
+  width: 100%;
+}
+
+/* ======== PREGUNTES I RESPOSTES ======== */
+.pregunta {
+  font-family: "STIX Two Text", serif;
+  font-weight: 800;
+  margin-bottom: 6px;
+  line-height: 25px;
+  font-size: 20px;
+  width: 100%;
+}
+
+.pregunta a {
+  color: #00529b;
+}
+
+.respuesta {
+  font-family: "STIX Two Text", serif;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.respuesta a {
+  color: #00529b;
+  font-weight: 600;
+}
+
+/* ======== DESTACATS / CITACIONS ======== */
+.caixad {
+  margin: 50px auto 70px auto;
+  max-width: 600px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.cometes2 {
+  float: left;
+  margin-top: -10px;
+  margin-right: 10px;
+  max-width: 70px;
+}
+
+.cometes2 img {
+  width: 100%;
+  max-width: 100px;
+}
+
+.linea3 {
+  padding-bottom: 150px;
+}
+
+.firma-x{
+    padding-top: 20px;
+}
+.destacado {
+  font-family: "STIX Two Text", serif;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 1.3em;
+  padding: 15px 35px 15px 15px;
+  text-align: left;
+  color: black;
+}
+
+/* ======== FOTOS ======== */
+.foto-bbva {
+  text-align: center;
+  margin: 0 auto 40px auto;
+  position: relative;
+}
+
+.foto-bbva img {
+  width: 100%;
+  height: auto;
+}
+
+.peufoto p {
+  font-size: 12px;
+  padding: 5px;
+  text-align: left;
+  line-height: 1.4em;
+  font-family: "STIX Two Text", serif;
+}
+
+/* ======== FIRMA I DATA ======== */
+.firma-x {
+  padding-bottom: 20px;
+}
+
+.firma {
+  font-size: 15px;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.data-f {
+  font-size: 14px;
+  font-weight: 100;
+  margin: 10px 0;
+}
+
+/* ======== BLOC INFERIOR (ALTRES ENTREVISTES) ======== */
+.abajo {
+  margin-top: 30px;
+}
+
+.abajo h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.4em;
+  padding-bottom: 30px;
+  color: #103668;
+  font-family: "STIX Two Text", serif;
+}
+
+.imageentre img {
+  max-width: 100%;
+  height: auto;
+}
+
+.entrevistat {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #00a4b7;
+  margin: 15px 0 10px 0;
+}
+
+.nomentre {
+  color: #103668;
+  font-size: 1.3em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carrec {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
+.titolentre {
+  font-family: "STIX Two Text", serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding-top: 10px;
+  border-top: 1px solid black;
+  margin-top: 10px;
+  line-height: 1.2em;
+}
+
+/* ======== CRÈDITS ======== */
+.credits {
+  color: grey;
+  text-align: center;
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+}
+
+.credits h5 {
+  margin-bottom: 20px;
+}
+
+.credits p {
+  font-size: 0.9em;
+  line-height: 1.6em;
+}
+
+/* ======== MEDIA QUERIES ======== */
+@media screen and (max-width: 800px) {
+  .cometes {
+    display: none;
+  }
+
+  .arriba h1 {
+    font-size: 34px;
+    line-height: 37px;
+    margin: 20px 0;
+  }
+
+  .mobil {
+    display: inline;
+  }
+
+  .pregunta {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  .respuesta {
+    font-size: 18px;
+  }
+
+  .destacado {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 40px;
+  }
+
+  .foto-bbva p {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .arriba h1 {
+    font-size: 32px;
+    padding: 0 4px;
+  }
+
+  .pregunta {
+    font-size: 17px;
+  }
+  .blanco{
+    padding: 0px 20px
+  }
+
+  .respuesta {
+    font-size: 17px;
+  }
+  .abajo div{
+    margin-bottom: 40px;
+  }
+
+  .foto-bbva .peufoto p {
+    background-color: black;
+    color: white;
+    padding: 7px;
+    font-size: 12px;
+  }
+
+  .barra-a p {
+    font-size: 12px;
+  }
+
+  .idiomes {
+    padding-top: 10px;
+  }
+
+  .destacado {
+    font-size: 32px;
+  }
+}
