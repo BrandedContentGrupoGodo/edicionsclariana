@@ -206,7 +206,7 @@ body:has(.popup-new:target){
 /* Móvil */
 @media (max-width: 600px){
     .text-new {
-    position: initial;
+    position: initial!important;
     }
   .popup-new{ padding: 10px !important; }
   .popup-content-new{
