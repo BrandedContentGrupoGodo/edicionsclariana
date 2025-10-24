@@ -116,78 +116,115 @@
 
 /* === POPUP responsive y accesible === */
 
-/* Estado base: oculto */
-.popup-new{
-  position: fixed !important;
-  inset: 0 !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  background: rgba(0,0,0,.65) !important;
-  padding: 16px !important;
-  opacity: 0 !important;
-  visibility: hidden !important;
-  pointer-events: none !important;
-  transition: opacity .25s ease, visibility .25s ease !important;
-  z-index: 9999 !important;
+/* === POPUP completamente responsive con scroll interno === */
+
+/* Fondo del popup */
+.popup-new {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.65);
+  padding: 16px;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity .25s ease, visibility .25s ease;
+  z-index: 9999;
 }
 
-/* Mostrar cuando tiene el hash (#popup-x) */
-.popup-new:target{
-  opacity: 1 !important;
-  visibility: visible !important;
-  pointer-events: auto !important;
+.popup-new:target {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
-/* Evita que la página del fondo se desplace cuando el modal está abierto */
+/* Bloquear scroll del fondo cuando el popup está activo */
 html:has(.popup-new:target),
-body:has(.popup-new:target){
-  overflow: hidden !important;
+body:has(.popup-new:target) {
+  overflow: hidden;
 }
 
-/* Contenedor del modal */
-.popup-content-new{
-  background: #fff !important;
-  width: min(920px, 100%) !important;
-  max-height: 90vh !important;
-  border-radius: 16px !important;
-  overflow: hidden !important;
-  box-shadow: 0 10px 30px rgba(0,0,0,.25) !important;
-
-  /* 2 columnas en escritorio */
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
+/* Contenedor del popup */
+.popup-content-new {
+  background: #fff;
+  width: min(900px, 95vw);
+  max-height: 90vh;              /* limita altura visible */
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-/* Imagen */
-.popup-content-new > img{
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
+/* Imagen superior */
+.popup-content-new > img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Texto: que sea scrollable si se pasa de alto */
-.popup-text-new{
-  padding: 24px !important;
-  overflow: auto !important;
+/* Contenedor de texto con scroll interno */
+.popup-text-new {
+  flex: 1 1 auto;
+  overflow-y: auto;              /* scroll solo vertical dentro del texto */
+  -webkit-overflow-scrolling: touch;
+  padding: 24px;
 }
 
-/* Botón cerrar: área táctil grande */
-.close-new{
-  position: absolute !important;
-  top: 10px !important;
-  right: 14px !important;
-  font-size: 28px !important;
-  line-height: 1 !important;
-  text-decoration: none !important;
-  color: #1f2937 !important;
-  width: 40px !important;
-  height: 40px !important;
-  display: grid !important;
-  place-items: center !important;
-  border-radius: 50% !important;
-  background: rgba(255,255,255,.85) !important;
+/* Botón cerrar */
+.close-new {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 28px;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 10;
+  background: rgba(255,255,255,0.9);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+/* Diseño adaptable */
+@media (min-width: 768px) {
+  .popup-content-new {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: 80vh; /* un poco menos en escritorio */
+  }
+
+  .popup-content-new > img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .popup-text-new {
+    padding: 32px;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup-content-new {
+    flex-direction: column;
+    width: 95vw;
+    max-height: 90vh;
+  }
+
+  .popup-content-new > img {
+    max-height: 35vh;
+    object-fit: cover;
+  }
+
+  .popup-text-new {
+    max-height: 55vh; /* espacio reservado al texto scrollable */
+  }
 }
 
 /* === Breakpoints === */
@@ -205,6 +242,13 @@ body:has(.popup-new:target){
 
 /* Móvil */
 @media (max-width: 600px){
+    .casa h1 {
+    font-size: clamp(2.5rem, 6vw, 3.4rem);
+    width: 85%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0px!important;
+}
     .text-new {
     position: initial!important;
     }
