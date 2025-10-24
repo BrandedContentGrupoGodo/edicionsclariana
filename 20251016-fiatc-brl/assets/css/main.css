@@ -114,155 +114,112 @@
 
 
 
-/* --- Forzar estilo de popups por :target --- */
-.popup-new {
+/* === POPUP responsive y accesible === */
+
+/* Estado base: oculto */
+.popup-new{
   position: fixed !important;
   inset: 0 !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
   background: rgba(0,0,0,.65) !important;
-  padding: 20px !important;
+  padding: 16px !important;
   opacity: 0 !important;
   visibility: hidden !important;
   pointer-events: none !important;
-  transition: opacity .3s ease, visibility .3s ease !important;
+  transition: opacity .25s ease, visibility .25s ease !important;
   z-index: 9999 !important;
 }
 
-.popup-new:target {
+/* Mostrar cuando tiene el hash (#popup-x) */
+.popup-new:target{
   opacity: 1 !important;
   visibility: visible !important;
   pointer-events: auto !important;
 }
 
-.popup-content-new {
-  background: #fff !important;
-  max-width: 900px !important;
-  width: 95% !important;
-  border-radius: 12px !important;
+/* Evita que la página del fondo se desplace cuando el modal está abierto */
+html:has(.popup-new:target),
+body:has(.popup-new:target){
   overflow: hidden !important;
-  position: relative !important;
-  display: flex !important;
-  flex-direction: column !important;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.25) !important;
 }
 
-.popup-content-new img {
+/* Contenedor del modal */
+.popup-content-new{
+  background: #fff !important;
+  width: min(920px, 100%) !important;
+  max-height: 90vh !important;
+  border-radius: 16px !important;
+  overflow: hidden !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,.25) !important;
+
+  /* 2 columnas en escritorio */
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+}
+
+/* Imagen */
+.popup-content-new > img{
   width: 100% !important;
-  height: auto !important;
+  height: 100% !important;
+  object-fit: cover !important;
   display: block !important;
 }
 
-.popup-text-new {
+/* Texto: que sea scrollable si se pasa de alto */
+.popup-text-new{
   padding: 24px !important;
+  overflow: auto !important;
 }
 
-.close-new {
+/* Botón cerrar: área táctil grande */
+.close-new{
   position: absolute !important;
   top: 10px !important;
-  right: 15px !important;
+  right: 14px !important;
   font-size: 28px !important;
-  color: #000 !important;
+  line-height: 1 !important;
   text-decoration: none !important;
-  font-weight: bold !important;
+  color: #1f2937 !important;
+  width: 40px !important;
+  height: 40px !important;
+  display: grid !important;
+  place-items: center !important;
+  border-radius: 50% !important;
+  background: rgba(255,255,255,.85) !important;
 }
 
-@media (max-width: 768px) {
-  .popup-content-new {
-    width: 90% !important;
+/* === Breakpoints === */
+
+/* Tablet */
+@media (max-width: 992px){
+  .popup-content-new{
+    grid-template-columns: 1fr !important;   /* apilar imagen y texto */
+    width: min(720px, 96vw) !important;
+  }
+  .popup-content-new > img{
+    height: 38vh !important;                 /* imagen con altura controlada */
   }
 }
 
-
-
-    /* Popup */
-    .popup-new {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0,0,0,0.5);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 100;
+/* Móvil */
+@media (max-width: 600px){
+    .text-new {
+    position: initial;
     }
-
-    .popup-new:target {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  .popup-new{ padding: 10px !important; }
+  .popup-content-new{
+    width: 96vw !important;
+    max-height: 92vh !important;
+    border-radius: 12px !important;
+  }
+  .popup-content-new > img{
+    height: 32vh !important;
+  }
+  .popup-text-new{ padding: 16px !important; }
 }
 
-    .popup-new.active-new {
-      display: flex;
-    }
-
-    .popup-content-new {
-      background: #fffaf0;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 900px;
-      display: flex;
-      flex-direction: row;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      animation: fadeIn-new 0.3s ease;
-      position: relative;
-    }
-
-    .popup-content-new img {
-      width: 45%;
-      object-fit: cover;
-    }
-
-    .popup-text-new {
-      padding: 40px;
-      font-size: 1.2rem;
-      color: #333;
-      width: 100%;
-      background: #fff4e0;
-     
-    }
-
-    .popup-text-new h3 {
-      margin-top: 0;
-      color: #1b3a4b;
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      padding-right: 40px;
-      font-family: prata, serif;
-    }
-
-    .close-new {
-      position: absolute;
-      top: 15px;
-      right: 25px;
-      font-size: 24px;
-      color: #555;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    @keyframes fadeIn-new {
-      from { opacity: 0; transform: translateY(-10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 700px) {
-      .popup-content-new {
-        flex-direction: column;
-      }
-      .popup-content-new img {
-        width: 100%;
-        height: 200px;
-      }
-      .popup-text-new {
-        width: 100%;
-      }
-    }
 
 
 .foto-peu {
