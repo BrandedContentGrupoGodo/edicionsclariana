@@ -24,6 +24,12 @@
       margin: 0 auto;
     }
 
+    #close {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
     .card-new {
       position: relative;
       border-radius: 10px;
