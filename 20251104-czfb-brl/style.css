@@ -1,0 +1,522 @@
+/* =============== RESET & BASE =============== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #fff;
+  overflow-x: hidden;
+  background: #000;
+}
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =============== HEADER =============== */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  color: #000;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.menu {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  justify-content: center;
+  flex: 1;
+}
+.menu a {
+  color: #000;
+  text-decoration: none;
+  position: relative;
+}
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s ease;
+}
+.menu a:hover::after {
+  width: 100%;
+}
+@media (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+}
+
+/* =============== HERO PRINCIPAL =============== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+  overflow: hidden;
+}
+.hero video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+.hero .overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+.text-block {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0 5vw;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.text-block.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.text-inner {
+  max-width: 600px;
+  width: 100%;
+}
+.text-block h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  line-height: 1.15;
+}
+.text-block p {
+  font-size: 1.65rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+@media (max-width: 700px) {
+  .text-block {
+    justify-content: center;
+    text-align: center;
+  }
+  .text-inner {
+    max-width: 90%;
+  }
+  .text-block h1 {
+    font-size: 2rem;
+  }
+  .text-block p {
+    font-size: 1rem;
+  }
+}
+
+/* =============== SECCIONS BLANQUES =============== */
+.slice {
+  position: relative;
+  background: #fff;
+  color: #000;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+  opacity: 1;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+.slice.fade-start {
+  transform: translateY(100px);
+}
+.slice.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+.slice .content {
+  max-width: 900px;
+  width: 100%;
+  padding: 6rem 1.5rem;
+}
+.slice h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  margin-bottom: 2rem;
+  font-weight: 800;
+}
+.slice h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 2rem 0 1rem;
+}
+.slice p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+/* =============== IMATGE RENDER =============== */
+.render {
+  position: relative;
+  margin: 3rem 0;
+  width: 115%;
+  left: -7.5%;
+}
+.render img {
+  width: 100%;
+  border-radius: 4px;
+}
+
+
+/* =============== VÍDEO FINAL HERO =============== */
+.video-final {
+  position: relative;
+  width: 115%;
+  left: -7.5%;
+  margin: 4rem 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+.video-final video {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+.video-final .video-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* =============== ENTREVISTA =============== */
+.entrevista {
+  margin-top: 3rem;
+  text-align: center;
+}
+.linia {
+  border-top: 1px solid #000;
+  margin-bottom: 1.5rem;
+}
+.capsalera {
+  text-transform: uppercase;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.persones {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-size: 1.35rem;
+}
+.persona strong {
+  font-weight: 800;
+}
+.persona span {
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ===== VÍDEO YOUTUBE — SOBRESURT I CENTRAT ===== */
+.video-entrevista {
+  margin: 3rem 0;
+  width: 115%;
+  max-width: none;
+  position: relative;
+  left: -7.5%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* relació 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
+/* =============== TEXT SECCIÓ + DESTACATS =============== */
+.text-seccio p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+.destacat {
+  font-weight: 200;
+  text-transform: uppercase;
+  font-size: 1.45rem;
+  line-height: 1.6;
+  letter-spacing: 0.02em;
+  padding: 2rem 2.5rem;
+  margin: 3rem 0;
+  width: 115%;
+  left: -7.5%;
+  position: relative;
+  border-radius: 4px;
+  color: #000;
+}
+.destacat p {
+
+}
+
+/* =============== STORY SCROLL 2 =============== */
+.story-scroll {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+  overflow: hidden;
+}
+
+.story-scroll {
+  position: relative;
+  width: 100%;
+  min-height: 300vh;
+  overflow: hidden;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Aplica el fondo en línea o via CSS */
+.story-scroll::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+}
+.story-scroll .text-block {
+  position: relative;
+  z-index: 1;
+}
+
+.story-scroll .overlay {
+  position: absolute; /* abans era fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: -1;
+}
+.story-scroll .text-block {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: left;
+  padding: 0 5vw;
+  opacity: 1;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+  color: #fff;
+}
+.story-scroll .text-block.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.story-scroll .text-inner {
+  max-width: 650px;
+}
+.story-scroll h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+.story-scroll p {
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+
+
+/* =============== STORY SCROLL 3 (text a la dreta) =============== */
+.story-scroll-right .text-block {
+  justify-content: flex-end; /* mou el text a la dreta */
+  text-align: right;
+  padding-right: 5vw;
+}
+
+.story-scroll-right .text-inner {
+  max-width: 650px;
+}
+
+.story-scroll-right h2,
+.story-scroll-right p {
+  color: #fff;
+}
+
+.story-scroll-right .bg {
+
+  position: absolute; /* 🔥 important: NO fixed */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+    background-attachment: fixed; 
+}
+
+
+
+/* =============== POST-STORY =============== */
+#post-story {
+  background: #fff;
+  color: #000;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 1s ease-out;
+}
+#post-story.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* =============== ANIMACIONS =============== */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.9s ease-out;
+}
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =============== RESPONSIVE =============== */
+@media (max-width: 1000px) {
+  .render,
+  .video-entrevista,
+  .video-final,
+  .destacat {
+    width: 100%;
+    left: 0;
+    padding: 1.5rem;
+  }
+}
+
+
+/* =============== FOOTER CRÈDITS =============== */
+footer.credits {
+  background: #fff;
+  color: #333;
+  text-align: center;
+  padding: 4rem 1.5rem 3rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  z-index: 5;
+}
+
+footer.credits hr {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+footer.credits h4 {
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #222;
+}
+
+footer.credits p {
+  max-width: 900px;
+  margin: 0 auto;
+  color: #555;
+}
+
+@media (max-width: 700px) {
+  footer.credits {
+    font-size: 0.85rem;
+    padding: 3rem 1rem 2rem;
+  }
+}
+
+
+/* === FIX per a fons en mòbil: menys alçada i millor enquadrament === */
+@media (max-width: 768px) {
+  .story-scroll,
+  .story-scroll-right {
+    background-attachment: scroll !important; /* Evita error iOS */
+    background-size: cover !important; /* Mostra tota la imatge sense tallar */
+    background-repeat: no-repeat;
+    background-position: center top !important;
+    min-height: 120vh; /* Abans 200vh — ara més baixa */
+  }
+
+  /* Si encara vols menys alçada, pots provar 100vh o 110vh */
+  /* .story-scroll,
+  .story-scroll-right {
+    min-height: 100vh;
+  } */
+
+  .story-scroll .text-block,
+  .story-scroll-right .text-block {
+    height: 100vh; /* Que el text quedi centrat dins l’alçada nova */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 1.5rem;
+  }
+
+  .story-scroll .text-inner,
+  .story-scroll-right .text-inner {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
