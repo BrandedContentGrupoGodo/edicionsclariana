@@ -470,6 +470,7 @@ body.nav-open {
   cursor: pointer;
   font-family: "Roboto", system-ui, sans-serif;
   font-size: 18px;
+  color: #111111!important;
 }
 
 .cr-accordion__label {
