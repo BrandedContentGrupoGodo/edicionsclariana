@@ -898,7 +898,7 @@ body.nav-open {
 
   /* lleuger ajust de tipografia perquè hi càpiga millor */
   .call-card__text {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.55;
   }
 }
