@@ -881,6 +881,28 @@ body.nav-open {
   cursor: pointer;
 }
 
+
+/* Correccions per als 4 quadrats en mòbil */
+@media (max-width: 600px) {
+  /* augmentem l'alçada mínima del flip */
+  .call-card__inner {
+    min-height: 320px; /* prova 320–360 si cal encara més espai */
+  }
+
+  /* fem que el text de la cara posterior no surti del marc */
+  .call-card__face--back {
+    padding: 14px 14px 18px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* lleuger ajust de tipografia perquè hi càpiga millor */
+  .call-card__text {
+    font-size: 13px;
+    line-height: 1.55;
+  }
+}
+
 /* RESPONSIVE ================================================== */
 
 @media (min-width: 768px) {
