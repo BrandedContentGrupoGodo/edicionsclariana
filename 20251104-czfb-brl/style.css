@@ -76,7 +76,7 @@ header {
   overflow: hidden;
 }
 .hero video {
-  position: static;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -519,4 +519,3 @@ footer.credits p {
     margin: 0 auto;
   }
 }
-
