@@ -140,6 +140,73 @@ header {
   }
 }
 
+
+/* HERO amb imatge */
+/* =============== HERO PRINCIPAL (CAPA FIXA REAL) =============== */
+.hero.hero-img{
+  position: relative;
+  width: 100%;
+  height: 300vh;   /* els textos fan scroll */
+  overflow: hidden;
+  background: none; /* IMPORTANT */
+}
+
+/* capa de fons FIXA sempre 100vh */
+.hero-bg{
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100%;
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251104-czfb-brl/assets/render.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+  transform: translateZ(0);  /* ajuda iOS */
+  will-change: transform;
+}
+
+/* overlay igual que abans */
+.hero.hero-img .overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: -1;
+}
+
+/* ja no hi ha vídeo */
+.hero video{ display:none; }
+
+/* overlay igual */
+.hero.hero-img .overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  z-index: -1;
+}
+
+/* IMPORTANT: si ja no hi ha vídeo, amaga'l */
+.hero video{ display:none; }
+
+/* FIX per iPhone (Chrome inclòs) */
+@media (max-width: 800px){
+  .hero.hero-img{
+    background-attachment: scroll !important;
+  }
+  .hero.hero-img::before{
+    content:"";
+    position: fixed;
+    inset: 0;
+    background-image: inherit;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -2;
+    transform: translateZ(0);
+  }
+}
+
+
 /* =============== SECCIONS BLANQUES =============== */
 .slice {
   position: relative;
