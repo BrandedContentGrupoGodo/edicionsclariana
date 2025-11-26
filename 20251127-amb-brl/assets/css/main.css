@@ -1,0 +1,749 @@
+/* =============== RESET & BASE =============== */
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter', sans-serif;
+
+  overflow-x:hidden;
+
+}
+img,video{max-width:100%;height:auto;display:block}
+
+/* =============== HEADER =============== */
+header{
+  position:fixed;top:0;left:0;width:100%;
+  background:#fff;color:#000;z-index:10;
+  display:flex;align-items:center;gap:1rem;
+  padding:0.75rem 2rem;box-shadow:0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* TITULARS PRINCIPALS */
+h1, h2, h3,
+.text-block h1,
+.text-block h2,
+.story-scroll h2,
+.story-scroll-right h2,
+.destacat {
+  font-family: "Anton", sans-serif;
+  font-weight: 400; /* Anton només té un pes */
+  letter-spacing: 0.5px;
+}
+
+.text-block h1 {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(3.5rem, 6vw, 6rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+.slice h2 {
+  font-family: "Anton", sans-serif;
+  font-size: clamp(2.2rem, 3.2vw, 3.4rem);
+  font-weight: 400;
+}
+.destacat {
+  font-family: "Anton", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.35;
+  text-transform: uppercase;
+  background: #f3f3f3;
+}
+
+/* TIPUS PARRAFO, MENÚ I TEXT NORMAL */
+p, li, a, span, blockquote, .menu a, .text-seccio p {
+  font-family: "Inter", sans-serif;
+}
+
+.logo{display:flex;align-items:center}
+.menu{
+  display:flex;gap:1.5rem;font-size:.95rem;font-weight:600;
+  justify-content:center;flex:1;
+  text-decoration:none;position:relative;
+}
+.menu a {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color:#000;text-decoration:none;
+}
+.menu a::after{
+  content:'';position:absolute;left:0;bottom:-4px;height:2px;width:0;
+  background:#000;transition:width .3s ease;
+}
+.menu a:hover:{color:#00ee00}
+.lang{display:flex;align-items:center;gap:.35rem;font-weight:700}
+.lang a{color:#000;text-decoration:none;opacity:.5}
+.lang a.active{opacity:1}
+@media(max-width:800px){.menu{display:none}header{padding:.75rem 1rem}}
+
+/* =============== HERO (VIDEO STICKY) =============== */
+.hero{
+  position:relative;height:300vh;background:#000;isolation:isolate;
+}
+.hero-media{
+  position:sticky;top:0;height:100vh;width:100%;z-index:-1;
+}
+.hero-media video{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+}
+.hero-overlay{
+  position:absolute;inset:0;background:rgba(0,0,0,0.45);
+}
+.text-block{
+  position:relative;height:100vh;display:flex;align-items:center;
+  justify-content:flex-start;text-align:left;padding:0 5vw;
+  opacity:0;transform:translateY(40px);
+  transition:opacity .8s ease, transform .8s ease;
+}
+.text-block.show{opacity:1;transform:translateY(0)}
+.text-inner{max-width:650px;width:100%}
+.text-block h1{
+  font-size:clamp(3rem,6vw,5rem);font-weight:800;line-height:1.1;
+}
+.text-block p{
+  font-size:clamp(1.1rem,2.2vw,1.65rem);line-height:1.6;
+}
+@media(max-width:700px){
+  .text-block{justify-content:center;text-align:center}
+  .text-inner{max-width:90%}
+}
+
+/* =============== SLICES (SECCIONS BLANQUES) =============== */
+.slice{
+  position:relative;background:#fff;color:#000;width:100%;
+  display:flex;justify-content:center;z-index:5;
+  transform:translateY(100px);opacity:0;
+  transition:transform 1s ease-out, opacity 1s ease-out;
+}
+.slice.visible{transform:translateY(0);opacity:1}
+.slice .content{
+  max-width:900px;width:100%;padding:0rem 1.5rem;
+}
+.slice h2{
+  font-size:clamp(1.8rem,3vw,2.6rem);margin-bottom:1rem;font-weight:800;
+}
+.slice h3{font-size:1.35rem;font-weight:700;margin:2rem 0 1rem}
+.slice p{font-size:1.125rem;line-height:1.6;margin-bottom:1.2rem}
+
+/* sobresortints (imatges / vídeos / destacats) */
+.render, .video-wide, .destacat{
+  position:relative;margin:3rem 0;width:115%;left:-7.5%;
+}
+.render img{width:100%;border-radius:6px}
+
+/* vídeo sobresortint */
+.video-wide video{
+  width:100%;border-radius:6px;box-shadow:0 4px 20px rgba(0,0,0,0.12);
+}
+
+/* destacat sobresortint */
+.destacat{
+  padding:2rem 2.5rem;border-radius:6px;font-weight:700;
+  text-transform:uppercase;letter-spacing:.02em;line-height:1.6;color:#000;
+  background:#f5f5f5;
+}
+
+/* =============== STORY SCROLLS (FONS FIX) =============== */
+.story-scroll{
+  position:relative;width:100%;height:300vh;overflow:hidden;
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  background-attachment:fixed;
+}
+.story-scroll::before{
+  content:"";position:absolute;inset:0;background:rgba(0,0,0,.45);z-index:0;
+}
+.story-scroll .text-block{
+  z-index:1;color:#fff;
+}
+
+/* story scroll dreta */
+.story-scroll-right .text-block{
+  justify-content:flex-end;text-align:right;
+}
+.story-scroll-right .text-inner{max-width:650px}
+
+/* mòbil: evita bugs i mostra més foto */
+@media(max-width:768px){
+  .story-scroll,.story-scroll-right{
+    background-attachment:scroll!important;
+    background-size:contain!important;
+    background-position:center top!important;
+    min-height:120vh;
+  }
+  .story-scroll .text-block,
+  .story-scroll-right .text-block{
+    height:100vh;justify-content:center;text-align:center;padding:0 1.5rem;
+  }
+}
+
+/* =============== ANIMACIÓ FADE-UP =============== */
+.fade-up{
+  opacity:0;transform:translateY(40px);transition:all .9s ease-out;
+}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+
+/* =============== FOOTER CRÈDITS =============== */
+footer.credits{
+  background:#fff;color:#333;text-align:center;z-index:5;
+  padding:4rem 1.5rem 3rem;font-size:.95rem;line-height:1.6;
+}
+footer.credits hr{
+  width:90%;max-width:900px;margin:0 auto 2rem;border:none;border-top:1px solid #ddd;
+}
+footer.credits h4{
+  font-weight:700;font-size:1.2rem;margin-bottom:1rem;color:#222;
+}
+footer.credits p{max-width:900px;margin:0 auto;color:#555}
+
+@media(max-width:1000px){
+  .render,.video-wide,.destacat{width:100%;left:0;padding:1.5rem}
+}
+
+
+/* ===== HERO FOTO INICIAL ===== */
+.hero-photo{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background:#000;
+}
+
+.hero-photo img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* titular baix-dreta */
+.hero-photo__title{
+  position:absolute;
+  right:5vw;
+  bottom:6vh;
+  max-width: 48vw;
+  text-align:right;
+  z-index:2;
+}
+
+.hero-photo__title h1{
+  font-family:"Anton", sans-serif;
+  font-weight:400;
+  color:#fff;
+  text-transform:uppercase;
+  letter-spacing:0.02em;
+  line-height:1.05;
+  font-size:clamp(2.2rem, 4.5vw, 4rem);
+  text-shadow:0 3px 18px rgba(0,0,0,0.55);
+}
+
+/* ===== INTRO BLANC DESPRÉS ===== */
+.intro{
+  background:#fff;
+  color:#000;
+  display:flex;
+  justify-content:center;
+}
+
+.intro__content{
+  max-width:900px;
+  width:100%;
+  padding:1rem 1.5rem 0rem;
+}
+
+.intro__subtitle{
+  font-family:"Inter", sans-serif;
+  font-weight:200;
+  font-size:clamp(1.2rem, 2vw, 1.55rem);
+  line-height:1.55;
+  color:#444;
+  margin-bottom:2.5rem;
+}
+
+.intro__meta{
+  font-family:"Inter", sans-serif;
+  font-size:0.95rem;
+  color:#111;
+  margin-bottom:1.75rem;
+}
+
+.intro__author{
+  font-weight:700;
+}
+
+.intro__date{
+  font-weight:400;
+  margin-top:0.15rem;
+  color:#666;
+}
+
+.intro p{
+  font-family:"Inter", sans-serif;
+  font-size:1.08rem;
+  line-height:1.7;
+  color:#111;
+  margin-bottom:1.5rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px){
+  .hero-photo__title{
+    max-width: 80vw;
+    right:6vw;
+    bottom:5vh;
+  }
+}
+
+@media (max-width: 600px){
+  .hero-photo__title{
+    right:6vw;
+    bottom:5vh;
+    max-width: 88vw;
+    text-align:left;   /* en mòbil queda més llegible */
+  }
+  .hero-photo__title h1{
+    font-size:clamp(1.9rem, 7vw, 2.6rem);
+  }
+
+  .intro__content{
+    padding:3.5rem 1.25rem 2.5rem;
+  }
+}
+
+/* ===== ANIMACIÓ FADE-UP ===== */
+.fade-up{
+  opacity:0;
+  transform:translateY(40px);
+  transition:all .9s ease-out;
+  will-change: opacity, transform;
+}
+.fade-up.visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* Si JS no carrega per algun motiu, que NO quedi invisible */
+.no-js .fade-up{
+  opacity:1 !important;
+  transform:none !important;
+}
+
+
+/* ===== DESTACAT AMB (com disseny) ===== */
+.destacat--amb{
+  font-family:"Anton", sans-serif;
+  font-weight:400;
+  text-transform:uppercase;
+  color:#b11b17;              /* vermell titular */
+  background:transparent;     /* com al disseny, sense caixa */
+  padding:0;
+  margin:2.5rem 0 2.5rem;
+  width:70%;
+  left:15%;
+  position:relative;
+  font-size:clamp(1.6rem, 2.4vw, 2.2rem);
+  line-height:1.2;
+  letter-spacing:0.01em;
+}
+
+/* en mòbil no sobresurt */
+@media (max-width:1000px){
+  .destacat--amb{
+    width:100%;
+    left:0;
+  }
+}
+
+
+/* ===== ANIMACIÓ ENTRADA DES DE LA DRETA ===== */
+.fade-right {
+  opacity: 0;
+  transform: translateX(80px);
+  transition: all 0.9s ease-out;
+}
+
+.fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* FOTO ENTRANT PER L’ESQUERRA */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-80px);
+  transition: all .9s ease-out;
+}
+.fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.image-left-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+}
+
+.image-left-wrapper {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.image-left-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+.text-section .content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0rem 1.5rem 2rem 2rem;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.photo-caption {
+  font-family: "Inter", sans-serif;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+  text-align: left;        /* Peu alineat a l'esquerra */
+  padding-left: 0.2rem;
+}
+
+
+/* ===== SECCIÓ 3 CARDS ===== */
+.cases-3{
+  background:#f6f1ea;
+  color:#111;
+  padding:4.5rem 0 5rem;
+}
+.cases-3__content{
+  max-width:1100px;
+  margin:0 auto;
+  padding:0 1.5rem;
+}
+.cases-3__title{
+  font-family:"Anton", sans-serif;
+  font-size:clamp(2.2rem,4vw,3.4rem);
+  line-height:1.05;
+  margin-bottom:1rem;
+  color:#0c5f73; /* blau/verd com l’exemple */
+}
+.cases-3__intro{
+  font-family:"Inter", sans-serif;
+  font-size:1rem;
+  line-height:1.55;
+  max-width:520px;
+  color:#333;
+  margin-bottom:2.5rem;
+}
+
+/* ===== STACK SUPERPOSAT ===== */
+.cases-3__stack{
+  position:relative;
+  width:100%;
+  height:780px;
+}
+
+/* CARD BASE */
+.case-card{
+  position:absolute;
+  cursor:pointer;
+  isolation:isolate;
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+.case-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+}
+.case-card__bg{
+  position:absolute;
+  inset:-28px -28px auto auto;
+  width:420px;height:420px;
+  z-index:-1;
+}
+.case-card__bg--red{ background:#a51616; }
+.case-card__bg--green{ background:#2f8a2f; }
+.case-card__bg--blue{ background:#0a5570; }
+
+.case-card__img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+/* etiqueta país */
+.case-card__label{
+  position:absolute;
+  left:18px;
+  bottom:14px;
+  font-family:"Anton", sans-serif;
+  font-size:1.75rem;
+  letter-spacing:.02em;
+  color:#fff;
+  text-transform:uppercase;
+  text-shadow:0 2px 10px rgba(0,0,0,.6);
+}
+.case-card__label--tr{
+  left:auto;
+  right:18px;
+  top:14px;
+}
+
+/* POSICIONS (clavades al layout) */
+.case-card--siria{
+ width: 420px;
+    height: 420px;
+    left: 62px;
+    top: 40px;
+    z-index: 1;
+}
+.case-card--siria .case-card__bg{
+  left:-40px; top:-40px;
+}
+
+.case-card--mexic{
+         width: 420px;
+    height: 420px;
+    right: 20%;
+    top: 140px;
+    z-index: 2;
+}
+.case-card--mexic .case-card__bg{
+  right:-35px; top:-35px;
+}
+
+.case-card--mocambic{
+  width: 420px;
+    height: 420px;
+        left: 26%;
+    top: 360px;
+    z-index: 3;
+}
+.case-card--mocambic .case-card__bg{
+  left:-45px; top:35px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 980px){
+  .cases-3__stack{ height:720px; }
+
+  .case-card--siria{ left:0; top:0; }
+  .case-card--mexic{ right:0; top:220px; }
+  .case-card--mocambic{ left:0; top:460px; width:100%; height:340px; }
+}
+@media (max-width: 640px){
+  .cases-3__stack{
+    height:auto;
+    display:grid;
+    gap:1.6rem;
+  }
+  .case-card{
+    position:relative;
+    width:100% !important;
+    height:240px !important;
+    left:auto; right:auto; top:auto;
+  }
+  .case-card__bg{
+    width:170px; height:170px;
+    inset:-20px auto auto -20px;
+  }
+  .case-card--mexic .case-card__bg{
+    inset:-20px -20px auto auto;
+  }
+  .case-card__bg--red{
+    display:none;
+  }
+  .case-card__bg--green{
+    display:none;
+  }
+  .case-card__bg--blue{
+    display:none;
+  }
+}
+/* ANIMACIÓ DEL FONS DE COLOR (hover) */
+.case-card__bg {
+  transition: transform .25s ease, filter .25s ease, opacity .25s ease;
+}
+
+/* Fons més fosc + lleuger shrink */
+.case-card:hover .case-card__bg {
+  transform: scale(0.92);
+  filter: brightness(0.75); /* fosquet suau */
+}
+
+/* ===== MODALS ===== */
+.case-modal{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  display:none;
+}
+.case-modal.is-open{ display:block; }
+
+.case-modal__backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
+}
+
+.case-modal__panel{
+  position:relative;
+  width:min(1100px, 92vw);
+  max-height:92vh;
+  margin:4vh auto;
+  background:#f6f1ea;
+  overflow:auto;
+  border-radius:0;
+  box-shadow:0 20px 60px rgba(0,0,0,.35);
+  animation:modalIn .35s ease;
+}
+@keyframes modalIn{
+  from{ opacity:0; transform:translateY(20px) scale(.98); }
+  to{ opacity:1; transform:translateY(0) scale(1); }
+}
+
+.case-modal__close{
+  position:absolute;
+  top:12px;
+  right:12px;
+  background:#2f8a2f;
+  color:#fff;
+  font-family:"Inter", sans-serif;
+  font-weight:700;
+  font-size:0.9rem;
+  padding:0.6rem 1rem;
+  border:0;
+  cursor:pointer;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  gap:0.4rem;
+  border-radius:3px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.25);
+}
+.case-modal__media {
+  position:relative;
+}
+.case-modal__close span{
+  font-size:1.3rem;
+}
+
+.case-modal__close span{
+  font-size:1.2rem;
+  line-height:1;
+}
+
+.case-modal__media img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+.case-modal__body{
+  padding:2.2rem 2.4rem 2.8rem;
+}
+.case-modal__tag{
+  font-family:"Inter", sans-serif;
+  font-weight:700;
+  color:#2f8a2f;
+  margin-bottom:.6rem;
+}
+.case-modal__headline{
+  font-family:"Anton", sans-serif;
+  font-size:clamp(1.6rem,2.6vw,2.2rem);
+  line-height:1.2;
+  margin-bottom:1rem;
+  text-transform:uppercase;
+}
+.case-modal__body p{
+  font-family:"Inter", sans-serif;
+  font-size:1.05rem;
+  line-height:1.7;
+  color:#222;
+  margin-bottom:1rem;
+}
+
+@media (max-width:640px){
+  .case-modal__body{
+    padding:1.6rem 1.4rem 2rem;
+  }
+}
+
+
+/* ===== KICKER / TÍTOL PETIT ===== */
+.kicker{
+  font-family:"Inter", sans-serif;
+  font-weight:700;
+  font-size:1rem;
+  margin-bottom:1.2rem;
+  color:#111;
+}
+
+/* ===== IMATGE UNA MICA MÉS AMPLA ===== */
+.wide-media{
+  position:relative;
+  margin:2.5rem 0 2rem;
+  width:110%;
+  left:-5%;
+}
+.wide-media img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:4px;
+  box-shadow:0 6px 24px rgba(0,0,0,.12);
+}
+.wide-media .photo-caption{
+  margin-top:.6rem;
+}
+
+/* ===== DESTACATS VERDS AMBANT AMB OVERSHOOT ===== */
+.destacat-amb p{
+     font-family: "Anton", sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #2f8a2f; /* verd AMB */
+    background: transparent;
+    padding: 0;
+    margin: 2.5rem 0 2.5rem;
+    width: 70%;
+    left: 15%;
+    position: relative;
+    font-size: clamp(1.6rem, 2.4vw, 2.2rem);
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+    padding: 2rem 0;
+}
+.destacat-amb p{ margin:0; }
+
+/* variants per control visual */
+.destacat-amb--right{ text-align:left; }
+.destacat-amb--left{ text-align:left; }
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1000px){
+  .wide-media,
+  .destacat-amb{
+    width:100%;
+    left:0;
+    padding:1.6rem 1.4rem;
+  }
+  .destacat-amb{
+    font-size:1.35rem;
+  }
+}
+
+@media(max-width:600px){
+  .wide-media{ margin:2rem 0 1.5rem; }
+  .destacat-amb{
+    margin:2rem 0;
+    font-size:1.2rem;
+    line-height:1.2;
+  }
+}
