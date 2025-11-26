@@ -1,0 +1,2087 @@
+:root {
+  --lv-bg: #ffffff;
+  --lv-bg-alt: #f5f5f7;
+  --lv-text: #111111;
+  --lv-text-muted: #555555;
+  --lv-primary: #001a4d;
+  --lv-max-width: 1000px;
+  --lv-radius-lg: 20px;
+  --lv-radius-xl: 28px;
+  --lv-gap: 24px;
+
+  --lv-header-h-mobile: 64px;
+  --lv-header-h-desktop: 80px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: var(--lv-text);
+  background-color: var(--lv-bg-alt);
+}
+
+/* GENERAL LAYOUT */
+.lv-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lv-main {
+  flex: 1;
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 0 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ========================= HEADER ========================= */
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-header__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  height: var(--lv-header-h-mobile);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-header__logo img {
+  display: block;
+  height: 55px;
+  width: auto;
+}
+
+/* Hamburguesa */
+/* Botó menú mòbil (hamburguesa) */
+.site-header__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #c4c4c4;
+  background: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  z-index: 50;
+}
+
+.site-header__toggle span {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #111111;
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease, bottom 0.2s ease;
+}
+
+/* Les tres barres en estat normal */
+.site-header__toggle span:nth-child(1) {
+  top: 13px;
+}
+
+.site-header__toggle span:nth-child(2) {
+  top: 19px;
+}
+
+.site-header__toggle span:nth-child(3) {
+  top: 25px;
+}
+
+/* Estat obert -> creu */
+.site-header__toggle.is-open span:nth-child(1) {
+  top: 19px;
+  transform: rotate(45deg);
+}
+
+.site-header__toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.site-header__toggle.is-open span:nth-child(3) {
+  top: 19px;
+  transform: rotate(-45deg);
+}
+
+
+/* Navegación */
+.site-header__nav {
+  position: fixed;
+  inset: var(--lv-header-h-mobile) 0 0 0;
+  background: #ffffff;
+  transform: translateY(-110%);
+  transition: transform 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 24px;
+}
+
+.site-header__nav.is-open {
+  transform: translateY(0);
+}
+
+.site-header__menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.site-header__menu a {
+  text-decoration: none;
+  color: var(--lv-text);
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.site-header__menu a:hover {
+  text-decoration: underline;
+}
+
+.site-header__lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+}
+
+.site-header__lang-link {
+  text-decoration: none;
+  color: var(--lv-text-muted);
+  font-weight: 500;
+}
+
+.site-header__lang-link--active {
+  color: var(--lv-primary);
+}
+
+.site-header__lang-separator {
+  opacity: 0.5;
+}
+
+/* Evitamos que la página se desplace por detrás del menú abierto */
+body.nav-open {
+  overflow: hidden;
+}
+
+
+/* ========================= ARTICLE 25N ========================= */
+
+.article {
+  margin-top: 50px;               /* separació respecte del vídeo */
+}
+
+.article__inner {
+  max-width: 720px;               /* ample de columna de text */
+  margin: 0 auto;
+}
+
+.article__eyebrow {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #c30000;                 /* vermell accent 25N */
+}
+
+.article__title {
+  margin: 0 0 38px;
+  font-family: "Roboto", sans-serif; /* tot Jost aquí */
+  font-weight: 200;
+  font-size: clamp(22px, 3vw, 26px);
+  line-height: 1.35;
+  color: #111111;
+}
+
+.article__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.article__author {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.article__date {
+  margin: 0;
+  font-size: 18px;
+  color: var(--lv-text-muted);
+}
+
+.article__divider {
+  width: 100%;                    /* línia curta com al disseny */
+  border: none;
+  border-top: 2px solid #000000;
+  margin: 10px 0 22px;
+}
+
+.article__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article__body p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--lv-text);
+  text-align: left;
+}
+
+/* Responsive petits ajustos */
+@media (min-width: 768px) {
+  .article {
+    margin-top: 60px;
+  }
+
+  .article__title {
+    font-size: clamp(24px, 2.6vw, 26px);
+  }
+}
+
+/* ========================= STATS SECTION ========================= */
+
+.stats-section {
+  margin-top: 56px;
+}
+
+.stats-card {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stats-title {
+  margin: 0 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c30000;
+}
+
+.stats-divider {
+  border-top: 1px solid #000000;
+  margin: 4px 0;
+}
+
+.stats-divider--middle {
+  border-top-width: 6px;
+  border-top-color: #f3f3f3;
+  margin: 18px 0 16px;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 24px 32px;
+}
+
+/* Mòbil: 2 columnes */
+.stats-grid--top {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stats-grid--bottom {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-number {
+  margin: 0 0 6px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  color: #c30000;
+}
+
+.stat-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #111111;
+}
+
+.stat-item--source {
+  text-align: left;
+}
+
+.stat-source {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #444444;
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .stats-section {
+    margin-top: 64px;
+  }
+
+  .stats-title {
+    font-size: 17px;
+  }
+
+  .stats-grid--top {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-top: 20px;
+  }
+
+  .stats-grid--bottom {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    padding-bottom: 20px;
+  }
+
+  .stat-number {
+    font-size: 30px;
+  }
+
+  .stat-text {
+    font-size: 18px;
+  }
+
+  .stat-source {
+    font-size: 12px;
+  }
+}
+
+
+
+/* ========================= ARTICLE - IMPLICAR TOTA LA SOCIETAT ========================= */
+
+.article--implicar {
+  margin-top: 56px;
+}
+
+.article__heading {
+  margin: 0 0 16px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #111111;
+}
+
+.article--implicar .article__body {
+  gap: 18px;
+}
+
+.article__quote {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* Imatge + peu de foto */
+.article-media {
+  margin: 28px 0 30px;
+}
+
+.article-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.article-media__caption {
+  margin-top: 6px;
+  font-size: 11px;
+  color: #555555;
+}
+
+/* lleugers ajustos en desktop */
+@media (min-width: 768px) {
+  .article--implicar {
+    margin-top: 64px;
+  }
+
+  .article__heading {
+    font-size: 29px;
+  }
+}
+
+
+/* ========================= LA RESPOSTA DE LA CIUTAT ========================= */
+
+.city-response {
+  margin-top: 64px;
+}
+
+.city-response__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.city-response__title {
+  margin: 0 0 12px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c30000;
+}
+
+.city-response__list {
+  border-top: 1px solid #000;
+}
+
+/* ITEM */
+
+.cr-accordion {
+  border-bottom: 1px solid #000;
+}
+
+.cr-accordion__header {
+  width: 100%;
+  padding: 10px 4px;
+  background: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+}
+
+.cr-accordion__label {
+  flex: 1;
+}
+
+.cr-accordion__icon {
+  width: 14px;
+  height: 14px;
+  border-right: 1.5px solid #000;
+  border-bottom: 1.5px solid #000;
+  transform: rotate(45deg); /* flecha hacia abajo */
+  transition: transform 0.18s ease-out;
+}
+
+/* Estado abierto: rotamos la flecha */
+.cr-accordion.is-open .cr-accordion__icon {
+  transform: rotate(-135deg);
+}
+
+/* Panel de contenido */
+.cr-accordion__panel {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.22s ease-out;
+}
+
+.cr-accordion__content {
+  padding: 14px 4px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Imagen y texto */
+.cr-accordion__media img {
+  display: block;
+  width: 100%;
+  max-width: 460px;
+  height: auto;
+  background: #e6e6e6; /* placeholder si no hi ha imatge */
+}
+
+.cr-accordion__text p {
+  margin: 0 0 8px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.cr-accordion__contact {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+/* DESKTOP: imatge esquerra, text dreta */
+@media (min-width: 768px) {
+  .city-response {
+    margin-top: 72px;
+  }
+
+  .cr-accordion__header {
+    padding-inline: 0;
+  }
+
+  .cr-accordion__content {
+    padding-inline: 0;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 24px;
+  }
+
+  .cr-accordion__media {
+    flex: 0 0 460px;  /* amplada fixa similar a la maqueta */
+  }
+
+  .cr-accordion__text {
+    flex: 1;
+  }
+
+  .cr-accordion__text p {
+    font-size: 18px;
+  }
+}
+
+
+
+/* ========================= TIPOLOGIES VIOLÈNCIES DIGITALS ========================= */
+
+.digital-types {
+  margin-top: 64px;
+}
+
+.digital-types__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.digital-types__title {
+  margin: 0 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c30000;
+}
+
+.digital-types__divider {
+  border-top: 1px solid #000;
+  margin-bottom: 22px;
+}
+
+/* Pastilles */
+.digital-types__pills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 18px;
+  margin-bottom: 26px;
+}
+
+.dt-pill {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 8px 22px;
+  border-radius: 999px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  background: #c30000;
+  color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: background 0.18s ease, color 0.18s ease, transform 0.12s ease;
+}
+
+.dt-pill:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Actiu = pastilla beige com la maqueta */
+.dt-pill--active {
+  background: #e7e0cf;
+  color: #222222;
+}
+
+/* Targeta gris de contingut */
+.digital-types__card {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 20px 24px;
+  border-radius: 22px;
+  background: #f3f3f3;
+  text-align: left;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.18s ease, box-shadow 0.18s ease, opacity 0.18s ease;
+}
+
+.digital-types__card-title {
+  margin: 0 0 8px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #c30000;
+}
+
+.digital-types__card-text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222222;
+}
+
+/* Petita animació quan canvia el contingut */
+.digital-types__card--changing {
+  opacity: 0.92;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .digital-types {
+    margin-top: 72px;
+  }
+
+  .digital-types__card {
+    padding: 24px 28px;
+  }
+
+  .digital-types__card-text {
+    font-size: 18px;
+  }
+}
+
+
+/* ========================= FOOTER ========================= */
+
+.lv-footer {
+  margin-top: 72px;
+  background: #7a7a7a;
+  padding: 18px 12px 20px;
+  text-align: center;
+}
+
+.lv-footer__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.lv-footer__text {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #353535ff;
+}
+
+.lv-footer__text + .lv-footer__text {
+  margin-top: 6px;
+}
+
+.lv-footer__link {
+  color: #c30000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lv-footer__link:hover {
+  text-decoration: underline;
+}
+
+/* Mòbil una mica més petit */
+@media (max-width: 480px) {
+  .lv-footer__text {
+    font-size: 12px;
+  }
+}
+
+
+
+/* ========================= CRIDA A LA IMPLICACIÓ GENERAL ========================= */
+
+.call-section {
+  margin-top: 64px;
+}
+
+.call-section__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.call-section__title {
+  margin: 0 0 8px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #c30000;
+}
+
+.call-section__divider {
+  border-top: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.call-section__intro {
+  margin: 0 0 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #111111;
+}
+
+/* GRID */
+.call-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+/* Targeta base (també s'utilitza com contenidor del flip) */
+.call-card {
+  font-family: "Roboto", sans-serif;
+}
+
+/* QUADRAT 1 (vermell, sense flip) */
+.call-card--primary {
+  background: #c30000;
+  color: #ffffff;
+  padding: 22px 22px 24px;
+  min-height: 220px;
+}
+
+.call-card__title--primary {
+  margin: 0 0 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.call-card__text--primary {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* CARTES FLIPPABLES ================================================== */
+
+.call-card--flippable {
+  position: relative;
+  perspective: 1000px;
+  min-height: 220px;
+}
+
+/* conté la cara frontal i posterior */
+.call-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s ease;
+}
+
+/* quan està girat */
+.call-card--flippable.is-flipped .call-card__inner {
+  transform: rotateY(180deg);
+}
+
+/* cares del flip */
+.call-card__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border: none;
+  border-radius: 0;
+}
+
+/* --- FRONT: foto + banda vermella --- */
+.call-card__face--front {
+  display: flex;
+  flex-direction: column;
+  background: #e5f1f8;
+  overflow: hidden;
+}
+
+.call-card__front-image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+/* la imatge real la injectarem via JS amb data-bg */
+.call-card[data-bg] .call-card__front-image {
+  background-color: #e5f1f8;
+}
+
+.call-card__front-bar {
+  background: #c30000;
+  color: #ffffff;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.call-card__front-title {
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+}
+
+/* Fletxa tipus “>” amb línies */
+.call-card__arrow {
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+/* --- BACK: text sobre fons gris clar --- */
+.call-card__face--back {
+  background: #f4f4f4;
+  padding: 18px 18px 20px;
+  transform: rotateY(180deg);
+}
+
+.call-card__title {
+  margin: 0 0 8px;
+  font-weight: 600;
+  font-size: 23px;
+  color: #c30000;
+}
+
+.call-card__text {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #222222;
+}
+
+/* CURSOR */
+.call-card--flippable {
+  cursor: pointer;
+}
+
+/* RESPONSIVE ================================================== */
+
+@media (min-width: 768px) {
+  .call-section {
+    margin-top: 0px;
+  }
+
+  .call-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .call-card--primary,
+  .call-card--flippable {
+    min-height: 310px;
+  }
+
+  .call-card__title--primary {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .call-card--primary {
+    padding: 18px 16px 20px;
+  }
+}
+
+
+/* ========================= INFOGRAFIA ========================= */
+
+
+/* Article específic Pla Viure: Ampliar el parc */
+.article--parc {
+  margin-top: 56px;
+}
+
+.infografia-section {
+  margin-top: 64px;
+}
+
+.infografia__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.infografia__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #c30000;
+  margin: 0 0 20px;
+}
+
+/* Wrapper responsive mantenint el ratio original (1250x701) */
+.infografia__embed-wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0 6px 26px rgba(0,0,0,0.15);
+}
+/* Ratio per la infografia 1 */
+.ratio-831 {
+  padding-bottom: calc(831 / 1250 * 100%);
+}
+
+/* Ratio per la infografia 2 */
+.ratio-301 {
+  padding-bottom: calc(301 / 1250 * 100%);
+}
+.infografia__embed-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* En pantalles grans, una mica més ample, com la resta de seccions amples */
+@media (min-width: 1024px) {
+  .infografia__inner {
+    padding: 0; /* ja no cal padding lateral aquí */
+  }
+}
+
+/* En mòbil, marges laterals perquè no toqui la vora */
+@media (max-width: 600px) {
+  .infografia__inner {
+    padding: 0 12px;
+  }
+  /* Ratio per la infografia 2 */
+.ratio-301 {
+  padding-bottom: calc(651 / 450 * 100%);
+}
+}
+
+
+/* ===== TOGGLE DESKTOP / MOBILE INFOGRAFIA ===== */
+/* Per defecte: es veu la de desktop */
+.infografia--mobile { 
+  display: none; 
+}
+.infografia--desktop { 
+  display: block; 
+}
+
+/* A mòbil: amaga desktop i mostra mòbil */
+@media (max-width: 768px) {
+  .infografia--desktop { 
+    display: none; 
+  }
+  .infografia--mobile { 
+    display: block; 
+  }
+}
+
+/* ========================= FLIP BANNER – NOU DEPARTAMENT ========================= */
+
+.flip-section {
+  margin-top: 64px;
+}
+
+/* mateix comportament que la infografia */
+.flip-section__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 1024px) {
+  .flip-section__inner {
+    padding: 0;   /* igual que .infografia__inner */
+  }
+}
+
+/* contenidor general del flip */
+.flip-banner {
+  position: relative;
+  perspective: 1200px;
+  cursor: pointer;
+}
+
+.flip-banner__inner {
+  position: relative;
+  width: 100%;
+  min-height: 260px;
+  transform-style: preserve-3d;
+  transition: transform 0.55s ease;
+}
+
+/* quan està girat */
+.flip-banner--flippable.is-flipped .flip-banner__inner {
+  transform: rotateY(180deg);
+}
+
+/* cares */
+.flip-banner__face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+/* --- FRONT --- */
+
+.flip-banner__face--front {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.flip-banner__image {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+}
+
+/* la imatge s'injecta via JS des de data-bg */
+
+.flip-banner__bar {
+  background: #c30000;
+  color: #ffffff;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.flip-banner__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-align: left;
+}
+
+/* Fletxa tipus ">" */
+.flip-banner__arrow {
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+/* --- BACK --- */
+
+.flip-banner__face--back {
+  background: #f0f0f0;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  padding: 42px 24px 24px;
+  transform: rotateY(180deg);
+  position: relative;
+  min-height: 520px;
+}
+
+.flip-banner__text p {
+  margin: 0 0 14px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.flip-banner__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Botó X per tancar */
+
+.flip-banner__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: none;
+  background: #7a7a7a;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 768px) {
+  .flip-section__inner {
+    padding: 0;
+  }
+
+  .flip-banner__inner {
+    min-height: 520px;
+  }
+
+  .flip-banner__title {
+    font-size: 18px;
+  }
+}
+
+/* ---- Variant lateral: imatge esquerra + text dreta ---- */
+
+.flip-banner--side .flip-banner__face--front {
+  display: flex;
+  flex-direction: row;
+  background: #f5f5f5;
+  border-radius: 4px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* Imatge esquerra */
+.flip-banner__side-image {
+  flex: 0 0 38%;
+  min-height: 200px;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Text dreta */
+.flip-banner__side-content {
+  flex: 1;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.flip-banner__side-title {
+  margin: 0 0 10px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  color: #c30000;
+}
+
+.flip-banner__side-text {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* Fletxa vermella al peu */
+.flip-banner__arrow--red {
+  margin-top: 18px;
+  align-self: flex-start;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #c30000;
+  border-bottom: 2px solid #c30000;
+  transform: rotate(-45deg);
+}
+
+/* Mòbil: el frontal passa a columna (foto a dalt, text a baix) */
+@media (max-width: 640px) {
+  .flip-banner--side .flip-banner__face--front {
+    flex-direction: column;
+  }
+
+  .flip-banner__side-image {
+    flex-basis: auto;
+    min-height: 180px;
+  }
+}
+.article__inner a {
+  color: #c30000;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(195,0,0,0.4);
+  transition: 0.2s ease;
+}
+
+.article__inner a:hover {
+  border-bottom-color: #c30000;
+}
+
+
+
+/* ========================= FOTO + PEU DE FOTO ========================= */
+
+.photo-section {
+  margin-top: 56px;
+}
+
+.photo-section__inner {
+  max-width: var(--lv-max-width);  /* mateix ample que infografies i flip-banners */
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.photo-section__figure {
+  margin: 0;
+  text-align: left;
+}
+
+.photo-section__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-section__caption {
+  margin-top: 6px;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #111111;
+}
+
+.photo-section__credit {
+  font-size: 14px;
+  color: #555555;
+}
+
+/* en desktop traiem el padding lateral per alinear amb la resta de seccions amples */
+@media (min-width: 1024px) {
+  .photo-section__inner {
+    padding: 0;
+  }
+}
+
+
+
+
+/* ========================= HERO PLA VIURE (FOTO ESTÀTICA) ========================= */
+
+.hero-pla {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--lv-header-h-mobile));
+  margin: 0;
+  overflow: hidden;
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251122-ajuntament-brl/assets/img/pla-viure-hero.jpg"); /* placeholder */
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-pla__bg {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-pla__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.65) 0%,
+    rgba(0, 0, 0, 0.3) 35%,
+    rgba(0, 0, 0, 0.0) 100%
+  );
+}
+
+.hero-pla__content {
+  position: absolute;
+  left: 50%;
+  bottom: 80px; /* separació respecte el marge inferior */
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.hero-pla__eyebrow {
+  margin: 0 0 6px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.hero-pla__title {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 800;
+  font-size: clamp(26px, 4vw, 46px);
+  line-height: 1.2;
+  color: #ffffff;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* En desktop, compensem l'alçada del header més gran */
+@media (min-width: 768px) {
+  .hero-pla {
+    height: calc(100vh - var(--lv-header-h-desktop));
+  }
+
+  .hero-pla__content {
+    bottom: 90px;
+  }
+}
+
+
+/* ========================= HERO VIDEO ========================= */
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--lv-header-h-mobile)); /* ocupa pantalla completa */
+  margin: 0;
+  border-radius: 0;
+  overflow: hidden;
+}
+.hero-video__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.45) 40%,
+      rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+.hero-video__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: end;      /* CENTRADO vertical */
+  justify-content: center;  /* CENTRADO horizontal */
+  text-align: center;
+  padding: 220px 20px;
+  z-index: 2;
+}
+
+.hero-video__title {
+  margin: 0;
+  font-family: "roboto", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(28px, 4.5vw, 70px);
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* Flecha scroll (estil anterior recuperat) */
+.hero-video__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 5;
+}
+
+.hero-video__arrow {
+  width: 14px;
+  height: 14px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+  animation: arrow-bounce 1.5s infinite;
+}
+
+@keyframes arrow-bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  40% {
+    transform: translateY(4px) rotate(-45deg);
+  }
+  60% {
+    transform: translateY(2px) rotate(-45deg);
+  }
+}
+
+/* ========================= SECCIONES GENERALES ========================= */
+
+.lv-section {
+  background: var(--lv-bg);
+  border-radius: var(--lv-radius-lg);
+  padding: 20px 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.03);
+}
+
+.lv-section__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.lv-section__title {
+  margin: 0;
+  font-family: "roboto", system-ui, sans-serif;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--lv-primary);
+}
+
+.lv-section__text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--lv-text);
+}
+
+/* ========================= FOOTER ========================= */
+
+.lv-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+}
+
+.lv-footer__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 16px 16px 20px;
+}
+
+.lv-footer__copy {
+  margin: 0;
+  font-size: 12px;
+  color: var(--lv-text-muted);
+}
+
+/* ========================= RESPONSIVE ========================= */
+
+@media (min-width: 768px) {
+  .lv-main {
+    padding: 0 24px 48px;
+    gap: 40px;
+  }
+
+  .site-header__inner {
+    height: var(--lv-header-h-desktop);
+    padding: 0 24px;
+  }
+
+  /* En desktop el menú es horizontal y siempre visible */
+  .site-header__toggle {
+    display: none;
+  }
+
+  .site-header__nav {
+    position: static;
+    transform: none !important;
+    background: transparent;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    gap: 24px;
+  }
+
+  .site-header__menu {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+ .hero-video {
+    height: calc(100vh - var(--lv-header-h-desktop));
+  }
+
+  .hero-video__content {
+    padding-bottom: 110px;
+  }
+
+  .lv-section {
+    padding: 24px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lv-main {
+    padding: 0 0 56px;
+  }
+
+  .site-header__inner,
+  .lv-footer__inner {
+    padding-inline: 0;
+  }
+}
+
+
+/* ========================= CAROUSEL ========================= */
+
+.carousel {
+  position: relative;
+}
+
+/* Slides */
+.carousel__slide {
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel__slide.is-active {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Imatges */
+.carousel__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Peus de foto */
+.carousel__caption {
+  margin-top: 6px;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  text-align: left;
+}
+.carousel__credit {
+  font-size: 11px;
+  color: #555;
+}
+
+/* Fletxes */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  background: rgba(0,0,0,0.35);
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel__arrow--prev { left: 10px; }
+.carousel__arrow--next { right: 10px; }
+
+/* Icones de fletxa */
+.carousel__arrow::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  margin: auto;
+}
+.carousel__arrow--prev::before {
+  transform: rotate(-135deg);
+}
+.carousel__arrow--next::before {
+  transform: rotate(45deg);
+}
+
+/* Dots */
+.carousel__dots {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 12px;
+}
+.carousel__dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #bbbbbb;
+  border: 1px solid #ffffff;
+  cursor: pointer;
+}
+.carousel__dot.is-active {
+  background: #ffffff;
+}
+
+@media (min-width: 1024px) {
+  .carousel-section__inner { padding: 0; }
+}
+
+
+/* ========================= ARTICLE AMB DESTACAT ESQUERRA ========================= */
+/* ========================= ARTICLE AMB DESTACAT ESQUERRA ========================= */
+
+.article--diagnosi {
+  margin-top: 64px;
+}
+
+.article__inner--split {
+  display: flex;
+  gap: 32px;
+  align-items: center; /* Centra verticalment el destacat */
+}
+
+/* DESTACAT ESQUERRA */
+.article-highlight {
+  flex: 0 0 220px;
+  align-self: center; 
+  font-family: "Jost", sans-serif;
+  font-size: 21px;
+  line-height: 1.6;
+  color: #111111;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* BARRETA VERMELLA A SOBRE */
+.article-highlight__bar {
+  width: 80px;          /* ample igual que la maqueta */
+  height: 4px;          /* gruix igual */
+  background: #c30000;  /* vermell Ajuntament */
+  margin-bottom: 4px;
+}
+
+/* TEXT DESTACAT */
+.article-highlight__text {
+  margin: 0;
+  font-weight: 800;
+}
+
+/* COS DE TEXT DRETA */
+.article__content {
+  flex: 1;
+}
+
+.article__heading {
+  margin: 0 0 14px;
+  font-family: "Jost", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #111111;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .article__inner--split {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+
+  .article-highlight {
+    flex: none;
+    align-self: flex-start;
+  }
+
+  .article__heading {
+    font-size: 18px;
+  }
+}
+
+
+/* ========================= POPUP OFICINA DEL CATALÀ ========================= */
+
+.popup-section {
+  margin-top: 64px;
+}
+
+.popup-section__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* Targeta amb foto + franja vermella */
+.popup-card {
+  cursor: pointer;
+}
+
+.popup-card__image-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.popup-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.popup-card__bar {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 11%;
+    background: rgba(195, 0, 0, 0.9);
+    color: #ffffff;
+    padding: 42px 26px;
+    display: flex;
+   flex-direction: column;   /* 🔥 apila texto y flecha en columna */
+  align-items: center;      /* centra horizontalmente */
+  justify-content: center;
+  gap: 10px; 
+}
+
+.popup-card__title {
+  font-family: "Jost", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 31px;
+  text-align: center;
+}
+
+/* fletxa blanca */
+.popup-card__chevron {
+  width: 22px;
+  height: 22px;
+  border-right: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(45deg);
+}
+
+/* POPUP overlay */
+.popup-oficina {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 16px;
+}
+
+.popup-oficina.is-open {
+  display: flex;
+}
+
+/* Panell de contingut */
+.popup-oficina__panel {
+  max-width: 780px;
+  width: 100%;
+  background: #e8e0da;
+  padding: 18px 22px 22px;
+  position: relative;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* X de tancar */
+.popup-oficina__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: none;
+  background: #7a7a7a;
+  color: #ffffff;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+/* Franja d'imatges superior */
+.popup-oficina__image-strip img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 14px;
+}
+
+/* Text del popup */
+.popup-oficina__body p {
+  margin: 0 0 12px;
+  font-family: "Jost", system-ui, sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+  color: #333333;
+}
+
+.popup-oficina__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  .popup-section__inner {
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .popup-oficina__panel {
+    padding: 16px 16px 18px;
+  }
+
+  .popup-card__bar {
+    bottom: 12%;
+    padding-inline: 12px;
+  }
+
+  .popup-card__title {
+    font-size: 14px;
+  }
+}
+
+
+/* ========================= ENTREVISTA ========================= */
+
+.interview-section {
+  margin-top: 72px;
+}
+
+.interview__inner {
+  max-width: 720px;              /* una mica més estret, tipus revista */
+  margin: 0 auto;
+  padding: 0 16px;
+  text-align: center;
+}
+
+/* capçalera */
+.interview__eyebrow {
+  margin: 0 0 2px;
+  font-family: "Jost", system-ui, sans-serif;
+  font-size: 18px;
+  text-transform: underline;
+  color: #111111;
+}
+
+.interview__name {
+  margin: 0;
+  font-family: "Jost", system-ui, sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  color: #c30000;
+}
+
+.interview__role {
+  margin: 2px 0 16px;
+  font-family: "Jost", system-ui, sans-serif;
+  font-size: 18px;
+  color: #555555;
+}
+
+/* titular gran */
+.interview__title {
+  margin: 0 0 12px;
+  font-family: "Montserrat", system-ui, sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.25;
+  color: #111111;
+}
+
+/* intro */
+.interview__intro {
+  margin: 0 0 24px;
+  font-family: "Jost", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333333;
+}
+
+/* foto */
+.interview__figure {
+  margin: 0 0 24px;
+}
+
+.interview__photo {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* cos Q&A */
+.interview__body {
+  text-align: left;
+  font-family: "Jost", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #222222;
+}
+
+.interview__body p {
+  margin: 0 0 18px;
+}
+
+.interview__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* preguntes en negreta */
+.interview__body strong {
+  font-weight: 600;
+}
+
+/* responsive */
+@media (max-width: 600px) {
+  .interview__title {
+    font-size: 22px;
+  }
+  .interview__inner {
+    padding: 0 14px;
+  }
+}
+/* ========================= FOTO AMB PEU ========================= */
+
+.photo-section {
+  margin-top: 48px;
+}
+
+.photo-section__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.photo-block {
+  margin: 0;
+}
+
+.photo-block__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.photo-block__caption {
+  margin-top: 6px;
+  font-family: "Jost", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+  color: #111;
+  text-align: left;
+}
+
+.photo-block__caption .credit {
+  color: #666666;
+  font-size: 11px;
+}
+
+/* desktop */
+@media (min-width: 1024px) {
+  .photo-section__inner {
+    padding: 0;
+  }
+}
+
+
+/* =========================== TEXT + HIGHLIGHT (RIGHT) =========================== */
+
+.text-with-highlight {
+  margin: 60px 0;
+}
+
+.twh__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 48px;
+  align-items: center; /* centra verticalment el destacat */
+}
+
+
+
+/* DESTACAT */
+.twh__highlight {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.twh__highlight-bar {
+  width: 40px;
+  height: 4px;
+  background-color: #c4161c;
+  margin-bottom: 12px;
+}
+
+.twh__highlight-text {
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.35;
+  color: #000;
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 900px) {
+  .twh__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .twh__highlight {
+    margin-top: 12px;
+  }
+
+  .twh__highlight-text {
+    font-size: 17px;
+  }
+}
