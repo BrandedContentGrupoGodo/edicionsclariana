@@ -991,7 +991,7 @@ body {
 /* FOTO NORMAL (NO sticky) */
 .feature__bg {
   position: relative;
-  height: clamp(260px, 70vh, 520px); /* alçada còmoda en desktop/mòbil */
+  height: clamp(260px, 70vh, 1220px); /* alçada còmoda en desktop/mòbil */
   overflow: hidden;
 }
 
