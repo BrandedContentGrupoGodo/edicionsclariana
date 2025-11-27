@@ -178,7 +178,7 @@ body {
   position: sticky;
   min-height: 100vh;
   top: 0;
-  z-index: 1;
+  z-index: 0;
 }
 
 /* capa del vídeo de fons, fixa */
