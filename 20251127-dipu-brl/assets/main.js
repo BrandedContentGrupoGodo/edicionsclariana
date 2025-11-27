@@ -21,8 +21,7 @@ if (navMenu && menuToggle) {
 }
 
 /***************************************************************
- * REVEAL-ON-SCROLL COMPATIBLE AMB LA VANGUARDIA
- * (sense IntersectionObserver)
+ * REVEAL-ON-SCROLL – COMPATIBLE AMB IFRAME / LA VANGUARDIA
  ***************************************************************/
 const revealElements = document.querySelectorAll(".reveal-on-scroll");
 
@@ -37,10 +36,30 @@ function revealOnScroll() {
   });
 }
 
-// Executem en els moments clau
-window.addEventListener("load", revealOnScroll);
-window.addEventListener("scroll", revealOnScroll);
-window.addEventListener("resize", revealOnScroll);
+// seguiment del scroll per detectar si hi ha moviment real
+let lastScrollY = window.scrollY;
+let scrollHasMoved = false;
 
-// Per si ja hi ha elements visibles de bon principi
+window.addEventListener("scroll", () => {
+  if (window.scrollY !== lastScrollY) {
+    scrollHasMoved = true;
+    lastScrollY = window.scrollY;
+  }
+  revealOnScroll();
+});
+
+window.addEventListener("resize", revealOnScroll);
+window.addEventListener("load", () => {
+  revealOnScroll();
+
+  // PLA C: si després d'una estona NO hi ha hagut scroll real,
+  // forcem que tot sigui visible igualment (cap text queda "bloquejat")
+  setTimeout(() => {
+    if (!scrollHasMoved) {
+      revealElements.forEach((el) => el.classList.add("is-visible"));
+    }
+  }, 1500);
+});
+
+// crida extra per si algun element ja és visible d'entrada
 revealOnScroll();
