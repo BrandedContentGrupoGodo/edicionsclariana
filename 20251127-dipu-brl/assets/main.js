@@ -21,11 +21,8 @@ if (navMenu && menuToggle) {
 }
 
 /***************************************************************
- * REVEAL-ON-SCROLL (VERSIÓ 100% COMPATIBLE IFRAME / LV)
- * 
- * IMPORTANT:
- * - NO utilitza IntersectionObserver
- * - Funciona en absolut tots els navegadors i iframes
+ * REVEAL-ON-SCROLL COMPATIBLE AMB LA VANGUARDIA
+ * (sense IntersectionObserver)
  ***************************************************************/
 const revealElements = document.querySelectorAll(".reveal-on-scroll");
 
@@ -40,13 +37,10 @@ function revealOnScroll() {
   });
 }
 
-// Executa en els moments clau
+// Executem en els moments clau
 window.addEventListener("load", revealOnScroll);
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("resize", revealOnScroll);
 
-
-/***************************************************************
- * (OPCIONAL) REVEAL IMMEDIAT SI ALGUN ELEMENT JA ÉS VISIBLE
- ***************************************************************/
+// Per si ja hi ha elements visibles de bon principi
 revealOnScroll();
