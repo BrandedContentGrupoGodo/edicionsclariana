@@ -538,24 +538,27 @@ body {
 
 .feature {
   position: relative;
-  min-height: 160vh;              /* hi ha marge per fer scroll damunt la foto */
+  min-height: 160vh;
   background: #ffffff;
 }
 
+/* capa de la foto, enganxada al scroll, però al PLA DE FONS */
 .feature__bg {
-  position: sticky;               /* la foto queda “fixa” mentre dura la secció */
+  position: sticky;
   top: 0;
   height: 100vh;
   overflow: hidden;
+  z-index: 0;
 }
 
+/* la imatge omple la capa */
 .feature__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* degradat fosc a l'esquerra perquè es llegeixi bé el text */
+/* degradat fosc a sobre de la foto */
 .feature__overlay {
   position: absolute;
   inset: 0;
@@ -567,13 +570,14 @@ body {
   pointer-events: none;
 }
 
-/* contenidor del text que es desplaça per sobre de la foto */
+/* CONTINGUT DE TEXT PER SOBRE DE LA FOTO */
 .feature__content-scroll {
   position: relative;
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 0 1.25rem;
   color: #fff;
+  z-index: 1; /* 👈 clau: el text va per sobre de .feature__bg */
 }
 
 .feature__spacer {
