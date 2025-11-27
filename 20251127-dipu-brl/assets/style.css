@@ -1065,7 +1065,7 @@ body {
 /* ====== RESPONSIVE PER LES FOTOS ====== */
 @media (max-width: 768px) {
   .feature__bg {
-    height: clamp(240px, 60vh, 420px);
+           height: clamp(240px, 65vh, 598px);
   }
 
   .feature__content-scroll {
