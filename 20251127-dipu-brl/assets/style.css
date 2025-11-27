@@ -175,8 +175,10 @@ body {
 /* HERO – VIDEO FIX + TEXT */
 
 .hero {
-  position: relative;
+  position: sticky;
   min-height: 100vh;
+  top: 0;
+  z-index: 1;
 }
 
 /* capa del vídeo de fons, fixa */
