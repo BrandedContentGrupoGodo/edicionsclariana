@@ -35,7 +35,7 @@ body {
 
 .topbar {
   font-size: 13px;
-  padding: 12px 0px;
+  padding:  0px;
 }
 
 .topbar__inner {
@@ -60,7 +60,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  font-size: 12px;
+  font-size: 19px;
 }
 
 .topbar__lang-link {
