@@ -283,17 +283,6 @@ figcaption {
   line-height: 1.7;
 }
 
-/* Responsive */
-@media (max-width: 800px) {
-  .article-columns {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .article-highlight {
-    order: -1;
-  }
-}
 
 /* contenidor de la secció en columna, com la intro */
 .article-image-block {
@@ -687,4 +676,22 @@ body.no-scroll {
 .footer-highlight {
   color: #ce132c;
   font-weight: 600;
+}
+
+
+/* Responsive */
+@media (max-width: 800px) {
+  .article-columns {
+    grid-template-columns: 1fr!important;
+    gap: 20px;
+  }
+
+  .article-highlight {
+    order: -1;
+  }
+  .article-inner figure {
+    position: relative;
+    width: calc(100% + 0px)!important;
+    left: 0px!important;
+}
 }
