@@ -1,0 +1,1172 @@
+:root {
+  --lv-bg: #ffffff;
+  --lv-bg-alt: #f5f5f7;
+  --lv-text: #111111;
+  --lv-text-muted: #555555;
+  --lv-primary: #001a4d;
+  --lv-max-width: 1000px;
+
+  --lv-header-h-mobile: 64px;
+  --lv-header-h-desktop: 80px;
+}
+
+/* RESET BÀSIC */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", sans-serif;
+  color: var(--lv-text);
+  background-color: var(--lv-bg-alt);
+}
+
+/* LAYOUT GENERAL */
+.lv-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.lv-main {
+  flex: 1;
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 0 16px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ========================= HEADER ========================= */
+
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.site-header__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  height: var(--lv-header-h-mobile);
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.site-header__logo img {
+  display: block;
+  height: 55px;
+  width: auto;
+}
+
+/* Botó menú mòbil (hamburguesa) */
+.site-header__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #c4c4c4;
+  background: #ffffff;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  z-index: 50;
+}
+
+.site-header__toggle span {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 2px;
+  background: #111111;
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease, top 0.2s ease;
+}
+
+/* barres en estat normal */
+.site-header__toggle span:nth-child(1) {
+  top: 13px;
+}
+.site-header__toggle span:nth-child(2) {
+  top: 19px;
+}
+.site-header__toggle span:nth-child(3) {
+  top: 25px;
+}
+
+/* Estat obert -> creu */
+.site-header__toggle.is-open span:nth-child(1) {
+  top: 19px;
+  transform: rotate(45deg);
+}
+.site-header__toggle.is-open span:nth-child(2) {
+  opacity: 0;
+}
+.site-header__toggle.is-open span:nth-child(3) {
+  top: 19px;
+  transform: rotate(-45deg);
+}
+
+/* Navegació mòbil */
+.site-header__nav {
+  position: fixed;
+  inset: var(--lv-header-h-mobile) 0 0 0;
+  background: #ffffff;
+  transform: translateY(-110%);
+  transition: transform 0.25s ease-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 16px;
+  gap: 24px;
+}
+
+.site-header__nav.is-open {
+  transform: translateY(0);
+}
+
+/* canvi d’idioma */
+.site-header__lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+}
+
+.site-header__lang-link {
+  text-decoration: none;
+  color: var(--lv-text-muted);
+  font-weight: 500;
+}
+
+.site-header__lang-link--active {
+  color: var(--lv-primary);
+}
+
+.site-header__lang-separator {
+  opacity: 0.5;
+}
+
+/* Evitem scroll de fons amb menú obert */
+body.nav-open {
+  overflow: hidden;
+}
+
+/* ========================= HERO VIDEO ========================= */
+
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: calc(100vh - var(--lv-header-h-mobile));
+  margin: 0;
+  overflow: hidden;
+}
+
+.hero-video__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-video__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.35) 0%,
+    rgba(0, 0, 0, 0.45) 40%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+.hero-video__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  text-align: center;
+  padding: 220px 20px;
+  z-index: 2;
+}
+
+.hero-video__title {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(48px, 6.5vw, 120px);
+  line-height: 1.1;
+  color: #ffffff;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+/* botó scroll avall */
+.hero-video__scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%);
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 5;
+}
+
+.hero-video__arrow {
+  width: 14px;
+  height: 14px;
+  border-left: 2px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  transform: rotate(-45deg);
+  animation: arrow-bounce 1.5s infinite;
+}
+
+@keyframes arrow-bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  40% {
+    transform: translateY(4px) rotate(-45deg);
+  }
+  60% {
+    transform: translateY(2px) rotate(-45deg);
+  }
+}
+
+/* ========================= ARTICLE ========================= */
+
+.article {
+  margin-top: 50px;
+}
+
+.article__inner {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.article__eyebrow {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #c30000;
+}
+
+.article__title {
+  margin: 0 0 38px;
+  font-weight: 200;
+  font-size: clamp(22px, 3vw, 26px);
+  line-height: 1.35;
+  color: #111111;
+  text-align: center;
+}
+
+.article__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 14px;
+}
+
+.article__author {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.article__date {
+  margin: 0;
+  font-size: 18px;
+  color: var(--lv-text-muted);
+}
+
+.article__divider {
+  width: 100%;
+  border: none;
+  border-top: 2px solid #000000;
+  margin: 10px 0 22px;
+}
+
+.article__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article__body p {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.7;
+  color: var(--lv-text);
+  text-align: left;
+}
+
+/* links dins l’article */
+.article__inner a {
+  color: #c30000;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(195, 0, 0, 0.4);
+  transition: 0.2s ease;
+}
+
+.article__inner a:hover {
+  border-bottom-color: #c30000;
+}
+
+/* ========================= CAROUSEL ========================= */
+
+.carousel-section {
+  margin-top: 40px;
+}
+
+.carousel-section__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.carousel {
+  position: relative;
+}
+
+/* Slides */
+.carousel__slide {
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.carousel__slide.is-active {
+  opacity: 1;
+  position: relative;
+  z-index: 2;
+}
+
+/* Imatges */
+.carousel__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Peus de foto */
+.carousel__caption {
+  margin-top: 6px;
+  font-size: 12px;
+  text-align: left;
+}
+
+.carousel__credit {
+  font-size: 11px;
+  color: #555;
+}
+
+/* Fletxes */
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #ffffff;
+  background: rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel__arrow--prev {
+  left: 10px;
+}
+.carousel__arrow--next {
+  right: 10px;
+}
+
+/* Icones de fletxa */
+.carousel__arrow::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  margin: auto;
+}
+.carousel__arrow--prev::before {
+  transform: rotate(-135deg);
+}
+.carousel__arrow--next::before {
+  transform: rotate(45deg);
+}
+
+/* ========================= FOOTER ========================= */
+
+.lv-footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+}
+
+.lv-footer__inner {
+  max-width: var(--lv-max-width);
+  margin: 0 auto;
+  padding: 16px 16px 20px;
+}
+
+.lv-footer__text {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #353535ff;
+  text-align: center;
+}
+
+.lv-footer__text + .lv-footer__text {
+  margin-top: 6px;
+}
+
+.lv-footer__link {
+  color: #c30000;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lv-footer__link:hover {
+  text-decoration: underline;
+}
+
+/* ========================= RESPONSIVE ========================= */
+
+@media (min-width: 768px) {
+  .lv-main {
+    padding: 0 24px 48px;
+    gap: 40px;
+  }
+
+  .site-header__inner {
+    height: var(--lv-header-h-desktop);
+    padding: 0 24px;
+  }
+
+  /* en desktop el menú es mostra en línia i sempre visible */
+  .site-header__toggle {
+    display: none;
+  }
+
+  .site-header__nav {
+    position: static;
+    transform: none !important;
+    background: transparent;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0;
+    gap: 24px;
+  }
+
+  .hero-video {
+    height: calc(100vh - var(--lv-header-h-desktop));
+  }
+
+  .hero-video__content {
+    padding-bottom: 110px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .lv-main {
+    padding: 0 0 56px;
+  }
+
+  .site-header__inner,
+  .lv-footer__inner {
+    padding-inline: 0;
+  }
+
+  .carousel-section__inner {
+    padding: 0;
+  }
+}
+
+/* ========================= INTRO TEXT SUBHERO ========================= */
+
+.intro-text {
+  max-width: 900px;
+  margin: 70px auto 50px;
+  padding: 0 16px;
+  text-align: center;
+}
+
+.intro-text p {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: clamp(28px, 3.6vw, 34px);
+
+  line-height: 1.3;
+}
+
+/* ========================= GRID NADAL ========================= */
+
+.nadal-grid {
+  margin: 40px 0 0;
+  background: #ffffff;
+}
+
+.nadal-grid__inner {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: grid;
+  gap: 2px;
+  /* Fila 1: 2+2 — Fila 2: 1+1+1+1 */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* Targeta base */
+.nadal-tile {
+  position: relative;
+  min-height: 660px; /* 🔧 molt més baix: es veu més imatge */
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 18px 22px;
+  text-decoration: none;
+  color: #ffffff;
+  font-family: "Roboto", system-ui, sans-serif;
+  background-size: cover;
+  background-position: center;
+}
+
+/* TARGETES IMATGE (amb enllaç) */
+.nadal-tile--link {
+  cursor: pointer;
+}
+
+/* imatge de fons via CSS variable */
+.nadal-tile--link::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--bg-image);
+  background-size: cover; /* ocupa tot el quadre */
+  background-position: center;
+  transform: scale(1); /* cap zoom de base */
+  transition: transform 0.3s ease-out;
+}
+
+/* vel de color (ara fosc neutre, no blau) */
+.nadal-tile--link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  transition: background 0.25s ease-out;
+}
+
+/* efecte zoom al passar el cursor */
+.nadal-tile--link:hover::before {
+  transform: scale(1.04); /* 🔧 zoom suau però visible */
+}
+
+.nadal-tile--link:hover::after {
+  background: rgba(0, 0, 0, 0.25); /* 🔧 menys fosca al hover */
+}
+
+.nadal-tile__label {
+  position: relative;
+  z-index: 1;
+  font-weight: 700;
+  font-size: clamp(62px, 4.6vw, 72px);
+  line-height: 0.9;
+  text-transform: uppercase;
+}
+
+/* QUADRAT VERMELL (TEXT FIX) */
+.nadal-tile--text {
+  background: #c30000;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 20px;
+}
+
+.nadal-tile--text p {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(26px, 1.8vw, 40px);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+/* ---- DISPOSICIÓ 2+2+4 (desktop) ---- */
+
+/* 1: CULTURA ocupa columnes 1-2 */
+.nadal-grid__inner > .nadal-tile:nth-child(1) {
+  grid-column: 1 / span 2;
+}
+
+/* 2: LLUMS ocupa columnes 3-4 */
+.nadal-grid__inner > .nadal-tile:nth-child(2) {
+  grid-column: 3 / span 2;
+}
+
+/* 3,4,5,6 queden cadascuna a 1 columna de la fila de sota */
+
+/* ========================= RESPONSIVE ========================= */
+
+/* Tablets: 2 columnes, sense spans especials */
+@media (max-width: 900px) {
+  .nadal-grid__inner {
+    padding: 0 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .nadal-grid__inner > .nadal-tile {
+    grid-column: auto !important;
+  }
+
+  .nadal-tile {
+    min-height: 220px;
+  }
+}
+
+/* Mòbil petit: 1 columna */
+@media (max-width: 540px) {
+  .nadal-grid__inner {
+    padding: 0 8px;
+    grid-template-columns: 1fr;
+  }
+
+  .nadal-tile {
+    min-height: 200px;
+  }
+}
+
+/* ========================= SECCIÓ TEXT NADAL ========================= */
+
+.nadal-text {
+  margin: 60px auto 40px; /* separació superior i inferior */
+  padding: 0 16px;
+}
+
+.nadal-text__inner {
+  max-width: 820px; /* ample similar als articles */
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.nadal-text__inner p {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1.65;
+  color: #333;
+}
+
+/* Ressalts en negreta dins el text */
+.nadal-text__inner strong {
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .nadal-text__inner p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+}
+
+/* ========================= SECCIONS NADAL (CULTURA, LLUMS,...) ========================= */
+
+.nadal-section {
+  margin: 60px auto 40px;
+  padding: 0 16px;
+}
+
+.nadal-section__nav {
+  max-width: 1100px;
+  margin: 0 auto 16px;
+  padding: 0 16px;
+  text-align: center;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nadal-section__nav-link {
+  text-decoration: none;
+  color: #555555;
+}
+
+.nadal-section__nav-link--active {
+  color: #117585;
+  font-weight: 700;
+}
+
+.nadal-section__nav-link:hover {
+  text-decoration: underline;
+}
+
+.nadal-section__nav-separator {
+  margin: 0 6px;
+  color: #aaaaaa;
+}
+
+.nadal-section__inner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 40px;
+}
+
+/* paraula gegant de fons */
+.nadal-section__bg-word {
+  position: absolute;
+  top: 10px;
+  left: -340px;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(120px, 20vw, 230px);
+  line-height: 1;
+  color: #dbeaed;
+  text-transform: uppercase;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* capçalera */
+.nadal-section__head {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 94px;
+  padding-top: 38px;
+}
+
+.nadal-section__eyebrow {
+  margin: 0 0 4px;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #555555;
+}
+
+.nadal-section__title {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-weight: 800;
+  font-size: clamp(24px, 3vw, 30px);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
+  color: #111111;
+}
+
+/* cos de text */
+.nadal-section__body {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+}
+
+.nadal-section__body p {
+  margin: 0 0 18px;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #222222;
+}
+
+.nadal-section__body p:last-child {
+  margin-bottom: 0;
+}
+
+.nadal-section__body strong {
+  font-weight: 700;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 900px) {
+  .nadal-section__inner {
+    padding-inline: 0;
+  }
+
+  .nadal-section__body p {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nadal-section {
+    margin-top: 56px;
+  }
+
+  .nadal-section__bg-word {
+    font-size: 80px; /* perquè no mengi massa espai en mòbil */
+    top: 20px;
+            left: 0px;
+    }
+
+  .nadal-section__head {
+    margin-bottom: 18px;
+  }
+}
+
+/* ========================= CARRUSEL CULTURA ========================= */
+
+.carousel-section {
+  margin: 40px 0 0;
+}
+
+.carousel-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+.carousel-card {
+  position: relative;
+}
+
+/* etiqueta blava "CARRUSEL" */
+.carousel-card__tag {
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: #00a3e8;
+  color: #ffffff;
+  padding: 10px 26px;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  z-index: 3;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Slides */
+.carousel__slide {
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  position: absolute;
+  inset: 0;
+}
+
+.carousel__slide.is-active {
+  opacity: 1;
+  position: relative; /* perquè marqui l’alçada del contenidor */
+  z-index: 1;
+}
+
+.carousel__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Peu de foto: franja negra a baix */
+.carousel__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 8px 14px;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Punts dins la foto */
+.carousel__dots {
+  position: absolute;
+  left: 50%;
+  bottom: 46px; /* una mica per sobre del peu de foto */
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+  z-index: 2;
+}
+
+.carousel__dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #ffffffff;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.carousel__dot.is-active {
+  background: var(--dot-color, #00a3e8); /* color de secció */
+}
+
+/* Responsive */
+@media (min-width: 1024px) {
+  .carousel-section__inner {
+    padding-inline: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-section__inner {
+    padding-inline: 8px;
+  }
+
+  .carousel-card__tag {
+    top: 20px;
+    right: 8px;
+    padding-inline: 18px;
+  }
+}
+
+/* ========================= TEXT FINAL SECCIÓ ========================= */
+
+.nadal-section-textend {
+  margin: 40px auto 60px;
+  padding: 0 16px;
+}
+
+.nadal-section-textend__inner {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.nadal-section-textend__inner p {
+  margin: 0;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 22px;
+  line-height: 1.7;
+  color: #222222;
+}
+
+.nadal-section-textend__inner strong {
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .nadal-section-textend__inner p {
+    font-size: 16px;
+    line-height: 1.55;
+  }
+  .carousel__dots {
+    display: none; /* amaguem punts en mòbil per evitar tapar imatge */
+}
+.carousel__caption {
+
+    font-size: 14px;
+
+}
+}
+
+#llums .nadal-section__bg-word {
+  color: #feeaa6; /* Paraula gegant */
+}
+
+#llums .carousel__dot.is-active {
+  --dot-color: #feeaa6; /* Color punt actiu del carrusel */
+}
+
+#llums .nadal-section__nav-link--active {
+  color: #fdc300; /* versió més fosca per visibilitat */
+  font-weight: 700;
+}
+
+#llums .carousel__dot.is-active {
+  --dot-color: #feeaa6;
+}
+
+/* ========================= SECCIÓ COMERÇ ========================= */
+
+#comerc .nadal-section__bg-word {
+  color: #f0e5f1; /* paraula gegant al fons */
+}
+
+#comerc .carousel__dot.is-active {
+  --dot-color: #f0e5f1; /* color del punt actiu */
+}
+
+#comerc .nadal-section__nav-link--active {
+  color: #9e54a1; /* més fosc perquè es vegi bé */
+  font-weight: 700;
+}
+
+/* ========================= SECCIÓ TRADICIONS ========================= */
+
+/* paraula gegant de fons */
+#tradicions .nadal-section__bg-word {
+  color: #d9ede1;
+}
+
+/* enllaç actiu del menú intern */
+#tradicions .nadal-section__nav-link--active {
+  color: #008636; /* versió més fosca del verd suau perquè es vegi bé */
+  font-weight: 700;
+}
+
+/* punts actius del(s) carrusel(s) dins TRADICIONS */
+#tradicions-carrusel .carousel__dot.is-active,
+#tradicions .carousel__dot.is-active {
+  --dot-color: #d9ede1;
+}
+
+/* ========================= SECCIÓ CAPITAL EUROPEA ========================= */
+
+/* paraula gegant de fons */
+#capital .nadal-section__bg-word {
+  color: #f9e3e6;
+}
+
+/* enllaç actiu del menú intern */
+#capital .nadal-section__nav-link--active {
+  color: #cf122b; /* versió més fosca perquè es vegi bé */
+  font-weight: 700;
+}
+
+/* punts actius del carrusel */
+#capital .carousel__dot.is-active,
+#capital-carrusel .carousel__dot.is-active {
+  --dot-color: #f9e3e6;
+}
+
+/* ========================= VIDEO RESPONSIVE ========================= */
+
+.video-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Relació 16:9 */
+  height: 0;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel--llum {
+  --dot-color: #feeaa6;
+}
+.carousel--comerc {
+  --dot-color: #f0e5f1;
+}
+.carousel--tradicions {
+  --dot-color: #d9ede1;
+}
+.carousel--capital {
+  --dot-color: #ceaab5;
+}
+
+
+.nadal-button {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.nadal-button img {
+  width: 420px;      /* mida recomanada */
+  max-width: 90%;    /* per adaptar-se a mòbil */
+  height: auto;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* CONTINGUT DEL MENU MOBIL */
+.site-header__nav {
+  justify-content: flex-start;
+  align-items: center;      /* 🔧 clau */
+}
+
+/* selector d’idioma en mòbil */
+.site-header__lang {
+  margin-top: 24px;
+  font-size: 20px;
+}
+
+/* ========================= MENU MOBIL COMPACTE ========================= */
+
+@media (max-width: 767px) {
+  .site-header__nav {
+    inset: auto 0 auto 0;          /* ❌ no ocupa tota la pantalla */
+    top: var(--lv-header-h-mobile);
+    height: auto;                  /* 🔧 alçada segons contingut */
+    padding: 16px 0 20px;
+    transform: translateY(-120%);
+    justify-content: center;
+  }
+
+  .site-header__nav.is-open {
+    transform: translateY(0);
+  }
+
+  .site-header__lang {
+    font-size: 20px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  /* Amaguem completament el nav si no està obert */
+  .site-header__nav {
+    display: none;
+  }
+
+  /* Quan es fa click a la hamburguesa, apareix */
+  .site-header__nav.is-open {
+    display: flex;
+  }
+}
