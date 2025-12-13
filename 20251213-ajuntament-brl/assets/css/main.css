@@ -1170,3 +1170,65 @@ body.nav-open {
     display: flex;
   }
 }
+
+/* ============ CAPITAL: FOTO CENTRADA A LA COLUMNA ============ */
+
+.media-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;          /* ✅ centra el bloc */
+  padding: 0 16px 40px;
+}
+
+.media-card {
+  margin: 0 auto;          /* ✅ centra el figure */
+  width: 100%;
+  max-width: 1100px;       /* ✅ mateix ample que la columna */
+}
+
+.media-card__image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ========================= CAPITAL MEDIA (foto normal) ========================= */
+
+#capital-media .media-section__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px 40px;
+}
+
+#capital-media .media-card {
+  position: relative;   /* necessari perquè el peu vagi a sobre */
+  margin: 0;            /* sense desplaçaments estranys */
+}
+
+#capital-media .media-card__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Peu de foto com el carrusel */
+#capital-media .media-card__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 8px 14px;
+  font-family: "Roboto", system-ui, sans-serif;
+  font-size: 18px;
+  line-height: 1.4;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/* Desktop: mateix comportament que les altres seccions */
+@media (min-width: 1024px) {
+  #capital-media .media-section__inner {
+    padding-inline: 0;
+  }
+}
