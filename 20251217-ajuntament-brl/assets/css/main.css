@@ -1,0 +1,739 @@
+/* =====================
+   VARIABLES I BASE
+===================== */
+:root {
+  --font: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+
+  --text: #111;
+  --muted: #6b7280;
+  --bg: #ffffff;
+  --border: #e5e7eb;
+  --accent: #ce132c;
+  --container: 1120px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.4;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout */
+.container {
+  width: min(var(--container), calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* =====================
+   TOPBAR
+===================== */
+.topbar {
+  border-bottom: 1px solid var(--border);
+  background: #fff;
+}
+
+.topbar__inner {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 64px;
+}
+
+.topbar__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.topbar__logo {
+  height: 56px;
+  width: auto;
+}
+
+.topbar__langs {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+  font-size: 18px;
+}
+
+.topbar__langs a {
+  color: #111;
+}
+
+.topbar__langs .is-active {
+  font-weight: 700;
+}
+
+.topbar__langs span {
+  opacity: 0.6;
+}
+
+/* Mòbil */
+@media (max-width: 420px) {
+  .topbar__inner {
+    height: 54px;
+  }
+  .topbar__logo {
+    height: 38px;
+  }
+  .topbar__langs {
+    font-size: 14px;
+  }
+  .topbar__center {
+    font-size: 11px;
+  }
+}
+
+/* =====================
+   HEADER (placeholder)
+===================== */
+.header {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.site-title {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* =====================
+   HERO VIDEO
+===================== */
+.hero-video {
+  position: relative;
+  width: 100%;
+  height: min(72vh, 920px);
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-video__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Degradat fosc inferior (subtil però efectiu) */
+.hero-video__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.15) 50%,
+    rgba(0, 0, 0, 0.45) 80%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+}
+
+/* Text */
+.hero-video__content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  align-items: flex-end; /* centre vertical */
+  justify-content: center; /* centre horitzontal */
+  padding: 30px 16px;
+  text-align: center;
+}
+
+.hero-video__content h1 {
+  color: #fff;
+  font-size: clamp(58px, 6vw, 72px);
+  font-weight: 700;
+  line-height: 1.1;
+  max-width: 820px;
+  margin: 0;
+}
+
+/* Mòbil */
+@media (max-width: 600px) {
+  .hero-video {
+    height: 60vh;
+  }
+  .hero-video__content {
+    padding-bottom: 32px;
+  }
+}
+
+/* =====================
+   CONTINGUT
+===================== */
+.section {
+  padding: 48px 0;
+}
+
+/* =====================
+   ARTICLE INTRO (FRANJA TEXT)
+===================== */
+.article-intro {
+  padding: 56px 0 72px;
+}
+
+.article-intro__inner {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.article-intro__kicker {
+  margin: 0 0 18px;
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+/* línia fina sota el kicker */
+.article-intro__kicker::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 2px;
+  background: var(--accent);
+  margin-top: 10px;
+}
+
+.article-intro__lead {
+  margin: 0 0 22px;
+  font-size: 25px;
+  line-height: 1.35;
+  color: #666;
+  padding-bottom: 24px;
+}
+
+.article-intro__meta {
+  margin: 0 0 22px;
+}
+
+.article-intro__author {
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.article-intro__date {
+  font-size: 15px;
+  color: #333;
+}
+
+.article-intro__body p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .article-intro {
+    padding: 40px 0 56px;
+  }
+  .article-intro__lead {
+    font-size: 23px;
+  }
+}
+
+/* =====================
+   IMATGE AMB PEU DE FOTO
+===================== */
+.article-image {
+  padding: 32px 0 56px;
+}
+
+.article-image__figure {
+  margin: 0;
+}
+
+.article-image__figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.article-image__caption {
+  margin-top: 8px;
+  font-size: 16px;
+  color: #111;
+}
+
+/* =====================
+   SECCIÓ DESTACAT
+===================== */
+.section-highlight {
+  padding: 64px 0;
+}
+
+.highlight-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 48px;
+  align-items: center; /* clau: centrat vertical */
+}
+
+/* Destacat esquerra */
+.highlight-box {
+  position: relative;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.highlight-box p {
+  margin: 0;
+}
+
+.highlight-bar {
+  display: block;
+  width: 76px;
+  height: 6px;
+  background: #d1001c; /* vermell institucional */
+  margin-bottom: 16px;
+}
+
+/* Contingut dret */
+.highlight-content {
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.highlight-content p {
+  margin: 0 0 16px;
+}
+
+.highlight-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .highlight-layout {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+
+  .highlight-box {
+    max-width: 420px;
+  }
+}
+
+/* =====================
+   TEASER HISTÒRIA
+===================== */
+.story-card {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  background: #e9e6e4;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.story-card:focus {
+  outline: 3px solid rgba(0, 0, 0, 0.25);
+  outline-offset: 2px;
+}
+
+.story-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  min-height: 260px;
+}
+
+.story-card__panel {
+  padding: 32px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.story-card__title {
+  margin: 0;
+  font-size: clamp(24px, 2.6vw, 40px);
+  line-height: 1.05;
+  font-weight: 800;
+}
+
+.story-card__lead {
+  margin: 0;
+  max-width: 44ch;
+  color: #333;
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.story-card__btn {
+  font-size: 20px;
+  margin-top: 18px;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #c5001a;
+  color: #fff;
+  font-weight: 700;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+}
+
+.story-card__btnIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.22);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  line-height: 1;
+}
+
+/* Responsive teaser */
+@media (max-width: 900px) {
+  .story-card {
+    grid-template-columns: 1fr;
+  }
+  .story-card__panel {
+    padding: 22px;
+  }
+  .story-card__media img {
+    min-height: 220px;
+  }
+}
+
+/* =====================
+   MODAL / POPUP
+===================== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 999;
+}
+
+.modal.is-open {
+  display: block;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.modal__dialog {
+  position: relative;
+  width: min(820px, calc(100% - 32px));
+  margin: 40px auto;
+  background: #e9e6e4;
+  border-radius: 10px;
+  overflow: hidden;
+  max-height: calc(100vh - 80px);
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.modal__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  font-size: 24px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.modal__content {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.modal__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modal__body {
+  padding: 20px 26px 26px;
+  font-size: 20px;
+  line-height: 1.65;
+  color: #333;
+  overflow: auto; /* scroll intern si cal */
+  max-height: 46vh; /* fa que el text scrollegi quan calgui */
+}
+
+.modal__body p {
+  margin: 0 0 14px;
+}
+
+.modal__body p:last-child {
+  margin-bottom: 0;
+}
+
+/* Responsive modal */
+@media (max-width: 520px) {
+  .modal__dialog {
+    margin: 18px auto;
+    max-height: calc(100vh - 36px);
+  }
+  .modal__body {
+    padding: 16px 16px 18px;
+    max-height: 52vh;
+  }
+}
+
+/* =====================
+   BLOC TEXT ARTICLE
+===================== */
+.article-block {
+  padding: 56px 0;
+}
+
+.article-block__inner {
+  width: min(720px, 100%);
+  margin: 0 auto;
+  font-size: 20px;
+  line-height: 1.75;
+  color: #333;
+}
+
+.article-block__inner p {
+  margin: 0 0 18px;
+}
+
+.article-block__inner h3 {
+  margin: 30px 0 12px;
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #111;
+}
+
+/* Mòbil */
+@media (max-width: 600px) {
+  .article-block {
+    padding: 44px 0;
+  }
+  .article-block__inner {
+    font-size: 18.5px;
+    line-height: 1.7;
+  }
+}
+
+/* =====================
+   FAQ / ACORDIÓ
+===================== */
+.faq {
+  padding: 56px 0 72px;
+}
+
+.faq__title {
+  text-align: center;
+  margin: 0 0 22px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  color: #cf001b;
+  font-size: 25px;
+}
+
+.faq__list {
+  width: min(860px, 100%);
+  margin: 0 auto;
+  display: grid;
+  gap: 14px;
+}
+
+/* Item base */
+.faq-item {
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Pregunta */
+.faq-q {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 14px 14px 18px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  text-align: left;
+}
+
+.faq-q__text {
+  font-size: 20px;
+  font-weight: 700;
+  color: #222;
+}
+
+.faq-q__icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: #c5001a;
+  position: relative;
+  box-shadow: 0 10px 16px rgba(0, 0, 0, 0.18);
+}
+
+/* Chevron (cap avall) */
+.faq-q__icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  border-right: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  transform: rotate(45deg);
+}
+
+/* Resposta */
+.faq-a {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.22s ease;
+}
+
+.faq-a > p {
+  overflow: hidden;
+  margin: 0;
+  padding: 0 18px 0;
+  font-size: 20px;
+  color: #333;
+  line-height: 1.6;
+  margin-top: 18px;
+}
+
+/* Estat obert */
+.faq-item.is-open {
+  background: #e9e6e4;
+}
+
+.faq-item.is-open .faq-q__text {
+  color: #c5001a;
+}
+
+.faq-item.is-open .faq-a {
+  grid-template-rows: 1fr;
+}
+
+.faq-item.is-open .faq-a > p {
+  padding: 0 18px 16px;
+}
+
+/* Chevron cap amunt */
+.faq-item.is-open .faq-q__icon::before {
+  transform: rotate(225deg);
+}
+
+/* Focus accesible */
+.faq-q:focus {
+  outline: 3px solid rgba(0, 0, 0, 0.2);
+  outline-offset: 2px;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .faq__list {
+    gap: 12px;
+  }
+  .faq-q__text {
+    font-size: 18.5px;
+  }
+  .faq-q__icon {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+/* =====================
+   FOOTER FINAL
+===================== */
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 36px 0 44px;
+  background: #fff;
+}
+
+.site-footer .container {
+  max-width: 900px;
+  text-align: center;
+}
+
+.site-footer__credits {
+  margin: 0 0 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+}
+
+.site-footer__project {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111;
+}
+
+/* Text en vermell (Imatges Barcelona) */
+.site-footer .highlight {
+  color: #c5001a;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .site-footer {
+    padding: 28px 0 36px;
+  }
+
+  .site-footer__credits,
+  .site-footer__project {
+    font-size: 12.5px;
+  }
+}
