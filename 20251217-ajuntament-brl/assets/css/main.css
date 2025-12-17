@@ -704,6 +704,7 @@ a {
 .site-footer .container {
   max-width: 900px;
   text-align: center;
+  background: white!important;
 }
 
 .site-footer__credits {
