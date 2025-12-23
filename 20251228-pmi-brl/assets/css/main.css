@@ -345,51 +345,8 @@ h5 {
     text-align: center !important;
   }
 }
-.footer {
-  position: relative;
-  background: #000;
-  height: 130px;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-}
-.footer .icon-ara:before {
-  content: "";
-  display: block;
-  width: 70px;
-  height: 22px;
-  background-image: url(https://s1static.ara.cat/interactius/assets/common_new/icons/logoARA_white.svg);
-  background-size: 100% auto;
-  background-repeat: no-repeat;
-}
-.footer .link-interactius {
-  text-decoration: none;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 5px 10px;
-  border-radius: 2px;
-  font-family: "Montserrat", sans-serif !important;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 13px;
-  font-weight: 400;
-}
-.footer .link-interactius:hover {
-  color: #000;
-  background-color: #fff;
-}
-@media only screen and (max-width: 800px) {
-  .footer {
-    flex-flow: column nowrap;
-    padding: 30px 20px;
-  }
-  .footer .link-interactius {
-    margin-top: 20px;
-  }
-}
+
+
 .p-relacionades {
   padding: 0 20px;
 }
@@ -5465,76 +5422,6 @@ details[open] summary:before {
   z-index: 9999;
 }
 
-.footer {
-  padding: 40px 0;
-}
-
-.footer-container {
-  display: flex;
-  justify-content: center;
-  flex-flow: column;
-}
-
-@media (min-width: 768px) {
-  .footer-container {
-    flex-flow: row;
-    justify-content: space-between;
-  }
-}
-
-.footer-container-a,
-.footer-container-b {
-  text-align: center;
-}
-
-@media (min-width: 768px) {
-  .footer-container-a {
-    text-align: left;
-  }
-  .footer-container-b {
-    text-align: right;
-  }
-}
-
-.footer-mundo-deportivo {
-  padding: 0 !important;
-  background-color: #fff !important;
-  color: #111 !important;
-  font-weight: bold;
-}
-
-.footer-mundo-deportivo a {
-  color: #999 !important;
-}
-
-.footer-mundo-deportivo .footer-mundo-deportivo-top {
-  background-color: #000 !important;
-  color: #fff;
-}
-
-.footer-mundo-deportivo .footer-main-menu {
-  list-style: none;
-  display: block;
-  margin: 0;
-  padding: 24px 0;
-  font-size: 14px;
-  line-height: 24px;
-}
-
-.footer-mundo-deportivo .footer-main-menu li {
-  display: inline-block;
-  padding: 4px;
-  margin-bottom: 5px;
-}
-
-.footer-mundo-deportivo .footer-main-menu li:after {
-  content: "|";
-  color: #999 !important;
-}
-
-.footer-mundo-deportivo .footer-main-menu li:last-child:after {
-  content: "";
-}
 
 .card {
   transition: all 0.3s ease-in-out;
@@ -6170,37 +6057,6 @@ figcaption {
   color: #696969;
   font-size: 0.85rem;
   font-style: italic;
-}
-
-.footer,
-.header {
-  background: #001c4c;
-  color: #afb2b7;
-  font-size: 12px;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-    Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-}
-
-.footer a,
-.header a {
-  color: #afb2b7;
-  text-decoration: none;
-}
-
-.footer a svg,
-.header a svg {
-  fill: #afb2b7;
-}
-
-.footer a:hover,
-.header a:hover {
-  color: rgba(175, 178, 183, 0.65);
-}
-
-.footer a:hover svg,
-.header a:hover svg {
-  color: rgba(175, 178, 183, 0.65);
 }
 
 .separator {
