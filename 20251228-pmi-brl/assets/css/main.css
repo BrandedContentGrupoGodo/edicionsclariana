@@ -1051,7 +1051,7 @@ img {
 }
 .emissions .comentari:before {
   content: "";
-  background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/fletxa_bola_min.svg);
+  background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/fletxa_bola_min.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;
@@ -1068,14 +1068,14 @@ img {
 }
 @media only screen and (min-width: 500px) {
   .emissions .comentari:before {
-    background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/fletxa_bola_mid.svg);
+    background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/fletxa_bola_mid.svg);
     height: 252px;
     width: 1511px;
   }
 }
 @media only screen and (min-width: 1020px) {
   .emissions .comentari:before {
-    background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/fletxa_bola_gran.svg);
+    background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/fletxa_bola_gran.svg);
     height: 80px;
     width: 80px;
     margin-bottom: 20px;
@@ -1272,7 +1272,7 @@ img {
   content: "";
   height: 20px;
   width: 97px;
-  background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/dialeg.svg);
+  background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/dialeg.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -1402,7 +1402,7 @@ img {
   width: 80px;
   margin-top: auto;
   margin-bottom: -1px;
-  background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/fletxa2.svg);
+  background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/fletxa2.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -1495,7 +1495,7 @@ img {
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 30px;
-  background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/fletxa.svg);
+  background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/fletxa.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -2289,17 +2289,17 @@ div.button {
 }
 /* Images for 3 Parallax Sections */
 .paralsec1 {
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/02.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/02.jpg");
 }
 .paralsec2 {
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/03.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/03.jpg");
 }
 .paralsec3 {
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/04.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/04.jpg");
 }
 
 .paralsec4 {
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/06.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/06.jpg");
 }
 .letrai {
   float: left;
@@ -2605,7 +2605,7 @@ blockquote {
   background-attachment: scroll !important;
   background-position: center center !important;
   background-size: cover !important;
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/diapo1.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/diapo1.jpg");
   height: 90vh;
   min-height: 90vh;
   overflow: hidden;
@@ -2616,13 +2616,13 @@ blockquote {
   left: 0;
 }
 .bg1 {
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/diapo2.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/diapo2.jpg");
 }
 .bg2 {
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/diapo3.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/diapo3.jpg");
 }
 .bg3 {
-  background-image: url("https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/diapo4.jpg");
+  background-image: url("https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/diapo4.jpg");
 }
 
 .slide-text h3 {
@@ -5577,7 +5577,7 @@ details[open] summary:before {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/bg-sm.jpg);
+  background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/bg-sm.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -5585,7 +5585,7 @@ details[open] summary:before {
 
 @media (min-width: 576px) {
   .hero-img {
-    background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/bg.jpg);
+    background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/bg.jpg);
   }
 }
 
@@ -5950,7 +5950,7 @@ blockquote {
 }
 
 .infografia-content {
-  background-image: url(https://github.com/BrandedContentGrupoGodo/edicionsclariana/20251228-pmi-brl/assets/img/bg-info.svg);
+  background-image: url(https://brandedcontentgrupogodo.github.io/edicionsclariana/20251228-pmi-brl/assets/img/bg-info.svg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
