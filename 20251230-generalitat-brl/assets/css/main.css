@@ -1,0 +1,1169 @@
+/* TIPOGRAFIA BASE */
+:root {
+  --color-bg: #ffffff;
+  --color-text: #111111;
+  --color-teal: #6bc5c0; /* verd-agua del bloc */
+  --color-intro-bg: #efc9e1; /* franja de l’entradeta */
+  --max-width: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+/* Text destacat amb Libre Franklin */
+.highlight-lf {
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* ---------- TOP BAR ---------- */
+
+.topbar {
+  font-size: 18px;
+  padding: 12px 0px;
+}
+
+.topbar__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  column-gap: 16px;
+}
+
+.topbar__spacer {
+  /* buit, serveix per centrar el text */
+}
+
+.topbar__center {
+  text-align: center;
+}
+
+.topbar__lang {
+  justify-self: end;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+}
+
+.topbar__lang-link {
+  text-decoration: none;
+  color: #222;
+  text-transform: lowercase;
+}
+
+.topbar__lang-link.is-active {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.topbar__lang-link:hover {
+  text-decoration: underline;
+}
+
+.topbar__lang-sep {
+  opacity: 0.6;
+}
+
+/* Responsive topbar */
+@media (max-width: 600px) {
+  .topbar__inner {
+    grid-template-columns: 1fr;
+    row-gap: 8px;
+    padding: 0 16px;
+  }
+  .topbar__center {
+    order: 1;
+    text-align: left;
+  }
+  .topbar__lang {
+    order: 2;
+    justify-self: flex-start;
+  }
+}
+
+/* ---------- HERO ---------- */
+
+.hero {
+  padding: 0;
+}
+
+.hero__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(0, 42%) minmax(0, 58%);
+  min-height: 320px;
+}
+
+/* Columna esquerra (bloc verd) */
+.hero__text-panel {
+  background: var(--color-teal);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero__kicker {
+  font-size: 13px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin: 0 0 10px;
+}
+
+.hero__title {
+  margin: 0;
+  font-family: "Inter", system-ui, sans-serif; /* base */
+  font-weight: 600;
+  font-size: clamp(30px, 4vw, 40px);
+  line-height: 1.15;
+}
+
+/* Columna dreta (imatge) */
+.hero__image-wrapper {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+}
+
+.hero__image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Crèdit sobre la imatge */
+.hero__credit {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  margin: 0;
+  font-size: 11px;
+  color: #ffffff;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* ---------- HERO INTRO ---------- */
+
+.hero-intro {
+  background: var(--color-intro-bg);
+  padding: 24px 28px;
+}
+
+.hero-intro__inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  text-align: center;
+  font-size: 25px;
+  line-height: 1.6;
+  padding-top: 44px;
+  padding-bottom: 44px;
+}
+
+/* ---------- RESPONSIVE HERO ---------- */
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+  }
+
+  .hero__text-panel {
+    padding: 32px 24px;
+  }
+
+  .hero__image-wrapper {
+    min-height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-intro {
+    padding: 20px 16px 24px;
+  }
+  .hero-intro__inner {
+    font-size: 18px;
+    text-align: left;
+  }
+}
+
+/* ---------------------------------------------------- */
+/* HERO AMB IMATGE A TOT EL WIDE + SEMICERCLE DEGRADAT   */
+/* ---------------------------------------------------- */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+/* Imatge de fons a pantalla completa */
+.hero__bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero__bg-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Crèdit sobre la imatge */
+.hero__credit {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-size: 12px;
+  color: white;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+/* ------ Semicercle degradat ------ */
+
+.hero__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%; /* amplada del semicercle */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 40px;
+  padding-right: 20px;
+  border-radius: 0px 50% 50% 0px;
+
+  /* Semicercle amb gradient + transparencia */
+  background: radial-gradient(
+    circle at left center,
+    #c3288a 0%,
+    #c3288a 40%,
+    rgba(109, 197, 190, 0) 100%
+  );
+}
+
+/* El cercle queda visualment com un semicercle */
+.hero__overlay::before {
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 140%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  mask-image: radial-gradient(circle, black 0%, black 55%, transparent 56%);
+  -webkit-mask-image: radial-gradient(
+    circle,
+    black 0%,
+    black 55%,
+    transparent 56%
+  );
+  z-index: -1;
+}
+
+/* ------ Text ------ */
+
+.hero__content {
+  max-width: 480px;
+  color: black;
+}
+
+.hero__kicker {
+  font-size: 18px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+.hero__title {
+  margin: 0;
+  font-size: clamp(52px, 6.8vw, 60px);
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .hero__overlay {
+    width: 70%;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero__overlay {
+    width: 100%;
+    padding: 40px 28px;
+    background: rgba(109, 197, 190, 0.85);
+  }
+
+  .hero__overlay::before {
+    display: none; /* sense semicercle en pantalles petites */
+  }
+
+  .hero__content {
+    max-width: 300px;
+  }
+}
+
+/* --------------------------- */
+/* SECCIÓ ARTICLE              */
+/* --------------------------- */
+
+.article {
+  padding: 48px 64px;
+}
+
+.article__inner {
+  max-width: 960px; /* columna central una mica més estreta */
+  margin: 0 auto;
+}
+
+.article__meta {
+  margin-bottom: 40px;
+}
+
+.article__author {
+  margin: 0;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.article__date {
+  margin: 2px 0 0;
+  font-size: 16px;
+  color: #555555;
+}
+
+.article__body {
+  font-size: 18px;
+  line-height: 1.7;
+}
+.article__body a {
+  color: #c3288a;
+  font-weight: 600;
+}
+.article__body p {
+  margin: 0 0 18px;
+}
+
+/* Imatge entremig del text */
+
+.article__figure {
+  margin: 40px 0 40px;
+}
+
+.article__image {
+  width: 100%;
+  display: block;
+}
+
+.article__caption {
+  margin-top: 6px;
+  font-size: 16px;
+  color: #555555;
+}
+
+/* Subtítol ("Recomanació de la UE") */
+
+.article__subheading {
+  margin: 26px 0 14px;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+/* Responsive petit */
+
+@media (max-width: 600px) {
+  .article {
+    padding: 32px 16px 48px;
+  }
+
+  .article__inner {
+    max-width: 100%;
+  }
+
+  .article__body {
+    font-size: 18px;
+  }
+}
+
+/* --------------------------- */
+/* ARTICLE AMB DESTACAT        */
+/* --------------------------- */
+
+.article-split {
+  padding: 48px 56px;
+}
+
+.article-split__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  align-items: stretch; /* l’altura la marca el text de la dreta */
+}
+
+/* Columna destacat */
+.article-split__highlight {
+  flex: 0 0 32%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centra verticalment el bloc */
+}
+
+.article-split__bar {
+  position: relative;
+  height: 12px;
+}
+
+.article-split__bar-main,
+.article-split__bar-shadow {
+  position: absolute;
+  left: 0;
+  border-radius: 0px 999px 999px 0px;
+  height: 17px;
+}
+
+.article-split__bar-main {
+  width: 120px;
+  top: 0;
+  background: #c3288a; /* vermell principal */
+}
+
+.article-split__bar-shadow {
+  width: 46px;
+  top: 6px;
+  background: #d6d6d6; /* franja gris sota */
+}
+
+.article-split__highlight-text {
+  font-size: 23px;
+  line-height: 1.4;
+  font-weight: 800;
+  color: #838181ff;
+}
+
+/* Columna text */
+.article-split__body {
+  flex: 1;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.article-split__body p {
+  margin: 0 0 18px;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+  .article-split__inner {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .article-split__highlight {
+    flex-basis: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .article-split {
+    padding: 32px 16px 40px;
+  }
+
+  .article-split__highlight-text {
+    font-size: 23px;
+  }
+
+  .article-split__body {
+    font-size: 18px;
+  }
+}
+
+/* --------------------------- */
+/* FAQ INTERACTIU (GRID 3x3)   */
+/* --------------------------- */
+
+.faq {
+  background: #4b4b4b;
+  padding: 56px 64px;
+  color: #ffffff;
+}
+
+.faq__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.faq__header {
+  margin-bottom: 24px;
+}
+
+.faq__title {
+  font-size: 24px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+}
+
+.faq__rule {
+  height: 1px;
+  background: #d0d0d0;
+  width: 100%;
+}
+
+/* GRID */
+
+.faq-grid {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* TARJETES */
+
+.faq-card {
+  border-radius: 22px;
+  min-height: 300px;
+  position: relative;
+  perspective: 1000px;
+  box-shadow: 5px 5px 10px black;
+}
+
+/* Colors base de cada tipus */
+
+.faq-card--teal {
+  background: #4ec5c1;
+}
+.faq-card--yellow {
+  background: #f6c54b;
+}
+.faq-card--salmon {
+  background: #f3837d;
+}
+.faq-card--rose {
+  background: #d5798c;
+}
+.faq-card--mint {
+  background: #89d2b3;
+}
+.faq-card--blue {
+  background: #315774;
+}
+.faq-card--ochre {
+  background: #d8a547;
+}
+.faq-card--coral {
+  background: #f16a70;
+}
+.faq-card--magenta {
+  background: #e2528f;
+}
+
+/* Imatge de la primera targeta */
+
+.faq-card--image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.faq-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+/* Contingut flip */
+
+.faq-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  border-radius: inherit;
+}
+
+.faq-card--flip.is-flipped .faq-card__inner {
+  transform: rotateY(180deg);
+}
+
+.faq-card__face {
+  position: absolute;
+  inset: 0;
+  padding: 20px;
+  border-radius: inherit;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Cara frontal (pregunta) */
+
+.faq-card__face--front {
+  color: #ffffff;
+}
+
+.faq-card__question {
+  margin: 0 0 16px;
+  font-size: 24px;
+  line-height: 1.3;
+  text-align: center;
+}
+
+/* Icona “play” */
+
+.faq-card__play {
+  display: flex;
+  justify-content: center;
+}
+
+.faq-card__play-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #515151;
+  position: relative;
+}
+
+.faq-card__play-icon::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+/* Cara posterior (resposta) */
+
+.faq-card__face--back {
+  transform: rotateY(180deg);
+  font-size: 18px;
+  line-height: 1.45;
+  color: #222222;
+  background: color(srgb 1 1 1 / 0.75);
+}
+
+/* Hover/cursor */
+
+.faq-card--flip {
+  cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+  .faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .faq {
+    padding: 40px 16px 48px;
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faq-card {
+    min-height: 300px;
+  }
+
+  .faq-card__question {
+    font-size: 23px;
+  }
+}
+
+/* --------------------------- */
+/* SECCIÓ FINAL DE TEXT        */
+/* --------------------------- */
+
+.article-final {
+  padding: 48px 72px;
+  background: #ffffff;
+}
+
+.article-final__inner {
+  max-width: 960px; /* mateixa amplada que .article__inner */
+  margin: 0 auto;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.article-final__inner p {
+  margin: 0 0 20px;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .article-final {
+    padding: 32px 16px 56px;
+  }
+  .article-final__inner {
+    font-size: 18px;
+  }
+}
+
+/* --------------------------- */
+/* FOOTER CRÈDITS              */
+/* --------------------------- */
+
+.credits {
+  padding: 48px 64px;
+  background: #ffffff;
+  text-align: center;
+  color: #7a7a7a;
+  font-size: 18px;
+}
+
+.credits__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.credits__rule {
+  height: 1px;
+  width: 100%;
+  background: #d1d1d1;
+  margin-bottom: 20px;
+}
+
+.credits__title {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #666666;
+}
+
+.credits__text {
+  max-width: 780px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .credits {
+    padding: 32px 16px 48px;
+    font-size: 13px;
+  }
+  .credits__title {
+    font-size: 16px;
+  }
+}
+
+/* ------- FIX HERO MÒBIL ------- */
+@media (max-width: 700px) {
+  .hero {
+    position: relative;
+    width: 100%;
+    min-height: auto; /* deixem que creixi amb el contingut */
+    overflow: hidden;
+  }
+
+  .hero__bg {
+    position: relative;
+    width: 100%;
+    height: 260px; /* alçada de la foto en mòbil */
+  }
+
+  .hero__bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .hero__overlay {
+    position: static; /* deixa de ser absolut */
+    width: 100%;
+    height: auto;
+    padding: 32px 16px 40px; /* marge interior còmode en mòbil */
+    background: var(--color-teal); /* bloc verd sòlid, sense semicercle */
+    border-radius: 0;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .hero__overlay::before {
+    display: none; /* ens assegurem que no hi ha cap màscara */
+  }
+
+  .hero__content {
+    max-width: none;
+    color: #000;
+  }
+
+  .hero__kicker {
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+
+  .hero__title {
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 800;
+  }
+}
+
+/* --------------------------- */
+/* CINC PASSOS PER A L’ACOMPANYAMENT */
+/* --------------------------- */
+
+.faq {
+  background: #4b4b4b;
+  padding: 56px 64px;
+  color: #ffffff;
+}
+
+.faq__inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.faq__header {
+  margin-bottom: 24px;
+}
+
+.faq__title {
+  font-size: 22px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  text-align: left;
+  font-weight: 300;
+}
+
+.faq__rule {
+  height: 2px;
+  background: #a19f9fff;
+  width: 100%;
+}
+
+/* Etiquetes ABANS / DURANT / DESPRÉS */
+
+.steps-labels {
+  margin-top: 24px;
+  margin-bottom: 8px;
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.steps-labels--top {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.steps-labels--bottom {
+  display: flex;
+  justify-content: normal;
+  gap: 125px;
+}
+
+.steps-labels__item {
+  color: #ffffff;
+}
+
+/* Files i grid */
+
+.steps-row {
+  margin-bottom: 24px;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.steps-grid--bottom {
+  align-items: stretch;
+}
+
+/* Targetes */
+
+.faq-card {
+  border-radius: 24px;
+  min-height: 180px;
+  position: relative;
+  perspective: 1000px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.faq-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  border-radius: inherit;
+}
+
+.faq-card--flip {
+  cursor: pointer;
+}
+
+.faq-card--flip.is-flipped .faq-card__inner {
+  transform: rotateY(180deg);
+}
+
+.faq-card__face {
+  position: absolute;
+  inset: 0;
+  padding: 20px 18px;
+  border-radius: inherit;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Cara frontal */
+
+.faq-card__face--front {
+  text-align: center;
+}
+
+/* Cara posterior */
+
+.faq-card__face--back {
+  transform: rotateY(180deg);
+  font-size: 14px;
+  line-height: 1.5;
+  color: #222;
+}
+
+/* Estils de text frontal */
+
+.steps-card__phase {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.steps-card__title {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+/* Mà pixel */
+
+.steps-card__hand {
+  width: 40px;
+  height: auto;
+  margin: 0 auto 4px;
+}
+
+/* Colors front/back per a cada pas */
+
+.faq-card--step1 .faq-card__face--front,
+.faq-card--step2 .faq-card__face--front,
+.faq-card--step3 .faq-card__face--front {
+  background: #d9298c; /* magenta */
+}
+
+.faq-card--step4 .faq-card__face--front {
+  background: #36a3b4; /* blau-verd */
+}
+
+.faq-card--step5 .faq-card__face--front {
+  background: #308d42; /* verd */
+}
+
+.faq-card--step1 .faq-card__face--back {
+  background: #efc9e1;
+}
+
+.faq-card--step2 .faq-card__face--back {
+  background: #efc9e1;
+}
+
+.faq-card--step3 .faq-card__face--back {
+  background: #efc9e1;
+}
+
+.faq-card--step4 .faq-card__face--back {
+  background: #cce8ec;
+}
+
+.faq-card--step5 .faq-card__face--back {
+  background: #cbe2cf;
+}
+
+/* Imatge pixel de la família */
+
+.steps-pixels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.steps-pixels__image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 900px) {
+  .faq {
+    padding: 40px 24px 48px;
+  }
+  .steps-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .steps-grid--top {
+    grid-template-columns: 1fr;
+  }
+  .steps-grid--bottom {
+    grid-template-columns: 1fr;
+  }
+  .steps-pixels {
+    order: -1;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .faq {
+    padding: 32px 16px 40px;
+  }
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  .steps-labels--bottom {
+    flex-direction: column;
+    gap: 4px;
+  }
+}
+
+/* Targetes generals */
+
+.faq-card {
+  border-radius: 24px;
+  height: 260px; /* ✅ alçada fixa per a totes */
+  position: relative;
+  perspective: 1000px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+}
+
+.faq-card__inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  border-radius: inherit;
+}
+
+.faq-card--flip {
+  cursor: pointer;
+}
+
+.faq-card--flip.is-flipped .faq-card__inner {
+  transform: rotateY(180deg);
+}
+
+.faq-card__face {
+  position: absolute;
+  inset: 0;
+  padding: 20px 18px;
+  border-radius: inherit;
+  backface-visibility: hidden;
+}
+
+/* Cara frontal: text + mà centrats */
+
+.faq-card__face--front {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* ✅ tot centrat al mig */
+  text-align: center;
+}
+
+/* Cara posterior: text centrat verticalment */
+
+.faq-card__face--back {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 18px;
+  line-height: 1.5;
+  color: #222;
+  transform: rotateY(180deg);
+}
+
+/* Text i mà */
+
+.steps-card__phase {
+  margin: 0 0 8px;
+  font-size: 30px;
+  font-weight: 800;
+}
+
+.steps-card__title {
+  margin: 0 0 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.steps-card__hand {
+  width: 40px;
+  height: auto;
+  margin-top: 8px;
+}
+
+/* Títol fora del bloc gris */
+.faq-title {
+  background: #ffffff;
+  padding: 40px 0 40px;
+}
+
+.faq-title__inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
