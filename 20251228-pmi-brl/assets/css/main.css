@@ -36,7 +36,13 @@
   src: url(https://fonts.gstatic.com/s/materialicons/v128/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2)
     format("woff2");
 }
-
+#check-menusidebar {
+    position: fixed;
+    top: 0;
+    left: -99px;
+    box-sizing: border-box;
+    padding: 0;
+}
 .material-icons {
   font-family: "Material Icons";
   font-weight: 400;
