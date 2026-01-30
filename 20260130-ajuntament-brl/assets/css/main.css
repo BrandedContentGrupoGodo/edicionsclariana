@@ -181,7 +181,9 @@ a {
   .hero-video__content {
     padding-bottom: 32px;
   }
-}
+  .hero-video__content h1 {
+  font-size: clamp(40px, 5vw, 52px)!important;
+}}
 
 /* =====================
    CONTINGUT
@@ -704,6 +706,7 @@ a {
 .site-footer .container {
   max-width: 900px;
   text-align: center;
+  background: white;
 }
 
 .site-footer__credits {
