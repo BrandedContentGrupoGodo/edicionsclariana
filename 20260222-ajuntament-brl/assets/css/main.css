@@ -181,6 +181,17 @@ a {
   .hero-video__content {
     padding-bottom: 32px;
   }
+  .hero-video__content h1 {
+    color: #fff;
+    font-size: clamp(41px, 5vw, 52px);
+    font-weight: 700;
+    line-height: 1.1;
+    max-width: 1000px;
+    margin: 0;
+}
+footer .container {
+    background-color: #fff!important;
+}
 }
 
 /* =====================
