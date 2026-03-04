@@ -389,7 +389,7 @@ p a:hover {
   .top-bar__title {
     font-size: 8px;
     white-space: normal;
-    text-align: center;
+    text-align: left;
     line-height: 1.2;
     width: 90%;
   }
@@ -415,4 +415,5 @@ p a:hover {
     padding-right: 12px;
   }
 }
+
 
