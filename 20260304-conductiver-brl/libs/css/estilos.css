@@ -321,6 +321,7 @@ p a:hover {
 .footer2 {
   margin-top: 60px;
   padding-bottom: 60px;
+  background: #fff;
 }
 
 .footer-line {
@@ -414,3 +415,4 @@ p a:hover {
     padding-right: 12px;
   }
 }
+
