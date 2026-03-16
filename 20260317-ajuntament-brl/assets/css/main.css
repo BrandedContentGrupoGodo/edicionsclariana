@@ -172,6 +172,10 @@ img {
   text-align: center;
 
   font-size: 14px;
+  background: #fff !important;
+}
+.site-footer .container{
+  background: #fff !important;
 }
 
 .site-footer__credits {
