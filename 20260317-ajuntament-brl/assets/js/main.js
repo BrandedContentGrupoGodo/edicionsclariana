@@ -19,13 +19,13 @@ const visibleCards = window.innerWidth < 700 ? 1 : 3;
 let index = visibleCards;
 
 
-/* CLONES */
+/* CLONES (correctes) */
 
-const statsFirstClones = cards.map(el=>el.cloneNode(true));
-const statsLastClones = cards.map(el=>el.cloneNode(true));
+const firstClones = cards.slice(0, visibleCards).map(el=>el.cloneNode(true));
+const lastClones = cards.slice(-visibleCards).map(el=>el.cloneNode(true));
 
-statsLastClones.forEach(el=>track.prepend(el));
-statsFirstClones.forEach(el=>track.append(el));
+lastClones.forEach(el=>track.prepend(el));
+firstClones.forEach(el=>track.append(el));
 
 const allCards = document.querySelectorAll(".stat-card");
 
@@ -146,16 +146,16 @@ const dotsContainer = document.querySelector(".parks-dots");
 
 const visible = window.innerWidth < 700 ? 1 : 3;
 
-let index = cards.length;
+let index = visible;
 
 
-/* CLONES */
+/* CLONES (correctes) */
 
-const parksFirstClones = cards.map(el=>el.cloneNode(true));
-const parksLastClones = cards.map(el=>el.cloneNode(true));
+const firstClones = cards.slice(0, visible).map(el=>el.cloneNode(true));
+const lastClones = cards.slice(-visible).map(el=>el.cloneNode(true));
 
-parksLastClones.forEach(el=>track.prepend(el));
-parksFirstClones.forEach(el=>track.append(el));
+lastClones.forEach(el=>track.prepend(el));
+firstClones.forEach(el=>track.append(el));
 
 const allCards = document.querySelectorAll(".park-card");
 
@@ -186,7 +186,9 @@ const dots=document.querySelectorAll(".parks-dots button");
 
 function update(anim=true){
 
-const w = allCards[0].offsetWidth + 30;
+const gap = window.innerWidth < 700 ? 0 : 30;
+
+const w = allCards[0].offsetWidth + gap;
 
 track.style.transition = anim ? "transform .5s ease" : "none";
 
@@ -250,7 +252,7 @@ setInterval(()=>{
 index++;
 update();
 
-},10000);
+},7000);
 
 }
 
@@ -278,8 +280,6 @@ iframe.allow =
 "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
 
 iframe.allowFullscreen = true;
-
-iframe.setAttribute("allowfullscreen","");
 
 video.innerHTML="";
 video.appendChild(iframe);
