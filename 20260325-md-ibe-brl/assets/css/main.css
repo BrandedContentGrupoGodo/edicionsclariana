@@ -9,7 +9,11 @@
 body {
   font-family: "Inter", sans-serif;
 }
-
+.container {
+  max-width: 100% !important;
+  margin: 0 auto;
+  padding: 0 20px;
+}
 /* FRANJA SUPERIOR */
 .top-bar {
   width: 100%;
@@ -128,34 +132,33 @@ body {
   .hero-title {
     bottom: 10px;
     padding: 8px 20px;
-            position: relative;
-        max-width: 100%;
-}
+    position: relative;
+    max-width: 100%;
+  }
 
-.hero-title h1 {
+  .hero-title h1 {
     font-size: 28px;
-}
-.subheadline p {
+  }
+  .subheadline p {
     font-size: 26px;
+  }
+  .highlight-right .highlight-text {
+    padding-left: 0px !important;
+  }
 
-}
-.highlight-right .highlight-text {
-    padding-left: 0px!important;
-}
+  .highlight-left .highlight-text {
+    padding-right: 0px !important;
+  }
 
-.highlight-left .highlight-text {
-    padding-right: 0px!important;
-}
-
-.highlight-right .highlight-text h2 {
+  .highlight-right .highlight-text h2 {
     text-align: left;
-    font-size: 31px!important;
-}
+    font-size: 31px !important;
+  }
 
-.highlight-left .highlight-text h2 {
+  .highlight-left .highlight-text h2 {
     text-align: left;
-    font-size: 31px!important;
-}
+    font-size: 31px !important;
+  }
 }
 
 .highlight-left {
@@ -206,7 +209,7 @@ body {
 .highlight-left .highlight-image img {
   width: 700px;
   border-top-left-radius: 120px;
-      max-width: 100%;
+  max-width: 100%;
 }
 
 .highlight-right {
@@ -257,7 +260,7 @@ body {
 .highlight-right .highlight-image img {
   width: 700px;
   border-top-right-radius: 120px;
-      max-width: 100%;
+  max-width: 100%;
 }
 
 @media (max-width: 900px) {
@@ -605,7 +608,6 @@ body {
   font-size: 12px;
   color: #fff001;
 }
-
 
 #d4 {
   display: flex;
