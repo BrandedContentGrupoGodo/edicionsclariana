@@ -86,9 +86,9 @@ const historias = [
   {
     // ACTUALIZAR EL CAPÍTULO 7
     nombre: "Joel Martín",
-    frase: "El hecho de que dudaran de mí me sirvió como gasolina para decir ‘ahora sí o sí, lo voy a conseguir",
-    imagen: "../../img/cap7.png",
-    enlace: "#"
+    frase: "Joel Martín: del “no llegarás a nada” a soñar con el oro en Los Ángeles 2028",
+    imagen: "https://brandedcontentgrupogodo.github.io/edicionsclariana/20260429-lacaixa-hub-brl/assets/img/cap7.png",
+    enlace: "https://www.lavanguardia.com/deportes/20260429/11524756/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
   },
   { locked: true },
   { locked: true },
