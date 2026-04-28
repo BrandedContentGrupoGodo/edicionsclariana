@@ -1,0 +1,371 @@
+:root {
+  --bg-color: #02060E;
+  --text-color: #ffffff;
+  --accent-color: #ffffff;
+  --star-glow: rgba(255, 255, 255, 0.15);
+  --font-sans: "Albert Sans", sans-serif;
+  --font-serif: "Crimson Text", serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- ESTILOS LANDING -------------------------------------- */
+.constelacion-wrapper {
+  font-family: var(--font-sans);
+  background: radial-gradient(50% 50% at 50% 50%, #081D31 37.02%, #02060E 100%), #02060E;
+  color: var(--text-color);
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+#stars-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+  
+}
+
+.constelacion-header {
+  text-align: center;
+  padding: 0 2rem 7rem;
+}
+
+.constelacion-header span {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  opacity: 0.85;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 127.075%; /* 12.708px */
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+
+}
+
+.constelacion-header h1 {
+  max-width: 950px;
+  font-size: 5rem;
+  font-family: var(--font-serif);
+  margin:0 auto 1rem;
+  color: var(--accent-color);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 93%;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.constelacion-header p.sub {
+  max-width: 380px;
+  margin: 0 auto 3rem;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%; 
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: var(--font-sans);
+}
+
+.scroll-cta {
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  margin-top: 1rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+.grid-background {
+  background-image: url('https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/fondo-estrellas.png');
+  background-color: #0a0e27;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: screen;
+  padding: 3rem 2rem 6rem;
+  opacity: 0.9;
+}
+
+.constelacion-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap:5rem;
+  padding: 0.1rem 2rem 6rem; 
+  margin: 0 auto;
+  max-width: 1580px;
+}
+
+.card {
+  background-color: rgba(1, 2, 4, 0.50);
+  border: 1px solid #1C3257;
+  border-radius: 7px;
+  overflow: hidden;
+  box-shadow: 0 0 12px var(--star-glow);
+  width: 300px;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.card:hover {
+  transform: translateY(-8px)!important; /* sube un poco la tarjeta */
+}
+
+.card:nth-child(odd) {
+  top: -30px;
+}
+
+.card:nth-child(even) {
+  top: 30px;
+}
+
+@media (max-width: 560px) {
+  .constelacion-header h1 {
+    font-size: 2.5rem;
+  }
+  .card:nth-child(odd), .card:nth-child(even) {
+    top: auto;
+  }
+}
+
+.card img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  max-width: 100%;
+  padding: 15px;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card h2 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 0.5rem;
+  color: var(--accent-color);
+}
+
+.card p em {
+  font-size: 1.1rem;
+  font-style: normal!important;
+  font-weight: 500;
+  line-height: 110%;
+}
+.card p {
+  font-size: 1rem;
+  font-style: normal!important;
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 15px;
+}
+
+.card a {
+  margin-top: auto;
+  display: inline-block;
+  margin-top: 1rem;
+  background: #18335f;
+  color: var(--accent-color);
+  padding: 0.6rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 110%;
+}
+
+.card a:hover {
+  background: #234a86;
+}
+
+.card.locked {
+  cursor: not-allowed;
+}
+
+.soon-text {
+  color: #728493;
+  font-family: var(--font-sans);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%; /* 19.8px */
+}
+
+
+/* ===== SECCIÓN EXTRA DEBAJO DE LA GRID ===== */
+.constelacion-extra {
+  text-align: center;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.constelacion-extra h3 {
+  font-size: 2.3rem;
+  font-family: var(--font-serif);
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  margin-bottom: 15px;
+  color: #fff; /* ajusta según tu paleta */
+  max-width: 800px;
+  margin: 50px auto 20px auto;
+}
+
+.constelacion-extra p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #ddd; /* ajusta según tu paleta */
+  max-width: 800px;
+  margin: auto;
+}
+
+.constelacion-extra img.big-photo {
+  border-radius: 7px;
+  margin: 35px 0;
+  width: 100%;
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.constelacion-extra .back-btn {
+  margin: 20px auto;
+  padding: 12px 24px;
+  border-radius: 7px;
+  border: none;
+  background: #1C3257;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.constelacion-extra .back-btn:hover {
+  background: #25447A;
+}
+
+.constelacion-extra .logo {
+  margin: 50px 0;
+  max-width: 250px;
+}
+
+/* ===== BARRA REDES SOCIALES ===== */
+.social-bar {
+  height: 54px;
+  width: 100%;
+  background: #091B2B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.social-bar a img {
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.social-bar a img:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* ---------- CRÉDITOS ---------------------------------- */
+.authorship-f {
+  color: #888;
+  font-size: 0.9em;
+  text-align: center;
+  padding-bottom: 30px;
+  margin-top: 30px;
+}
+
+.container-fluid-f {
+  width: calc(100% - 40px);
+  margin-inline: auto;
+  padding-inline: 20px;
+}
+
+/* estilos para que en LV se muestre el contenido sin margenes */
+.wallpaper-inverted-ad{
+    display: none!important;
+  }
+  
+  .visual-article-free .col-12 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-top: 0 !important;
+  }
+  .content-free-html {
+    margin:0 !important;
+  }
+  .container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  .visual__story--free .content-free-html {
+    margin: 0px !important;
+  }
+  .row>* {
+    padding-right: 0!important;
+    padding-left: 0!important;
+    margin-top: 0!important;
+  }
+  .article-default a:hover {
+    text-decoration: none;
+    box-shadow: none;
+  }
+button:focus {
+    outline: 1px dotted var(--background-color);
+    outline: 5px auto var(--background-color) -webkit-focus-ring-color;
+}
+
+.fb_iframe_widget {
+    display: inline-block;
+    position: relative;
+    padding-top: 0.8rem;
+    color: white;
+}
+.fb-xfbml-parse-ignore {
+  color: white!important;
+}
+._6a ._6b {
+  color: white!important;
+}
+.blanco {
+  color: #fff!important;
+      padding-top: 0.8rem;
+}
+.fb-share-button {
+  color: white!important;
+}

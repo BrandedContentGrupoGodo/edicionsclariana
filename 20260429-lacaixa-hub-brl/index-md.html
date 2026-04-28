@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <!-- ACTUALIZAR LA RUTA DE LOS ARCHIVOS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <div class="constelacion-wrapper">
+        <canvas id="bg"></canvas>
+          <canvas id="stars-bg"></canvas>
+        <div class="constelacion-header">
+            <span>En colaboración con CaixaBank</span>
+            <h1>Una constelación de historias que iluminan el deporte</h1>
+            <p class="sub">Seis relatos reales. Seis estrellas. Una red de apoyo que impulsa cada logro</p>
+            <div class="scroll-cta">▼ Explorar las historias</div>
+        </div>
+
+        <div class="grid-background">
+            <div class="constelacion-grid" id="constelacion"></div>
+        </div>
+
+        <!-- NUEVA SECCIÓN ============================================= -->
+        <div class="constelacion-extra">
+            <h3>¿Qué conecta estas historias?</h3>
+            <p>
+                CaixaBank impulsa el deporte paralímpico español desde la igualdad, la empatía y la acción. 
+                Detrás de cada historia hay una red real de apoyo: familias, entrenadores, organizaciones y sueños compartidos.
+            </p>
+
+            <!-- Imagen grande con border radius -->
+            <img src="https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/galeria1.jpg" alt="Deporte inclusivo" class="big-photo">
+
+            <h3>Juntos brillamos más</h3>
+            <p>
+            Explora cada historia y forma parte de la constelación del deporte inclusivo
+            </p>
+
+            <!-- Botón scroll arriba -->
+            <button class="back-btn"
+                onclick="document.getElementById('constelacion').scrollIntoView({ behavior: 'smooth' });">
+                Volver a las estrellas
+            </button>
+
+            <!-- Logo centrado -->
+            <div>
+            <img src="https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/logo_caixabank.svg" alt="Logo CaixaBank" class="logo">
+            </div>
+        </div>
+
+        <!-- BARRA REDES SOCIALES ====================================== -->
+        <div class="social-bar">
+            <div class="blanco">
+                <iframe 
+                src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.lavanguardia.com%2Fdeportes%2F20250908%2F11008947%2Fconstelaciones-luz-atleta-historias-constelaciones-brl.html&layout=button&size=large&width=120&height=35&appId" 
+                width="120" 
+                height="30" 
+                style="border:none;overflow:hidden" 
+                scrolling="no" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
+                </iframe>
+            </div>
+            <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button blanco" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            
+        </div>
+
+        <!-- CRÉDITOS ============================================= -->
+        <div class="authorship-f" aria-label="Créditos del proyecto">
+            <div class="container-fluid-f">
+                <span>Coordinación: Kevin Casas y Rosa Varona</span> |
+                <span>Diseño y maquetación: Alejandra Santander</span> |
+                <span>Vídeo y fotografía: Nolich.</span>
+                <span>Un proyecto de Brandslab. Godó Nexus</span>
+            </div>
+        </div>
+    </div>  
+    
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
+    <!-- ACTUALIZAR LA RUTA DE LOS ARCHIVOS -->
+    <script src="assets/js/scripts-md.js"></script>
+</body>
+</html>
