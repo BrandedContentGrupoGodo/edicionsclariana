@@ -84,11 +84,11 @@ const historias = [
     enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20251117/1002568983/ander-cepas-tenis-mesa-campeon-olvido-era-numero-uno-mundo-constelaciones-streaming-brl.html"
   },
   {
-    // ACTUALIZAR EL CAPÍTULO 7
-    nombre: "Capítulo 7",
-    frase: "Una nueva historia para seguir iluminando el deporte",
-    imagen: "#",
-    enlace: "#"
+     // ACTUALIZAR EL CAPÍTULO 7
+    nombre: "Joel Martín",
+    frase: "Joel Martín: del “no llegarás a nada” a soñar con el oro en Los Ángeles 2028",
+    imagen: "https://brandedcontentgrupogodo.github.io/edicionsclariana/20260429-lacaixa-hub-brl/assets/img/cap7.png",
+    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260429/1004176410/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
   },
   { locked: true },
   { locked: true },
