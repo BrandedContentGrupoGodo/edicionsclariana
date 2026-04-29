@@ -88,7 +88,7 @@ const historias = [
     nombre: "Joel Martín",
     frase: "Del 'no llegarás a nada' a soñar con el oro en Los Ángeles 2028",
     imagen: "https://brandedcontentgrupogodo.github.io/edicionsclariana/20260429-lacaixa-hub-brl/assets/img/cap7.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260429/1004176410/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
+    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260430/1004176410/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
   },
   { locked: true },
   { locked: true },
