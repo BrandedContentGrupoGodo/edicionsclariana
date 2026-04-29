@@ -118,7 +118,7 @@ historias.forEach((historia, i) => {
     // Historias bloqueadas
     card.classList.add("locked");
     card.innerHTML = `
-      <img src="assets/img/locked.png" alt="Historia bloqueada">
+      <img src="https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/locked.png" alt="Historia bloqueada">
       <div class="card-content">
         <p class="soon-text">Próximamente</p>
       </div>
