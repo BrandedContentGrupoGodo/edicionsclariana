@@ -33,6 +33,8 @@ body {
 /* SECCIONS */
 .section {
   padding: 6rem 0rem 0rem 0rem;
+  background: var(--color-fons) !important;
+
 }
 
 .section--narrow {
@@ -761,6 +763,8 @@ body {
 .footer__inner {
   max-width: 900px;
   margin: 0 auto;
+      background: var(--color-fons) !important;
+
 }
 
 /* TITOL */
