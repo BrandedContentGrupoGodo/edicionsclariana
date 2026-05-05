@@ -224,7 +224,7 @@ body {
 /* =====================
    CONTAINER
 ===================== */
-.container {
+.section .container {
   max-width: 950px;
   margin: 0 auto;
   padding: 40px 20px;
@@ -649,6 +649,7 @@ body {
 /* Contenedor más estrecho para elegancia */
 .footer__inner {
   max-width: 800px;
+  background: #ffffff!important;
 }
 
 /* Título serif */
