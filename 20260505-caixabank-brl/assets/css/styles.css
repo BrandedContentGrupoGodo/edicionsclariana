@@ -265,7 +265,7 @@ body {
 }
 
 /* ACTIVO */
-.section__menu li.active {
+.section__menu li.active_menu {
   color: #b78f49; /* dorado */
 }
 
