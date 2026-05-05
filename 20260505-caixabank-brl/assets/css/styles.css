@@ -680,7 +680,7 @@ body {
 }
 
 /* ACTIVO */
-.section__menu a.active {
+.section__menu a.active_menu {
   color: #b78f49;
 }
 
