@@ -207,6 +207,10 @@ img{
 /* TABLET */
 @media (max-width: 980px){
 
+
+  .lang{
+  position: inherit!important;
+  }
   .hero{
     min-height: 560px;
   }
