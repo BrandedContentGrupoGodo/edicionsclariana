@@ -1582,3 +1582,22 @@ img{
   }
 
 }
+
+/* LINKS */
+.support-section__link{
+  color: var(--red);
+
+  font-weight: 700;
+
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  transition:
+    opacity .2s ease,
+    color .2s ease;
+}
+
+.support-section__link:hover{
+  opacity: .75;
+}
