@@ -84,13 +84,18 @@ const historias = [
     enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20251117/1002568983/ander-cepas-tenis-mesa-campeon-olvido-era-numero-uno-mundo-constelaciones-streaming-brl.html"
   },
   {
-     // ACTUALIZAR EL CAPÍTULO 7
+    // ACTUALIZAR EL CAPÍTULO 7
     nombre: "Joel Martín",
-    frase: "Del 'no llegarás a nada' a soñar con el oro en Los Ángeles 2028",
+    frase: "Joel Martín: Del 'no llegarás a nada' a soñar con el oro en Los Ángeles 2028",
     imagen: "https://brandedcontentgrupogodo.github.io/edicionsclariana/20260429-lacaixa-hub-brl/assets/img/cap7.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260430/1004176410/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20260430/11524756/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
   },
-  { locked: true },
+  {
+    nombre: "Judith Rodríguez",
+    frase: "Al entrar el último tocado me entraron ganas de llorar al pensar en todo lo que había detrás de ese éxito",
+    imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap8.png",
+    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260528/1004188252/judith-rodriguez-paralimpicos-esgrima-espana-medalla-constelaciones-streaming-brl.html"
+  },
   { locked: true },
   { locked: true },
   { locked: true },
