@@ -295,7 +295,9 @@ body{
 
 }
 
-
+aside {
+  display:inline!important;
+}
 
 .sidebar{
 
