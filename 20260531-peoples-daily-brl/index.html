@@ -1,375 +1,740 @@
-<!DOCTYPE html>
-<html lang="es">
+:root{
 
-<head>
+  --bg:#f5f1ea;
+  --text:#121212;
+  --muted:#6e6e6e;
+  --line:#ddd4c8;
+  --accent:#b31d2c;
+  --white:#ffffff;
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+}
 
-  <title>People's Daily | La Vanguardia</title>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-  <!-- FONTS -->
+body{
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  line-height:1.8;
 
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+}
 
-  <!-- CSS -->
+/* TOPBAR */
 
-  <link rel="stylesheet" href="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/css/main.css">
+.topbar{
 
-</head>
+  height:60px;
+  background:#111;
+  color:white;
 
-<body>
+  display:flex;
+  align-items:center;
 
+}
 
+.topbar-inner{
 
-  <!-- NAV -->
+  width:100%;
+  max-width:1400px;
+  margin:auto;
 
-  <header class="header">
+  padding:0 40px;
 
-    <div class="header-inner">
+  font-size:13px;
+  letter-spacing:2px;
+  text-transform:uppercase;
 
-      <div class="brand">
-        Ofrecido por PEOPLE'S DAILY
-      </div>
+}
 
-      <nav class="main-nav">
-        <a href="index.html" class="active">IA</a>
-        <a href="02.html">Datos</a>
-        <a href="03.html">BeiDou</a>
-        <a href="04.html">Innovación</a>
-        <a href="05.html">Economía</a>
-      </nav>
+/* HEADER */
 
-    </div>
+.header{
 
-  </header>
+  position:sticky;
+  top:0;
 
-  <!-- HERO -->
+  z-index:100;
 
-  <section class="hero">
+  background:rgba(245,241,234,.92);
 
-    <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/img/foto01.jpg" alt="">
+  backdrop-filter:blur(12px);
 
-   <div class="hero-overlay"></div>
+  border-bottom:1px solid var(--line);
 
-<div class="hero-caption">
-  Instalación internacional de computación en Changji, en la región autónoma uigur de Xinjiang. (He Long)
-</div>
+}
 
-<div class="hero-content">
+.header-inner{
 
-      <span class="eyebrow">
-        Inteligencia Artificial
-      </span>
+  max-width:1400px;
+  margin:auto;
 
-      <h1>
-        Modelos gigantes chinos de IA logran un uso global generalizado
-      </h1>
+  padding:22px 40px;
 
-      <p class="subtitle">
-        Los datos de la industria muestran que los grandes modelos de IA chinos ahora se encuentran entre los líderes mundiales en consumo total de tokens
-      </p>
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 
-      
+}
 
-    </div>
+.brand{
 
-  </section>
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:3px;
 
-  <!-- CONTENT -->
+}
 
-  <main class="layout">
+.main-nav{
 
-    <!-- ARTICLE -->
+  display:flex;
+  gap:22px;
 
-    <article class="article">
+}
 
-      <div class="meta">
-        <span>Wang Yinxin y Li Junqiang</span>
-      </div>
+.main-nav a{
 
-      <p>
-        A las 15:00 h en Nueva York, un ingeniero llamado Mike en una <i>startup</i> estadounidense recibió una nueva tarea. Se volvió hacia un asistente de IA impulsado por un modelo gigante chino. Después de ingresar algunos requisitos clave, un plan de proyecto bien estructurado apareció en su pantalla en pocos segundos. Con la ayuda de este <i>asistente inteligente</i>, una tarea que antes tomaba medio día se completó en menos de 30 minutos.
-      </p>
+  text-decoration:none;
+  color:var(--muted);
 
-      <p>
-       En los mercados globales, un número creciente de usuarios está recurriendo a los modelos de IA gigantes chinos para aumentar la productividad. Cada interacción consume unidades digitales conocidas como tokens, los bloques básicos que los sistemas de IA usan para procesar el lenguaje. En general, un carácter chino corresponde a un token, mientras que una palabra en inglés abarca de uno a dos tokens, incluyendo la puntuación.
-      </p>
+  transition:.3s;
 
-      <p>
-       Dado que los grandes modelos procesan texto limitado por sesión, la mayoría de los servicios de IA cobran en función del uso de tokens: un mayor consumo significa mayores costos. En marzo de este año, el uso diario de tokens en China superó los 140 billones, un aumento de mil veces en dos años. 
-      </p>
+  font-size:14px;
 
-      <!-- FOTO 2 -->
+}
 
-      <figure class="article-image">
+.main-nav a:hover,
+.main-nav a.active{
 
-        <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/img/foto02.jpg" alt="">
+  color:var(--accent);
 
-        <figcaption>
-          Parque industrial de macrodatos en Zhangjiakou, provincia de Hebei. (Chen Xiaodong)
-        </figcaption>
+}
 
-      </figure>
+/* HERO */
 
-      <h2>
-       Líderes en consumo de tokens
-      </h2>
+.hero{
 
-      <p>
-        Los datos de la industria muestran que los grandes modelos de IA chinos ahora se encuentran entre los líderes mundiales en consumo total de tokens. Yan Yijun, vicepresidente de la empresa de modelos de base de IA con sede en Shanghai MiniMax, explicó: "Los usuarios aplican criterios claros: primero, el modelo debe ser inteligente, fácil de usar y receptivo, y capaz de resolver problemas complejos; segundo, los precios deben ser razonables y comercialmente sostenibles."
-      </p>
+  position:relative;
+  height:90vh;
 
-      <p>
-        El consumo de tokens refleja el uso en el mundo real, indicando qué tan profundamente, con qué frecuencia y de manera tan extensa los grandes modelos de IA se integran en las aplicaciones. 
-      </p>
+  overflow:hidden;
 
-      <div class="quote-block">
+}
 
-  <blockquote>
-    “Los grandes modelos de IA chinos disfrutan de un uso de alta frecuencia por parte de usuarios de todo el mundo”
-  </blockquote>
+.hero img{
 
-  <span class="quote-author">
-    — Yan Yijun, vicepresidente de MiniMax
-  </span>
+  width:100%;
+  height:100%;
 
-</div>
+  object-fit:cover;
 
-      <p>
-        Para los desarrolladores, equilibrar un mayor rendimiento con un menor costo no es una tarea fácil. Las mejoras en la capacidad del modelo a menudo vienen acompañadas de un crecimiento exponencial en los parámetros, lo que incrementa el consumo de tokens. Cuantos más tokens se usen, mayores serán los costos operativos para las empresas y los costos para los usuarios. 
-      </p>
+}
 
-      <!-- FOTO 3 -->
+.hero-overlay{
 
+  position:absolute;
+  inset:0;
 
-      <p>
-       Yan citó el modelo "MiniMax M2.5" como una solución: "Usamos la innovación algorítmica para crear rutas de razonamiento eficientes, reduciendo el consumo de tokens desde el origen mientras aumentamos el valor de cada token".
-      </p>
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.75),
+    rgba(0,0,0,.15)
+  );
 
-      <p>
-        Con un precio de 1 dólar por hora, MiniMax M2.5 produce 100 tokens por segundo. Las estimaciones sugieren que los modelos chinos ofrecen un rendimiento comparable a una décima parte del costo de las alternativas estadounidenses.
-      </p>
+}
 
+.hero-content{
 
-	     <div class="quote-block">
+  position:absolute;
 
-  <blockquote>
-    “La disminución de los costos refleja el progreso tecnológico de las empresas chinas de IA y su fortaleza en el suministro de energía y las cadenas industriales”
-  </blockquote>
+  left:50%;
+  bottom:80px;
 
-  <span class="quote-author">
-    — Li Zhiqing, profesor de la Escuela de Economía de la Universidad de Fudan
-  </span>
+  transform:translateX(-50%);
 
-</div>
+  width:100%;
+  max-width:1200px;
 
-      <p>
-       La amplia gama de escenarios de aplicación de China sirve como campo de prueba para la IA. Hasta diciembre del 2025, los usuarios de IA generativa en China habían alcanzado los 602 millones, un aumento del 141,7% respecto al año anterior.</p>
+  padding:0 40px;
 
- <p>Esta base de usuarios en rápida expansión está acelerando la transición de la IA de ser una novedad a convertirse en una herramienta cotidiana, extendiendo su uso más allá de las aplicaciones de internet a áreas como la colaboración en oficinas y el diseño industrial.</p>
+  color:white;
 
- <p>Al mismo tiempo, la creciente adopción proporciona retroalimentación continua, mejorando la capacidad de los modelos para manejar tareas complejas y abriendo nuevas vías para el desarrollo.</p>
+}
 
+.eyebrow{
 
- <figure class="article-image">
+  display:inline-block;
 
-        <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/img/foto03.jpg" alt="">
+  margin-bottom:25px;
 
-        <figcaption>
-          Clase sobre conocimientos básicos de IA en una escuela primaria. (Liu Dongyue)
-        </figcaption>
+  text-transform:uppercase;
+  letter-spacing:2px;
 
-      </figure>
+  font-size:12px;
+  font-weight:600;
 
-      <h2>
-        La IA depende de la electricidad
-      </h2>
+}
 
- <p>"En última instancia, el desarrollo de la IA depende de la electricidad", señaló Li. "Un servidor de IA consume de cinco a ocho veces más energía que un servidor tradicional. El entrenamiento de un modelo grande requiere cientos de millones de kilovatios-hora de electricidad, mientras que las operaciones diarias pueden superar los 500,000 kilovatios-hora. Por lo tanto, los costos de energía son un factor clave que moldea la distribución global de la capacidad de computación”.</p>
+.hero h1{
 
- <p>En este aspecto, China sobresale. Con el sistema de suministro eléctrico más grande del mundo, respaldado por redes de transmisión de ultra alta tensión e integración a gran escala de energía renovable, el país ha establecido una base estable y rentable para la potencia de cálculo.</p>
+  font-family:'DM Serif Display',serif;
 
+  font-size:clamp(3rem,7vw,4.5rem);
 
-       <div class="quote-block">
+  line-height:.95;
 
-  <blockquote>
-    “China ahora está transformando sus fortalezas en energía y manufactura en valor digital para el mercado global”
-  </blockquote>
+  max-width:650px;
 
-  <span class="quote-author">
-    — Li Zhiqing, profesor de la Escuela de Economía de la Universidad de Fudan
-  </span>
+  margin-bottom:25px;
 
-</div>
+}
 
- <p>Hoy, la abundante y asequible energía verde, desde parques eólicos en los desiertos occidentales hasta instalaciones solares en la meseta Qinghai-Tíbet, se alimenta a la red y se transmite eficientemente a los centros de computación del este a través de sistemas de despacho inteligente multinivel, desarrollados de manera independiente."</p>
+.subtitle{
 
- <p>"Además, la cadena de suministro de IA bien desarrollada de China reduce aún más los costos de la industria", precisó Li. Una fuerte coordinación entre sectores, incluidos los chips de IA, servidores, infraestructura informática, redes transfronterizas, computación en el borde y liquidación internacional, ha creado una ventaja integral de cadena completa. </p>
+  max-width:720px;
 
- <p>Li ofreció una comparación: tradicionalmente, un kilovatio-hora de electricidad genera entre una y dos veces su valor en producción. Pero en el caso de los tokens, el valor puede aumentar decenas o incluso cientos de veces. 
+  font-size:1.25rem;
 
-      </p>
+  line-height:1.6;
 
-     
+  opacity:.92;
 
-    </article>
+  margin-bottom:25px;
 
-    <!-- SIDEBAR -->
+}
 
-<aside class="sidebar">
+.meta{
 
-  <div class="sidebar-sticky">
+  font-size:.95rem;
 
-    <span class="sidebar-title">
-      Otros temas
-    </span>
+  font-weight:800;
+  padding-bottom:30px;
 
-    <!-- CARD -->
+}
 
-    <a href="02.html" class="story-card">
+/* LAYOUT */
 
-      <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/img/sidebar02.jpg" alt="">
+.layout{
 
-      <div class="story-overlay"></div>
+  max-width:1400px;
 
-      <div class="story-content">
+  margin:auto;
 
-        <div>
+  padding:100px 40px;
 
-  
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 300px;
 
-          <h3>
-            Una Organización Mundial de Datos
-          </h3>
+  gap:90px;
 
-        </div>
+}
 
-        <div class="story-arrow">
-          →
-        </div>
+/* ARTICLE */
 
-      </div>
+.article{
 
-    </a>
+  max-width:760px;
 
-    <!-- CARD -->
+}
 
-    <a href="03.html" class="story-card">
+.article p{
 
-      <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/img/sidebar03.jpg" alt="">
+  font-size:1.15rem;
 
-      <div class="story-overlay"></div>
+  margin-bottom:34px;
 
-      <div class="story-content">
+}
 
-        <div>
+.lead{
 
+  font-size:1.55rem !important;
 
-          <h3>
-            Revolución agrícola precisa
-          </h3>
+  line-height:1.6;
 
-        </div>
+  color:#222;
 
-        <div class="story-arrow">
-          →
-        </div>
+}
 
-      </div>
+.article h2{
 
-    </a>
+  font-family:'DM Serif Display',serif;
 
-    <!-- CARD -->
+  font-size:3rem;
 
-    <a href="04.html" class="story-card">
+  line-height:1;
 
-      <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/img/sidebar04.jpg" alt="">
+  margin:90px 0 30px;
 
-      <div class="story-overlay"></div>
+}
 
-      <div class="story-content">
+.article-image{
 
-        <div>
+  margin:70px 0;
 
+}
 
-          <h3>
-            Innovación manufacturera
-          </h3>
+.article-image img{
 
-        </div>
+  width:100%;
 
-        <div class="story-arrow">
-          →
-        </div>
+  border-radius:16px;
 
-      </div>
+}
 
-    </a>
+.article-image figcaption{
 
-    <!-- CARD -->
+  margin-top:12px;
 
-    <a href="05.html" class="story-card">
+  color:var(--muted);
 
-      <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260531-peoples-daily-brl/assets/img/sidebar05.jpg" alt="">
+  font-size:.9rem;
 
-      <div class="story-overlay"></div>
+}
 
-      <div class="story-content">
 
-        <div>
 
-    
+.sidebar{
 
-          <h3>
-            Cuatro claves económicas
-          </h3>
+  position:relative;
+  align-self:start;
 
-        </div>
+}
 
-        <div class="story-arrow">
-          →
-        </div>
+.sidebar-sticky{
 
-      </div>
+  position:-webkit-sticky;
+  position:sticky;
 
-    </a>
+  top:140px;
 
-  </div>
+}
 
-</aside>
+.sidebar-title{
 
+  display:block;
 
-  </main>
+  margin-bottom:25px;
 
-  <section class="pd-final-section">
+  font-size:12px;
 
-  <div class="pd-final-divider"></div>
+  letter-spacing:2px;
 
-  <div class="pd-final-inner">
+  text-transform:uppercase;
 
-    <h4 class="pd-final-title">
-      Créditos
-    </h4>
+  color:var(--muted);
 
-    <p class="pd-final-text">
-      Producción: Edicions Clariana SL |
-      Redacción: People's Daily Digital |
-      Diseño: Martí Palma |
-      Maquetación: Enric Abad |
-      Fotografías: People's Daily Digital
-    </p>
+}
 
-    <p class="pd-final-text pd-final-text-secondary">
-      Un proyecto de Brandslab · Godó Nexus
-    </p>
+.story-link{
 
-  </div>
+  display:block;
 
-</section>
+  padding:18px 0;
 
-</body>
+  border-top:1px solid var(--line);
 
-</html>
+  text-decoration:none;
+
+  color:inherit;
+
+  transition:.3s;
+
+}
+
+.story-link:hover{
+
+  transform:translateX(6px);
+
+}
+
+.story-link span{
+
+  display:block;
+
+  margin-bottom:8px;
+
+  color:var(--accent);
+
+  font-size:12px;
+
+  font-weight:700;
+
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1100px){
+
+  .layout{
+
+    grid-template-columns:1fr;
+
+  }
+
+  .sidebar{
+
+    order:-1;
+
+  }
+
+  .sidebar-sticky{
+
+    position:relative;
+    top:0;
+
+  }
+
+}
+
+@media(max-width:768px){
+
+  .main-nav {
+    display: block!important;
+    gap: 22px;
+}
+.hero-caption {
+    bottom: 0px!important;
+}
+.subtitle {
+    margin-bottom: 50px;
+    line-height: 1.2;
+}
+.sidebar-sticky {
+    padding: 10px;
+}
+  .hero{
+
+    height:80vh;
+
+  }
+
+  .hero-content{
+
+    bottom:50px;
+
+    padding:0 24px;
+
+  }
+
+  .layout{
+
+    padding:70px 24px;
+
+  }
+
+  .header-inner,
+  .topbar-inner{
+
+    padding-left:24px;
+    padding-right:24px;
+
+  }
+
+  .article h2{
+
+    font-size:2.2rem;
+
+  }
+
+  blockquote{
+
+    font-size:1.5rem;
+
+  }
+
+}
+
+.hero-caption{
+
+  position:absolute;
+
+  bottom:20px;
+  right:30px;
+
+  z-index:3;
+
+  color:white;
+
+  font-size:.85rem;
+
+  background:rgba(0,0,0,.45);
+
+  padding:10px 14px;
+
+  border-radius:10px;
+
+  backdrop-filter:blur(10px);
+
+}
+
+.quote-block{
+
+  margin:80px 0;
+
+  padding-left:30px;
+
+  border-left:4px solid var(--accent);
+
+}
+
+.quote-block blockquote{
+
+  font-family:'DM Serif Display',serif;
+
+  font-size:2.2rem;
+
+  line-height:1.25;
+
+  margin-bottom:18px;
+
+}
+
+.quote-author{
+
+  display:block;
+
+  font-size:.9rem;
+
+  letter-spacing:.5px;
+
+  text-transform:uppercase;
+
+  color:var(--muted);
+
+  font-weight:600;
+
+}
+
+
+/* SIDEBAR */
+
+.sidebar-sticky{
+
+  position:sticky;
+  top:120px;
+
+}
+
+.sidebar-title{
+
+  display:block;
+
+  margin-bottom:25px;
+
+  font-size:12px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  color:var(--muted);
+
+}
+
+/* CARD */
+
+.story-card{
+
+  position:relative;
+
+  display:block;
+
+  overflow:hidden;
+
+  border-radius:18px;
+
+  margin-bottom:20px;
+
+  text-decoration:none;
+
+  color:white;
+
+  height:160px;
+
+}
+
+.story-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:transform .6s ease;
+
+}
+
+.story-card:hover img{
+
+  transform:scale(1.05);
+
+}
+
+/* OVERLAY */
+
+.story-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.88) 0%,
+    rgba(0,0,0,.45) 35%,
+    rgba(0,0,0,.05) 100%
+  );
+
+}
+
+/* CONTENT */
+
+.story-content{
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:2;
+
+  padding:22px;
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:flex-end;
+
+}
+
+.story-category{
+
+  display:inline-block;
+
+  margin-bottom:10px;
+
+  color:#ff5a5f;
+
+  text-transform:uppercase;
+
+  font-size:11px;
+
+  letter-spacing:2px;
+
+  font-weight:700;
+
+}
+
+.story-content h3{
+
+  font-size:1.15rem;
+
+  line-height:1.3;
+
+  max-width:180px;
+
+}
+
+.story-arrow{
+
+  font-size:2rem;
+
+  line-height:1;
+
+  transition:transform .3s ease;
+
+}
+
+.story-card:hover .story-arrow{
+
+  transform:translateX(6px);
+
+}
+
+/* FINAL SECTION */
+
+.pd-final-section{
+
+  padding:40px 40px 40px;
+
+  background:var(--bg);
+
+}
+
+.pd-final-divider{
+
+  width:100%;
+  height:1px;
+
+  background:var(--line);
+
+  margin-bottom:50px;
+
+}
+
+.pd-final-inner{
+
+  max-width:1100px;
+
+  margin:auto;
+
+  text-align:center;
+
+}
+
+.pd-final-title{
+
+  font-size:1.2rem;
+
+  margin-bottom:24px;
+
+  font-family:'DM Serif Display',serif;
+
+  color:var(--text);
+
+}
+
+.pd-final-text{
+
+  font-size:0.8rem;
+
+  line-height:1.9;
+
+  color:var(--muted);
+
+}
+
+.pd-final-text-secondary{
+
+  margin-top:10px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+  .pd-final-section{
+
+    padding:70px 24px 90px;
+
+  }
+
+  .pd-final-title{
+
+    font-size:1.7rem;
+
+  }
+
+  .pd-final-text{
+
+    font-size:.95rem;
+
+    line-height:1.8;
+
+  }
+
+}
