@@ -297,19 +297,19 @@ body{
 
 
 
-/* SIDEBAR */
+.sidebar{
+
+  position:relative;
+  align-self:start;
+
+}
 
 .sidebar-sticky{
 
+  position:-webkit-sticky;
   position:sticky;
 
-  top:120px;
-
-  background:white;
-
-  border-radius:20px;
-
-  padding:30px;
+  top:140px;
 
 }
 
