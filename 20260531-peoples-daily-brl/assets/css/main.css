@@ -239,9 +239,7 @@ body {
   font-size: 0.9rem;
 }
 
-aside {
-  display: inline !important;
-}
+
 
 .sidebar {
   position: relative;
@@ -596,4 +594,155 @@ aside {
 
     line-height: 1.8;
   }
+}
+
+/* ==========================
+SIDEBAR
+========================== */
+
+/* ==========================
+SIDEBAR DESKTOP FIX
+========================== */
+
+.sidebar{
+
+  position:relative;
+
+}
+
+/* FIXE */
+
+.sidebar-sticky{
+
+  position:fixed;
+
+  top:150px;
+
+  right:calc((100vw - 1400px)/2 + 40px);
+
+  width:300px;
+
+  z-index:20;
+
+}
+
+/* TITOL */
+
+.sidebar-title{
+
+  display:block;
+
+  margin-bottom:24px;
+
+  font-size:12px;
+
+  letter-spacing:2px;
+
+  text-transform:uppercase;
+
+  color:var(--muted);
+
+}
+
+/* CARD */
+
+.story-card{
+
+  position:relative;
+
+  display:block;
+
+  overflow:hidden;
+
+  border-radius:20px;
+
+  margin-bottom:20px;
+
+  height:160px;
+
+  text-decoration:none;
+
+  color:white;
+
+}
+
+.story-card img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+}
+
+.story-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+  linear-gradient(
+      to top,
+      rgba(0,0,0,.92),
+      rgba(0,0,0,.10)
+  );
+
+}
+
+.story-content{
+
+  position:absolute;
+
+  inset:0;
+
+  z-index:2;
+
+  padding:20px;
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:flex-end;
+
+}
+
+.story-content h3{
+
+  color:white;
+
+  max-width:180px;
+
+  line-height:1.25;
+
+}
+
+.story-arrow{
+
+  font-size:2rem;
+
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:1500px){
+
+  .sidebar-sticky{
+
+    right:40px;
+
+  }
+
+}
+
+@media(max-width:1100px){
+
+  .sidebar{
+
+    display:none;
+
+  }
+
 }
