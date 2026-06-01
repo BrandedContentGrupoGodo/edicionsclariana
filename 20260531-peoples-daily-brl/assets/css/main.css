@@ -613,6 +613,7 @@ SIDEBAR
 
 .sidebar{
 
+  position:fixed;
 
   top:140px;
 
