@@ -604,132 +604,55 @@ SIDEBAR
 SIDEBAR DESKTOP FIX
 ========================== */
 
+/* ==========================
+SIDEBAR APAREIX DESPRÉS HERO
+========================== */
+/* ==========================
+SIDEBAR
+========================== */
+
 .sidebar{
 
-  position:relative;
 
-}
-
-/* FIXE */
-
-.sidebar-sticky{
-
-  position:fixed;
-
-  top:150px;
+  top:140px;
 
   right:calc((100vw - 1400px)/2 + 40px);
 
   width:300px;
 
-  z-index:20;
+  z-index:50;
+
+  transform:translateX(500px);
+
+  opacity:0;
+
+  transition:
+    transform .45s ease,
+    opacity .35s ease;
 
 }
 
-/* TITOL */
+/* VISIBLE */
 
-.sidebar-title{
+.sidebar.sidebar-visible{
 
-  display:block;
+  transform:none;
 
-  margin-bottom:24px;
-
-  font-size:12px;
-
-  letter-spacing:2px;
-
-  text-transform:uppercase;
-
-  color:var(--muted);
+  opacity:1;
 
 }
 
-/* CARD */
-
-.story-card{
-
-  position:relative;
-
-  display:block;
-
-  overflow:hidden;
-
-  border-radius:20px;
-
-  margin-bottom:20px;
-
-  height:160px;
-
-  text-decoration:none;
-
-  color:white;
-
-}
-
-.story-card img{
+.sidebar-sticky{
 
   width:100%;
-  height:100%;
-
-  object-fit:cover;
 
 }
-
-.story-overlay{
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-  linear-gradient(
-      to top,
-      rgba(0,0,0,.92),
-      rgba(0,0,0,.10)
-  );
-
-}
-
-.story-content{
-
-  position:absolute;
-
-  inset:0;
-
-  z-index:2;
-
-  padding:20px;
-
-  display:flex;
-
-  justify-content:space-between;
-
-  align-items:flex-end;
-
-}
-
-.story-content h3{
-
-  color:white;
-
-  max-width:180px;
-
-  line-height:1.25;
-
-}
-
-.story-arrow{
-
-  font-size:2rem;
-
-}
-
 
 /* RESPONSIVE */
 
 @media(max-width:1500px){
 
-  .sidebar-sticky{
+  .sidebar{
 
     right:40px;
 
