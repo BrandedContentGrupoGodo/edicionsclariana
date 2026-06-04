@@ -1,0 +1,15 @@
+Substituir o afegir aquests assets:
+
+- assets/img/hero.jpg
+- assets/img/video-refugi.mp4
+- assets/img/chart-refugis.png
+- assets/img/card-comercos.jpg
+- assets/img/card-aigua.jpg
+- assets/img/popup-comercos.jpg
+- assets/img/popup-aigua.jpg
+- assets/img/icon-sol.png
+- assets/img/icon-mobil.png
+- assets/img/icon-paraigua.png
+- assets/img/icon-flor.png
+
+Els fitxers ES i CAT comparteixen els mateixos noms d'imatge i video.
