@@ -645,7 +645,7 @@ h2 {
   }
 
   .chart {
-    min-height: 260px;
+           min-height: auto;
   }
 
   .feature-section {
