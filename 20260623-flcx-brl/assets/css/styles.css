@@ -753,6 +753,7 @@ body.modal-open {
   border-top: 1px solid #ddd;
   color: #555;
   text-align: center;
+      background: white !important;
 }
 
 .footer p {
