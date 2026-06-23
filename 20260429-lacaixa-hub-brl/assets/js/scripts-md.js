@@ -84,7 +84,6 @@ const historias = [
     enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20251117/1002568983/ander-cepas-tenis-mesa-campeon-olvido-era-numero-uno-mundo-constelaciones-streaming-brl.html"
   },
   {
-    // ACTUALIZAR EL CAPÍTULO 7
     nombre: "Joel Martín",
     frase: "Joel Martín: Del 'no llegarás a nada' a soñar con el oro en Los Ángeles 2028",
     imagen: "https://brandedcontentgrupogodo.github.io/edicionsclariana/20260429-lacaixa-hub-brl/assets/img/cap7.png",
@@ -96,7 +95,12 @@ const historias = [
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap8.png",
     enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260528/1004188252/judith-rodriguez-paralimpicos-esgrima-espana-medalla-constelaciones-streaming-brl.html"
   },
-  { locked: true },
+  {
+    nombre: "Araceli Menduiña",
+    frase: "En tierra no puedo correr ni saltar, pero en la piragua me siento libre",
+    imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap9.png",
+    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260625/1004198507/araceli-menduina-final-piraguismo-54-anos-constelaciones-streaming-brl.html"
+  },
   { locked: true },
   { locked: true },
   { locked: true }
