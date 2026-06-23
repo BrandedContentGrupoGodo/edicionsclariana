@@ -95,7 +95,12 @@ const historias = [
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap8.png",
     enlace: "https://www.lavanguardia.com/deportes/20260528/11548670/judith-rodriguez-paralimpicos-esgrima-espana-medalla-constelaciones-streaming-brl.html"
   },
-  { locked: true },
+  {
+    nombre: "Araceli Menduiña",
+    frase: "En tierra no puedo correr ni saltar, pero en la piragua me siento libre",
+    imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap9.png",
+    enlace: "https://www.lavanguardia.com/deportes/20260625/11573320/araceli-menduina-final-piraguismo-54-anos-constelaciones-streaming-brl.html"
+  },
   { locked: true },
   { locked: true },
   { locked: true }
