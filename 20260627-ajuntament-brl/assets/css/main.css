@@ -521,7 +521,7 @@ summary {
 .flip-card-bcn__back p,
 .flip-card-bcn__back li {
   font-size: clamp(0.88rem, 1.2vw, 1.02rem)!important;
-  line-height: 1.25;
+  line-height: 1.15!important;
 }
 
 .flip-card-bcn__back ul {
