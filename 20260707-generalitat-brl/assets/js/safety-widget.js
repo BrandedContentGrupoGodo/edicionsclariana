@@ -5,6 +5,12 @@
       mount.dataset.lvEclipseInitV2 = "1";
 
       const root = mount.attachShadow ? mount.attachShadow({ mode: "open" }) : mount;
+      const assetBase = (() => {
+        const script = document.currentScript;
+        if (!script || !script.src) return "assets/";
+        return new URL("../", script.src).href;
+      })();
+      const safetyCssHref = `${assetBase}css/safety-widget.css?v=20260706a`;
 
       try {
         // ===== Ajustes =====
@@ -483,7 +489,7 @@
         });
 
         root.innerHTML = `
-          <link rel="stylesheet" href="assets/css/safety-widget.css?v=20260702j">
+          <link rel="stylesheet" href="${safetyCssHref}">
 <div class="w" role="group" aria-label="Simulador de seguridad para observar el eclipse (visión directa)">
             <div class="top">
               <div class="view" id="view">
@@ -2262,7 +2268,7 @@
           drawBase(performance.now());
         })();
       } catch (err) {
-        root.innerHTML = `<link rel="stylesheet" href="assets/css/safety-widget.css?v=20260702j"><div class="safety-widget-error">
+        root.innerHTML = `<link rel="stylesheet" href="${safetyCssHref}"><div class="safety-widget-error">
           El widget ha fallado por un error de JavaScript. Abre la consola para ver el detalle.
         </div>`;
         console.error("[Eclipse widget] Error:", err);
