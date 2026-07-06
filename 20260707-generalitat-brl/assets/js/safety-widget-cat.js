@@ -5,12 +5,7 @@
       mount.dataset.lvEclipseInitV2 = "1";
 
       const root = mount.attachShadow ? mount.attachShadow({ mode: "open" }) : mount;
-      const assetBase = (() => {
-        const script = document.currentScript;
-        if (!script || !script.src) return "assets/";
-        return new URL("../", script.src).href;
-      })();
-      const safetyCssHref = `${assetBase}css/safety-widget.css?v=20260706a`;
+      const safetyCssHref = "https://brandedcontentgrupogodo.github.io/edicionsclariana/20260707-generalitat-brl/assets/css/safety-widget.css?v=20260706b";
 
       try {
         // ===== Ajustes =====
