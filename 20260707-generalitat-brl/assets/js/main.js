@@ -85,8 +85,7 @@ function initEclipseScrollMap(){
     shadowColor: '#000000',
     shadowOpacity: 0.6,
     borderColor: 'rgba(255,255,255,0.2)',
-    vhPerStep: window.innerWidth <= 768 ? 2.5 : 4,
-    playMs: window.innerWidth <= 768 ? 120 : 100,
+    playMs: window.innerWidth <= 768 ? 140 : 120,
   };
 
   const state = {
@@ -99,6 +98,7 @@ function initEclipseScrollMap(){
     playTimer: null,
     hintHidden: false,
     isVisible: false,
+    autoStarted: false,
   };
 
   const clamp = (value, min, max) => Math.max(min, Math.min(max, value));
@@ -128,8 +128,6 @@ function initEclipseScrollMap(){
       type: 'FeatureCollection',
       features: geojson.features.filter((feature) => feature.properties[step] != null),
     }));
-
-    document.querySelector('#es-driver').style.height = `${state.totalSteps * cfg.vhPerStep}vh`;
   }
 
   function addLayers(){
@@ -190,48 +188,19 @@ function initEclipseScrollMap(){
     }
   }
 
-  function getScrollProgress(){
-    const driver = document.querySelector('#es-driver');
-    const rect = driver.getBoundingClientRect();
-    const maxTravel = rect.height - window.innerHeight;
-    if (maxTravel <= 0) return 0;
-    return clamp(-rect.top / maxTravel, 0, 1);
-  }
-
-  function onScroll(){
-    if (state.totalSteps === 0) return;
-
-    const progress = getScrollProgress();
+  function updateHint(){
     const hint = document.querySelector('#es-hint');
-    if (!state.hintHidden && progress > 0.005 && hint) {
+    if (!state.hintHidden && hint) {
       hint.style.opacity = '0';
       state.hintHidden = true;
     }
-
-    updateStep(Math.round(progress * (state.totalSteps - 1)));
   }
 
-  function setupScroll(){
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (ticking) return;
-      ticking = true;
-      requestAnimationFrame(() => {
-        ticking = false;
-        onScroll();
-      });
-    }, { passive: true });
-  }
-
-  function scrollToStep(index){
-    const driver = document.querySelector('#es-driver');
-    const rect = driver.getBoundingClientRect();
-    const maxTravel = rect.height - window.innerHeight;
-    const driverTop = window.scrollY + rect.top;
-    window.scrollTo({
-      top: driverTop + (index / (state.totalSteps - 1)) * maxTravel,
-      behavior: 'auto',
-    });
+  function advanceStep(){
+    if (state.totalSteps === 0) return;
+    updateHint();
+    const nextStep = state.currentStep >= state.totalSteps - 1 ? 0 : state.currentStep + 1;
+    updateStep(nextStep);
   }
 
   function stopPlay(){
@@ -241,21 +210,12 @@ function initEclipseScrollMap(){
   }
 
   function startPlay(){
+    if (state.isPlaying || state.totalSteps === 0) return;
     state.isPlaying = true;
     document.querySelector('#es-play').textContent = '⏸';
 
-    if (state.currentStep >= state.totalSteps - 1) {
-      state.currentStep = -1;
-      scrollToStep(0);
-    }
-
     state.playTimer = setInterval(() => {
-      const nextStep = state.currentStep + 1;
-      if (nextStep >= state.totalSteps) {
-        stopPlay();
-        return;
-      }
-      scrollToStep(nextStep);
+      advanceStep();
     }, cfg.playMs);
   }
 
@@ -271,8 +231,8 @@ function initEclipseScrollMap(){
     reset?.addEventListener('click', () => {
       stopPlay();
       state.currentStep = -1;
-      scrollToStep(0);
       updateStep(0);
+      if (state.isVisible) startPlay();
     });
 
     document.addEventListener('keydown', (event) => {
@@ -285,11 +245,11 @@ function initEclipseScrollMap(){
       } else if (event.key === 'ArrowRight') {
         event.preventDefault();
         stopPlay();
-        if (state.currentStep < state.totalSteps - 1) scrollToStep(state.currentStep + 1);
+        if (state.currentStep < state.totalSteps - 1) updateStep(state.currentStep + 1);
       } else if (event.key === 'ArrowLeft') {
         event.preventDefault();
         stopPlay();
-        if (state.currentStep > 0) scrollToStep(state.currentStep - 1);
+        if (state.currentStep > 0) updateStep(state.currentStep - 1);
       }
     });
   }
@@ -297,8 +257,13 @@ function initEclipseScrollMap(){
   function setupVisibilityGuard(){
     const observer = new IntersectionObserver((entries) => {
       state.isVisible = entries[0].isIntersecting;
-      if (!state.isVisible && state.isPlaying) stopPlay();
-    }, { threshold: 0 });
+      if (state.isVisible) {
+        state.autoStarted = true;
+        startPlay();
+      } else if (state.isPlaying) {
+        stopPlay();
+      }
+    }, { threshold: 0.25 });
 
     observer.observe(document.querySelector('#es-driver'));
   }
@@ -328,7 +293,6 @@ function initEclipseScrollMap(){
   });
 
   setupControls();
-  setupScroll();
   setupVisibilityGuard();
 }
 
