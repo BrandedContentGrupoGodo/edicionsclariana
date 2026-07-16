@@ -1,3 +1,7 @@
+(() => {
+const supplementRoot = document.getElementById("gencat-security-supplement");
+if (!supplementRoot) return;
+
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const formatNumber = (value, decimals = 0) => value.toLocaleString("ca-ES", {
@@ -23,37 +27,37 @@ const animateNumber = (element) => {
   requestAnimationFrame(tick);
 };
 
-const observed = document.querySelectorAll("[data-count], .reveal-card");
+const observed = supplementRoot.querySelectorAll("[data-count], .gss-reveal-card");
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (!entry.isIntersecting || entry.target.dataset.animated) return;
     entry.target.dataset.animated = "true";
     if (entry.target.matches("[data-count]")) animateNumber(entry.target);
-    if (entry.target.classList.contains("reveal-card")) entry.target.classList.add("is-visible");
+    if (entry.target.classList.contains("gss-reveal-card")) entry.target.classList.add("gss-is-visible");
   });
 }, { threshold: 0.3 });
 observed.forEach((element) => observer.observe(element));
 
-const equipmentButtons = document.querySelectorAll(".equipment-button");
-const equipmentPanels = document.querySelectorAll(".equipment-panel");
+const equipmentButtons = supplementRoot.querySelectorAll(".gss-equipment-button");
+const equipmentPanels = supplementRoot.querySelectorAll(".gss-equipment-panel");
 const closeEquipmentPanels = () => {
   equipmentButtons.forEach((button) => {
-    button.classList.remove("is-active");
+    button.classList.remove("gss-is-active");
     button.setAttribute("aria-expanded", "false");
   });
-  equipmentPanels.forEach((panel) => panel.classList.remove("is-open"));
+  equipmentPanels.forEach((panel) => panel.classList.remove("gss-is-open"));
 };
 const openEquipmentPanel = (id) => {
   equipmentButtons.forEach((button) => {
     const active = button.dataset.panel === id;
-    button.classList.toggle("is-active", active);
+    button.classList.toggle("gss-is-active", active);
     button.setAttribute("aria-expanded", String(active));
   });
-  equipmentPanels.forEach((panel) => panel.classList.toggle("is-open", panel.id === id));
+  equipmentPanels.forEach((panel) => panel.classList.toggle("gss-is-open", panel.id === id));
 };
 equipmentButtons.forEach((button) => button.addEventListener("click", () => {
-  const panel = document.getElementById(button.dataset.panel);
-  if (panel?.classList.contains("is-open")) {
+  const panel = supplementRoot.querySelector(`#${button.dataset.panel}`);
+  if (panel?.classList.contains("gss-is-open")) {
     closeEquipmentPanels();
     return;
   }
@@ -63,14 +67,14 @@ equipmentPanels.forEach((panel) => {
   panel.querySelector("button")?.addEventListener("click", closeEquipmentPanels);
 });
 
-const mapMarkers = document.querySelectorAll(".map-marker");
-const mapPopups = document.querySelectorAll(".map-popup");
-const mapInstruction = document.querySelector(".map-instruction");
+const mapMarkers = supplementRoot.querySelectorAll(".gss-map-marker");
+const mapPopups = supplementRoot.querySelectorAll(".gss-map-popup");
+const mapInstruction = supplementRoot.querySelector(".gss-map-instruction");
 const mapUsesHover = window.matchMedia("(hover: hover) and (pointer: fine)");
 
 const closeMapPopups = () => {
   mapMarkers.forEach((marker) => {
-    marker.classList.remove("is-active");
+    marker.classList.remove("gss-is-active");
     marker.setAttribute("aria-expanded", "false");
   });
   mapPopups.forEach((popup) => { popup.hidden = true; });
@@ -78,11 +82,11 @@ const closeMapPopups = () => {
 };
 
 const openMapPopup = (marker) => {
-  const popup = document.getElementById(`map-${marker.dataset.mapPlace}`);
+  const popup = supplementRoot.querySelector(`#map-${marker.dataset.mapPlace}`);
   if (!popup) return;
   closeMapPopups();
   popup.hidden = false;
-  marker.classList.add("is-active");
+  marker.classList.add("gss-is-active");
   marker.setAttribute("aria-expanded", "true");
   if (mapInstruction) mapInstruction.hidden = true;
 };
@@ -109,9 +113,10 @@ mapPopups.forEach((popup) => {
   popup.querySelector("button")?.addEventListener("click", closeMapPopups);
 });
 
-document.querySelectorAll(".flip-card").forEach((card) => {
+supplementRoot.querySelectorAll(".gss-flip-card").forEach((card) => {
   card.addEventListener("click", () => {
-    const flipped = card.classList.toggle("is-flipped");
+    const flipped = card.classList.toggle("gss-is-flipped");
     card.setAttribute("aria-expanded", String(flipped));
   });
 });
+})();
