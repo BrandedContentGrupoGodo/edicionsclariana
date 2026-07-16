@@ -86,7 +86,7 @@
 #gencat-security-supplement .gss-equipment__intro.gss-section-narrow { width: min(100%, var(--article)); margin-bottom: 22px; font-size: 18px; line-height: 1.35; }
 #gencat-security-supplement .gss-equipment-buttons { width: min(100%, var(--article)); margin-inline: auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
 #gencat-security-supplement .gss-equipment-button { padding: 0; border: 0; background: transparent; color: #fff; cursor: pointer; display: flex; flex-direction: column; align-items: center; }
-#gencat-security-supplement .gss-equipment-button b { margin-top: 8px; }
+#gencat-security-supplement .gss-equipment-button__title { margin-top: 8px; }
 #gencat-security-supplement .gss-equipment-button i { color: var(--cyan); font-size: 38px; line-height: 1; font-style: normal; transition: transform .25s ease; }
 #gencat-security-supplement .gss-equipment-button:first-child i { color: var(--coral); }
 #gencat-security-supplement .gss-equipment-button:last-child i { color: var(--sage); }
@@ -140,7 +140,7 @@
 #gencat-security-supplement .gss-flip-card__front, #gencat-security-supplement .gss-flip-card__back { position: absolute; inset: 0; overflow: hidden; border-radius: 18px; transition: opacity .12s linear .25s; }
 #gencat-security-supplement .gss-flip-card__front img { width: 100%; height: 100%; object-fit: cover; }
 #gencat-security-supplement .gss-flip-card__front::after { content: ""; position: absolute; inset: 37% 0; background: rgba(67, 196, 187, .8); }
-#gencat-security-supplement .gss-flip-card__front b { position: absolute; z-index: 1; left: 12px; right: 12px; top: 44.5%; transform: translateY(-50%); color: #fff; text-align: center; font-size: 21px; line-height: 1.05; }
+#gencat-security-supplement .gss-flip-card__title { position: absolute; z-index: 2; left: 12px; right: 12px; top: 44.5%; display: block; transform: translateY(-50%); color: #fff; text-align: center; font-size: 21px; line-height: 1.05; }
 #gencat-security-supplement .gss-flip-card__hint { position: absolute; z-index: 1; left: 50%;     top: calc(63% - 40px);
     color: #fff;
     font-size: 34px; line-height: 1; font-style: normal; transform: translateX(-50%); transition: transform .22s ease; }
@@ -148,7 +148,7 @@
 #gencat-security-supplement .gss-flip-card__back { padding: 34px; display: flex; flex-direction: column; justify-content: center; background: var(--cyan-soft); color: #111; opacity: 0; transform: scaleX(-1); }
 #gencat-security-supplement .gss-flip-card.gss-is-flipped .gss-flip-card__front { opacity: 0; }
 #gencat-security-supplement .gss-flip-card.gss-is-flipped .gss-flip-card__back { opacity: 1; }
-#gencat-security-supplement .gss-flip-card__back b { margin-bottom: 14px; font-size: 21px; line-height: 1.1; }
+#gencat-security-supplement .gss-flip-card__back-title { display: block; margin-bottom: 14px; font-size: 21px; line-height: 1.1; }
 #gencat-security-supplement .gss-flip-card__back span { font-size: 18px; line-height: 1.35; }
 
 #gencat-security-supplement .gss-security-today { margin-bottom: 64px; }
@@ -186,7 +186,7 @@
   #gencat-security-supplement .gss-people-card img { height: 210px; }
   #gencat-security-supplement .gss-people-card > div { padding: 24px; }
   #gencat-security-supplement .gss-equipment-buttons { gap: 8px; }
-  #gencat-security-supplement .gss-equipment-button b { font-size: 13px; text-align: center; }
+  #gencat-security-supplement .gss-equipment-button__title { font-size: 13px; text-align: center; }
   #gencat-security-supplement .gss-equipment-icon { width: 92px; }
   #gencat-security-supplement .gss-equipment-panels { grid-template-columns: 1fr; }
   #gencat-security-supplement .gss-equipment-panel { min-height: 250px; display: none; }
