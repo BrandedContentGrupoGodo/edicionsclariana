@@ -298,6 +298,38 @@ main{ background: var(--bg); }
   width: 100%;
 }
 
+.split-block--points-reel{
+  width: min(1040px, 100%);
+  grid-template-columns: minmax(0, 1.35fr) minmax(240px, .65fr);
+  gap: clamp(34px, 5vw, 58px);
+  align-items: stretch;
+}
+
+.split-block--points-reel .fact-list{
+  width: 100%;
+}
+
+.split-block--points-reel .fact-list--plain{
+  column-count: 2;
+  column-gap: 46px;
+}
+
+.split-block--points-reel .fact-list--plain > h3{
+  column-span: all;
+  margin-bottom: 24px;
+}
+
+.split-block--points-reel .proposal-group{
+  break-inside: avoid;
+  margin-bottom: 18px;
+  padding-left: 22px;
+  border-left: 2px solid rgba(242,191,68,.46);
+}
+
+.split-block--points-reel .proposal-group--column-break{
+  break-before: column;
+}
+
 .split-block--image{
   width: min(980px, 100%);
   grid-template-columns: 1fr;
@@ -1119,6 +1151,13 @@ main{ background: var(--bg); }
   background: #161616;
 }
 
+.photo-guide__reel--points{
+  width: min(300px, 100%);
+  min-height: 0;
+  height: auto;
+  align-self: center;
+}
+
 .photo-guide__play{
   position: absolute;
   top: 50%;
@@ -1478,6 +1517,11 @@ main{ background: var(--bg); }
     gap: 28px;
   }
 
+  .split-block--points-reel{
+    grid-template-columns: 1fr;
+    width: min(520px, 100%);
+  }
+
   .photo-guide--with-reel{
     width: min(520px, 100%);
     align-items: start;
@@ -1492,6 +1536,15 @@ main{ background: var(--bg); }
   .split-block--text-only .fact-list--plain{
     column-count: 1;
     column-gap: 0;
+  }
+
+  .split-block--points-reel .fact-list--plain{
+    column-count: 1;
+    column-gap: 0;
+  }
+
+  .split-block--points-reel .proposal-group--column-break{
+    break-before: auto;
   }
 
   .split-block--text-only .fact-list--plain .proposal-group{
