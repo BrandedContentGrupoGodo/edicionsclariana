@@ -6,7 +6,8 @@
   --ink: #090909;
   --pad: clamp(20px, 4vw, 46px);
 }
-#salut-supplement, #salut-supplement * {
+#salut-supplement,
+#salut-supplement * {
   box-sizing: border-box;
 }
 #salut-supplement {
@@ -35,18 +36,13 @@
   max-width: 100%;
 }
 #salut-supplement button,
-
 #salut-supplement a {
   font: inherit;
 }
 #salut-supplement p,
-
 #salut-supplement h1,
-
 #salut-supplement h2,
-
 #salut-supplement h3,
-
 #salut-supplement figure {
   margin-top: 0;
 }
@@ -228,32 +224,31 @@
 #salut-supplement .stats-grid > div:nth-child(n + 4) {
   border-top: 1px solid #aaa;
 }
-#salut-supplement .stats strong {
+#salut-supplement .stats .stat-value {
   color: var(--coral);
   font-size: 62px;
   line-height: 1;
   font-weight: 300;
 }
 #salut-supplement .stats small,
-
 #salut-supplement .province-totals small,
-
 #salut-supplement .carousel small {
   font-size: 0.62em;
   font-weight: 300;
 }
-#salut-supplement .stats b {
+#salut-supplement .stats .stat-label {
   font-size: 19px;
   line-height: 1.2;
+  font-weight: 700;
 }
 #salut-supplement .section-head {
   padding: 60px 0 18px;
 }
 #salut-supplement .section-head h2,
-
 #salut-supplement .content-section h2 {
   font-size: 29px;
   line-height: 1.08;
+  margin-bottom: 20px;
 }
 #salut-supplement .section-head h2 {
   font-size: 33px;
@@ -418,9 +413,7 @@
   pointer-events: none;
 }
 #salut-supplement .map-marker:hover,
-
 #salut-supplement .map-marker:focus-visible,
-
 #salut-supplement .map-marker.is-active {
   z-index: 3;
   filter: drop-shadow(0 5px 5px rgba(0, 0, 0, 0.45));
@@ -471,7 +464,6 @@
   transition: border-color 0.2s ease;
 }
 #salut-supplement .map-copy > p,
-
 #salut-supplement .map-copy article {
   width: 100%;
   margin: 0;
@@ -677,7 +669,8 @@
   }
 }
 @media (prefers-reduced-motion: reduce) {
-  #salut-supplement, #salut-supplement * {
+  #salut-supplement,
+  #salut-supplement * {
     scroll-behavior: auto !important;
     transition: none !important;
   }
@@ -688,5 +681,3 @@
     stroke-dashoffset: 0;
   }
 }
-
-
