@@ -1,0 +1,706 @@
+#mobilitat-supplement {
+  --coral: #ff7d79;
+  --cyan: #59c8c4;
+  --sage: #adc7ad;
+  --peach: #ffd0ad;
+  --dark: #505050;
+  --ink: #060606;
+  --note: #009ee2;
+  --pad: clamp(20px, 5vw, 46px);
+  color: var(--ink);
+  background: #fff;
+  font: 18px/1.38 Arial, Helvetica, sans-serif;
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+#mobilitat-supplement,
+#mobilitat-supplement * {
+  box-sizing: border-box;
+}
+#mobilitat-supplement img,
+#mobilitat-supplement video {
+  display: block;
+  max-width: 100%;
+}
+#mobilitat-supplement a,
+#mobilitat-supplement button {
+  font: inherit;
+}
+#mobilitat-supplement p,
+#mobilitat-supplement h1,
+#mobilitat-supplement h2,
+#mobilitat-supplement h3,
+#mobilitat-supplement figure {
+  margin-top: 0;
+}
+#mobilitat-supplement p {
+  margin-bottom: 22px;
+}
+#mobilitat-supplement .narrow {
+  width: min(calc(100% - (2 * var(--pad))), 740px);
+  margin-inline: auto;
+}
+#mobilitat-supplement .wide {
+  width: min(calc(100% - (2 * var(--pad))), 980px);
+  margin-inline: auto;
+}
+#mobilitat-supplement .dark {
+  background: var(--dark);
+  color: #fff;
+}
+#mobilitat-supplement .topbar__inner {
+  position: relative;
+  min-height: 92px;
+  max-width: 1180px;
+  margin: auto;
+  padding: 0 var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#mobilitat-supplement .topbar p {
+  margin: 0;
+  font-size: 16px;
+}
+#mobilitat-supplement .topbar nav {
+  position: absolute;
+  right: var(--pad);
+  display: flex;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 700;
+}
+#mobilitat-supplement .topbar a {
+  color: inherit;
+  text-decoration: none;
+}
+#mobilitat-supplement .topbar .is-active {
+  text-decoration: underline;
+}
+#mobilitat-supplement .hero {
+  position: relative;
+  height: 638px;
+  overflow: hidden;
+  background: #e8e8e8;
+}
+#mobilitat-supplement .hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#mobilitat-supplement .hero__wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(170, 197, 171, 0) 0%,
+    rgba(170, 197, 171, 0) 38%,
+    rgba(170, 197, 171, 0.42) 68%,
+    rgba(170, 197, 171, 0.9) 100%
+  );
+}
+#mobilitat-supplement .hero__content {
+  position: absolute;
+  left: 50%;
+  bottom: 58px;
+  width: min(900px, calc(100% - 40px));
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff;
+}
+#mobilitat-supplement .hero__content p {
+  margin-bottom: 10px;
+  font-size: 25px;
+  font-weight: 900;
+}
+#mobilitat-supplement .hero h1 {
+  margin: 0;
+  font-size: clamp(40px, 5vw, 52px);
+  line-height: 1.08;
+  font-weight: 900;
+}
+#mobilitat-supplement .intro {
+  padding: 28px var(--pad) 30px;
+  background: #eef6f0;
+}
+#mobilitat-supplement .intro p {
+  max-width: 780px;
+  margin: auto;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.28;
+}
+#mobilitat-supplement main > article {
+  padding-top: 72px;
+}
+#mobilitat-supplement .byline {
+  margin-bottom: 31px;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.12;
+}
+#mobilitat-supplement .byline strong {
+  font-size: 16px;
+}
+#mobilitat-supplement .byline span {
+  font-size: 13px;
+}
+#mobilitat-supplement .prose {
+  padding-bottom: 22px;
+}
+#mobilitat-supplement .rule-title {
+  margin: 48px 0 12px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #000;
+  font-size: 20px;
+  line-height: 1.15;
+  font-weight: 400;
+}
+#mobilitat-supplement .headline-stats {
+  padding: 30px 0 38px;
+}
+#mobilitat-supplement .headline-stats__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+}
+#mobilitat-supplement .headline-stats__grid > div {
+  min-height: 170px;
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+#mobilitat-supplement .headline-stats__grid > div + div {
+  border-left: 1px solid #bbb;
+}
+#mobilitat-supplement .stat-value {
+  color: var(--sage);
+  font-size: clamp(50px, 7vw, 72px);
+  line-height: 0.95;
+  font-weight: 300;
+}
+#mobilitat-supplement .stat-value small {
+  font-size: 0.5em;
+}
+#mobilitat-supplement .headline-stats strong {
+  margin-top: 4px;
+  font-size: 17px;
+  line-height: 1.14;
+}
+#mobilitat-supplement .headline-stats em {
+  margin-top: 8px;
+  color: var(--coral);
+  font-size: 35px;
+  line-height: 1;
+  font-style: normal;
+  font-weight: 700;
+}
+#mobilitat-supplement .headline-stats p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 700;
+}
+#mobilitat-supplement .section-head {
+  padding: 48px 0 0;
+}
+#mobilitat-supplement .section-head h2,
+#mobilitat-supplement .cards-section h2,
+#mobilitat-supplement .territory h2 {
+  margin-bottom: 12px;
+  font-size: 30px;
+  line-height: 1.02;
+  font-weight: 900;
+}
+#mobilitat-supplement .section-head .rule-title {
+  font-size: 20px;
+  font-weight: 400;
+}
+#mobilitat-supplement .priority-chart {
+  padding: 39px 0 42px;
+}
+#mobilitat-supplement .priority-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 230px;
+  gap: 42px;
+  align-items: center;
+}
+#mobilitat-supplement .bar-list {
+  display: grid;
+  gap: 13px;
+}
+#mobilitat-supplement .bar-list > div {
+  position: relative;
+  --value-space: 92px;
+  min-height: 40px;
+  padding-top: 1px;
+  padding-right: var(--value-space);
+}
+#mobilitat-supplement .bar-list > div::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: var(--value-space);
+  top: 24px;
+  height: 1px;
+  background: var(--c);
+}
+#mobilitat-supplement .bar-list strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 16px;
+  line-height: 1.1;
+}
+#mobilitat-supplement .bar-list i {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 0;
+  height: 21px;
+  border-radius: 0 8px 8px 0;
+  background: var(--c);
+  transition: width 1.1s cubic-bezier(0.2, 0.8, 0.2, 1);
+      margin-top: 10px;
+}
+#mobilitat-supplement .bar-list.is-visible i {
+  width: var(--v);
+  max-width: 100%;
+}
+#mobilitat-supplement .bar-list span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 700;
+}
+#mobilitat-supplement .side-notes {
+  display: grid;
+  gap: 70px;
+}
+#mobilitat-supplement .side-notes p {
+  margin: 0;
+  max-width: 190px;
+  font-size: 15px;
+  line-height: 1.16;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#mobilitat-supplement .side-notes b,
+#mobilitat-supplement .side-notes span {
+  display: block;
+  color: var(--sage);
+  font-size: 38px;
+  line-height: 0.95;
+  font-weight: 300;
+  text-transform: none;
+}
+#mobilitat-supplement .side-notes--numbers {
+  gap: 20px;
+}
+#mobilitat-supplement .side-notes--numbers span {
+  color: var(--cyan);
+  font-size: 31px;
+}
+#mobilitat-supplement .accessible {
+  padding: 54px 0 28px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 270px;
+  gap: 72px;
+}
+#mobilitat-supplement .accessible h2 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  line-height: 1.06;
+  font-weight: 900;
+}
+#mobilitat-supplement .accessible__figures p {
+  margin: 0 0 13px;
+  font-size: 16px;
+  line-height: 1.14;
+  font-weight: 900;
+}
+#mobilitat-supplement .accessible__figures span {
+  display: block;
+  color: var(--sage);
+  font-size: 41px;
+  line-height: 0.98;
+  font-weight: 300;
+}
+#mobilitat-supplement .photo {
+  margin-top: 18px;
+  margin-bottom: 56px;
+}
+#mobilitat-supplement .photo img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: cover;
+}
+#mobilitat-supplement figcaption {
+  margin-top: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+}
+#mobilitat-supplement .cards-section {
+  padding: 0 0 34px;
+}
+#mobilitat-supplement .cards-section > h2,
+#mobilitat-supplement .cards-section > p,
+#mobilitat-supplement .territory > h2,
+#mobilitat-supplement .territory > p {
+  width: min(100%, 740px);
+  margin-left: auto;
+  margin-right: auto;
+}
+#mobilitat-supplement .cards-section > p,
+#mobilitat-supplement .territory > p {
+  margin-bottom: 22px;
+}
+#mobilitat-supplement .carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+#mobilitat-supplement .carousel > button {
+  flex: 0 0 24px;
+  width: 24px;
+  height: 54px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #000;
+  font-size: 48px;
+  line-height: 1;
+  cursor: pointer;
+}
+#mobilitat-supplement .cards {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 26px;
+}
+#mobilitat-supplement .cards article {
+  min-height: 200px;
+  padding: 20px 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--sage);
+  color: #000;
+  text-align: center;
+  box-shadow: 8px 8px 9px rgba(0, 0, 0, 0.33);
+}
+#mobilitat-supplement .cards article[hidden] {
+  display: none;
+}
+#mobilitat-supplement .cards article:nth-child(3n + 2) {
+  background: var(--coral);
+}
+#mobilitat-supplement .cards article:nth-child(3n) {
+  background: var(--cyan);
+}
+#mobilitat-supplement .cards strong {
+  display: block;
+  font-size: clamp(32px, 4vw, 43px);
+  line-height: 0.94;
+  font-weight: 300;
+}
+#mobilitat-supplement .cards small {
+  margin-left: 2px;
+  font-size: 0.48em;
+}
+#mobilitat-supplement .cards p {
+  margin: 10px 0 0;
+  font-size: 21px;
+  line-height: 1.12;
+}
+#mobilitat-supplement .territory {
+  padding: 4px 0 36px;
+}
+#mobilitat-supplement .territory__grid {
+  display: grid;
+  grid-template-columns: 190px minmax(0, 1fr) 230px;
+  gap: 18px;
+  align-items: center;
+}
+#mobilitat-supplement .province-list {
+  display: grid;
+  gap: 82px;
+}
+#mobilitat-supplement .province-list h3 {
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+#mobilitat-supplement .province-list p {
+  position: relative;
+  margin: 0 0 2px;
+  font-size: 16px;
+  line-height: 1.12;
+}
+#mobilitat-supplement .province-list p::before {
+  content: "•";
+}
+#mobilitat-supplement .province-list article {
+  transition: opacity 0.18s, transform 0.18s;
+}
+#mobilitat-supplement .province-list article.is-muted {
+  opacity: 0.38;
+}
+#mobilitat-supplement .province-list article.is-active {
+  transform: translateY(-2px);
+}
+#mobilitat-supplement .map-panel {
+  position: relative;
+}
+#mobilitat-supplement .map-panel > img {
+  width: 100%;
+}
+#mobilitat-supplement .map-hotspot {
+  position: absolute;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}
+#mobilitat-supplement .map-hotspot:focus-visible {
+  outline: 2px solid #000;
+}
+#mobilitat-supplement .map-hotspot.lleida {
+  left: 7%;
+  top: 4%;
+  width: 43%;
+  height: 68%;
+}
+#mobilitat-supplement .map-hotspot.girona {
+  left: 55%;
+  top: 23%;
+  width: 42%;
+  height: 32%;
+}
+#mobilitat-supplement .map-hotspot.barcelona {
+  left: 44%;
+  top: 41%;
+  width: 40%;
+  height: 39%;
+}
+#mobilitat-supplement .map-hotspot.tarragona {
+  left: 0;
+  top: 65%;
+  width: 46%;
+  height: 32%;
+}
+#mobilitat-supplement .pin {
+  position: absolute;
+  width: 45px;
+  aspect-ratio: 4439 / 6420;
+  background: center / contain no-repeat;
+  pointer-events: none;
+  transition: transform 0.18s, filter 0.18s;
+}
+#mobilitat-supplement .pin-lleida {
+  left: 27%;
+  top: 37%;
+  background-image: url("../img/picto-2.png");
+}
+#mobilitat-supplement .pin-girona {
+  left: 78%;
+  top: 33%;
+  background-image: url("../img/picto-4.png");
+}
+#mobilitat-supplement .pin-barcelona {
+  left: 58%;
+  top: 50%;
+  background-image: url("../img/picto-3.png");
+}
+#mobilitat-supplement .pin-tarragona {
+  left: 20%;
+  top: 65%;
+  background-image: url("../img/picto-1.png");
+}
+#mobilitat-supplement .map-panel[data-active="lleida"] .pin-lleida,
+#mobilitat-supplement .map-panel[data-active="girona"] .pin-girona,
+#mobilitat-supplement .map-panel[data-active="barcelona"] .pin-barcelona,
+#mobilitat-supplement .map-panel[data-active="tarragona"] .pin-tarragona {
+  filter: drop-shadow(0 7px 7px rgba(0, 0, 0, 0.35));
+  transform: scale(1.15);
+}
+#mobilitat-supplement .climate {
+  padding-top: 0;
+}
+#mobilitat-supplement .eco-chart {
+  margin-bottom: 50px;
+}
+#mobilitat-supplement .eco {
+  padding-bottom: 56px;
+}
+#mobilitat-supplement .closing {
+  padding: 8px 0 30px;
+}
+#mobilitat-supplement .video-cta {
+  padding: 8px 0 72px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 42px;
+}
+#mobilitat-supplement .interactive-frame {
+  width: 100%;
+  aspect-ratio: 16 / 12;
+  background: #ddd;
+}
+#mobilitat-supplement .interactive-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+#mobilitat-supplement .pill {
+  padding: 12px 30px;
+  border-radius: 999px;
+  background: #f56f7e;
+  color: #fff;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.22);
+  font-size: 15px;
+  font-weight: 700;
+  text-decoration: none;
+}
+#mobilitat-supplement footer {
+  padding: 28px var(--pad);
+  background: #f2f2f2;
+  text-align: center;
+  font-size: 12px;
+}
+#mobilitat-supplement footer h2 {
+  margin-bottom: 8px;
+  font-size: 17px;
+}
+#mobilitat-supplement footer p {
+  margin: 4px 0;
+}
+@media (max-width: 860px) {
+  #mobilitat-supplement .priority-layout,
+  #mobilitat-supplement .accessible,
+  #mobilitat-supplement .territory__grid {
+    grid-template-columns: 1fr;
+  }
+  #mobilitat-supplement .side-notes {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  #mobilitat-supplement .side-notes p {
+    max-width: none;
+  }
+  #mobilitat-supplement .province-list {
+    gap: 18px;
+    grid-template-columns: 1fr 1fr;
+  }
+  #mobilitat-supplement .map-panel {
+    order: -1;
+  }
+  #mobilitat-supplement .cards {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+  }
+}
+@media (max-width: 640px) {
+  #mobilitat-supplement {
+    font-size: 18px;
+  }
+  #mobilitat-supplement .topbar__inner {
+    min-height: 68px;
+    justify-content: flex-start;
+  }
+  #mobilitat-supplement .topbar p {
+    max-width: 66%;
+    font-size: 13px;
+  }
+  #mobilitat-supplement .topbar nav {
+    font-size: 13px;
+  }
+  #mobilitat-supplement .hero {
+    height: 420px;
+  }
+  #mobilitat-supplement .hero__content {
+    bottom: 40px;
+  }
+  #mobilitat-supplement .hero__content p {
+    font-size: 18px;
+  }
+  #mobilitat-supplement .hero h1 {
+    font-size: clamp(32px, 10vw, 44px);
+  }
+  #mobilitat-supplement .intro p {
+    font-size: 20px;
+  }
+  #mobilitat-supplement main > article {
+    padding-top: 48px;
+  }
+  #mobilitat-supplement .headline-stats__grid {
+    grid-template-columns: 1fr;
+  }
+  #mobilitat-supplement .headline-stats__grid > div {
+    min-height: 150px;
+    padding: 18px 20px;
+  }
+  #mobilitat-supplement .headline-stats__grid > div + div {
+    border-left: 0;
+    border-top: 1px solid #bbb;
+  }
+  #mobilitat-supplement .section-head h2,
+  #mobilitat-supplement .cards-section h2,
+  #mobilitat-supplement .territory h2 {
+    font-size: 27px;
+  }
+  #mobilitat-supplement .priority-chart {
+    padding: 32px 0;
+  }
+  #mobilitat-supplement .bar-list strong,
+  #mobilitat-supplement .bar-list span {
+    font-size: 14px;
+  }
+  #mobilitat-supplement .side-notes,
+  #mobilitat-supplement .province-list {
+    grid-template-columns: 1fr;
+  }
+  #mobilitat-supplement .accessible {
+    gap: 24px;
+  }
+  #mobilitat-supplement .accessible__figures {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  #mobilitat-supplement .accessible__figures span {
+    font-size: 34px;
+  }
+  #mobilitat-supplement .cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  #mobilitat-supplement .cards article {
+    min-height: 158px;
+  }
+  #mobilitat-supplement .photo {
+    margin-bottom: 46px;
+  }
+  #mobilitat-supplement .photo img {
+    min-height: 260px;
+  }
+  #mobilitat-supplement .interactive-frame {
+    aspect-ratio: 4 / 5;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  #mobilitat-supplement *,
+  #mobilitat-supplement {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+  #mobilitat-supplement .bar-list i {
+    width: var(--v);
+  }
+}
