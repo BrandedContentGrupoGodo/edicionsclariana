@@ -239,20 +239,18 @@
   padding-top: 1px;
   padding-right: var(--value-space);
 }
-#mobilitat-supplement .bar-list > div::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: var(--value-space);
-  top: 24px;
-  height: 1px;
-  background: var(--c);
-}
 #mobilitat-supplement .bar-list strong {
   display: block;
   margin-bottom: 4px;
   font-size: 16px;
   line-height: 1.1;
+}
+#mobilitat-supplement .bar-list strong::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 4px;
+  background: var(--c);
 }
 #mobilitat-supplement .bar-list i {
   display: block;
