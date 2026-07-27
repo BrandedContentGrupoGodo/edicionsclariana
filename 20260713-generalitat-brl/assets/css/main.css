@@ -330,6 +330,25 @@ main{ background: var(--bg); }
   break-before: column;
 }
 
+.split-block--intro-reel{
+  width: min(1040px, 100%);
+  grid-template-columns: minmax(0, 1.25fr) minmax(240px, .75fr);
+  gap: clamp(34px, 5vw, 58px);
+  align-items: center;
+}
+
+.split-block--intro-reel .fact-list{
+  width: 100%;
+}
+
+.split-block--intro-reel .fact-list h2{
+  font-size: clamp(34px, 4.2vw, 52px);
+}
+
+.split-block--intro-reel .fact-list li{
+  margin-bottom: 16px;
+}
+
 .split-block--image{
   width: min(980px, 100%);
   grid-template-columns: 1fr;
@@ -1158,6 +1177,13 @@ main{ background: var(--bg); }
   align-self: center;
 }
 
+.photo-guide__reel--intro{
+  width: min(320px, 100%);
+  min-height: 0;
+  height: auto;
+  align-self: center;
+}
+
 .photo-guide__play{
   position: absolute;
   top: 50%;
@@ -1520,6 +1546,12 @@ main{ background: var(--bg); }
   .split-block--points-reel{
     grid-template-columns: 1fr;
     width: min(520px, 100%);
+  }
+
+  .split-block--intro-reel{
+    grid-template-columns: 1fr;
+    width: min(520px, 100%);
+    align-items: start;
   }
 
   .photo-guide--with-reel{
