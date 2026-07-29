@@ -281,6 +281,8 @@ figcaption {
   color: #000;
   font-size: 16px;
   line-height: 1.15;
+      background: white !important;
+    text-align: left !important;
 }
 
 .quote-row footer strong {
