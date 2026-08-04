@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ca">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Tot el que cal saber per gaudir de l'eclipsi solar amb seguretat: on veure'l, com observar-lo i quines recomanacions cal seguir." />
+    <title>Tot el que cal saber per gaudir de l'eclipsi solar amb seguretat</title>
+    <link rel="icon" href="data:," />
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/css/eclipse-interactive.css?v=20260806-1" />
+    <link rel="stylesheet" href="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/css/main.css?v=20260806-3" />
+  </head>
+  <body>
+    <div id="eclipse-supplement">
+      <header class="topbar">
+        <div class="topbar__inner">
+          <p>Ofert per Generalitat de Catalunya</p>
+          <nav aria-label="Canvi d'idioma">
+            <a class="is-active" href="index_cat.html" aria-current="page">CAT</a><span>|</span><a href="index.html">ES</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero__interactive">
+            <div class="eclipse-phase-interactive" data-lang="ca" aria-label="Infografia interactiva sobre les fases de l'eclipsi">
+              <div class="eclipse-phase-interactive__stage">
+                <div class="eclipse-phase-interactive__inner">
+                  <div class="eclipse-phase-interactive__image-container">
+                    <div class="eclipse-phase-interactive__image-stack">
+                      <img class="eclipse-phase-interactive__image" src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/eclipsi5.jpg" alt="Eclipsi solar" />
+                      <img class="eclipse-phase-interactive__image eclipse-phase-interactive__image--totality" src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/eclipsi5_1.jpg" alt="Totalitat de l'eclipsi" />
+                    </div>
+                    <div class="eclipse-phase-interactive__moon" aria-hidden="true"></div>
+                  </div>
+                  <div class="eclipse-phase-interactive__copy">
+                    <h3 class="eclipse-phase-interactive__title"></h3>
+                    <p class="eclipse-phase-interactive__subtitle"></p>
+                    <p class="eclipse-phase-interactive__description"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <h1>Tot el que cal saber per gaudir<br />de l'eclipsi solar amb seguretat</h1>
+        </section>
+
+        <section class="intro">
+          <p>Quines són les millors recomanacions de mobilitat per poder veure'l amb seguretat, des d'on es veurà millor, i què cal tenir en compte per protegir els ulls durant un dels fenòmens astronòmics més excepcionals que es pot observar a Catalunya aquest segle</p>
+        </section>
+
+        <article>
+          <header class="byline narrow">
+            <strong>Gemma Martí</strong>
+            <span>6 agost 2026</span>
+          </header>
+
+          <div class="narrow prose">
+            <p>El dimecres 12 d'agost Catalunya viurà un dels esdeveniments astronòmics més importants del segle. L'eclipsi solar serà visible des de tot el territori, però només les comarques situades dins la franja de totalitat podran contemplar un dels instants més espectaculars de l'astronomia: la lluna ocultarà completament el sol i, durant uns minuts, el dia es convertirà en nit.</p>
+          </div>
+
+          <figure class="wide map-card map-card--interactive">
+            <div class="map-fullwidth-mobile">
+              <div id="es-wrapper" class="eclipse-scroll-map">
+                <div id="es-driver">
+                  <div id="es-sticky">
+                    <div id="es-map"></div>
+                    <div id="es-overlay">
+                      <div id="es-time">
+                        <span class="es-label">Hora local</span>
+                        <span class="es-value" id="es-time-val">20:25:30</span>
+                      </div>
+                      <div id="es-legend">
+                        <div class="es-legend-title">Durada de l'eclipsi</div>
+                        <div class="es-legend-bar-wrapper">
+                          <div class="es-legend-bar"></div>
+                          <div class="es-legend-labels">
+                            <span>1 min 40 s</span>
+                            <span>1 min 20 s</span>
+                            <span>1 min</span>
+                            <span>40 s</span>
+                            <span>30 s</span>
+                            <span>20 s</span>
+                            <span>10 s</span>
+                            <span>&lt;10 s</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="es-progress-wrap">
+                        <span id="es-time-start">20:25</span>
+                        <div id="es-track">
+                          <div id="es-fill"></div>
+                          <div id="es-dot"></div>
+                        </div>
+                        <span id="es-time-end">20:34</span>
+                      </div>
+                      <div id="es-controls">
+                        <button id="es-play" type="button" title="Reproduir / pausa">▶</button>
+                        <button id="es-reset" type="button" title="Reiniciar">↺</button>
+                      </div>
+                      <div id="es-hint">
+                        Desplaça't per veure el moviment
+                        <span class="es-arrow"></span>
+                      </div>
+                    </div>
+                    <div id="es-loading"><div class="es-spinner"></div> Carregant dades...</div>
+                    <div id="es-error">No s'ha pogut carregar l'arxiu GeoJSON.<br /><br />Revisa la connexió a internet i que l'URL pública estigui disponible.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <figcaption><strong>Mapa d'on es projectarà la franja de totalitat.</strong> Travessarà especialment el sud de Tarragona i algunes zones de Lleida, mentre que Barcelona i Girona veuran un eclipsi parcial molt profund.</figcaption>
+          </figure>
+
+          <div class="narrow prose">
+            <p>Es tracta d'un fenomen extraordinari. L'últim eclipsi total visible des d'algun punt de Catalunya es va produir el 30 d'agost de 1905 i, després del d'aquest estiu, no n'hi haurà cap altre fins al 17 de novembre de 2180. Més endavant, caldrà esperar fins a l'any 2433 per tornar-ne a veure un altre. Davant aquesta oportunitat única, es preveu que milers de persones es desplacin fins a les comarques del sud del país per seguir-lo en directe.</p>
+            <p>Per facilitar una observació segura i una mobilitat ordenada, la Generalitat de Catalunya, en col·laboració amb els municipis situats dins la franja de totalitat i amb l'assessorament de la comunitat científica, ha habilitat diversos punts d'observació i ha preparat un dispositiu especial perquè la jornada es desenvolupi amb totes les garanties.</p>
+          </div>
+
+          <section class="narrow section-head">
+            <h2>Què és un eclipsi solar?</h2>
+            <p>Un eclipsi total de sol és el fenomen astronòmic que es produeix quan la lluna se situa exactament entre la terra i el sol i n'oculta completament el disc durant uns minuts.</p>
+            <p>En aquell instant, el cel s'enfosqueix, la temperatura pot baixar lleugerament i es fa visible la corona solar, la capa més externa de l'atmosfera del sol, que normalment queda amagada per la seva intensa llum.</p>
+          </section>
+
+          <section class="phase-section" aria-label="Fases d'un eclipse total">
+            <div class="narrow">
+              <h2 class="rule-title">FASES D'UN ECLIPSE TOTAL</h2>
+              <p class="phase-subtitle">Línia temporal aproximada: 2 h 40 min</p>
+            </div>
+            <div class="phase-band">
+              <div class="wide phase-grid">
+                <article class="phase phase--one"><i></i><strong>1r contacte</strong></article>
+                <article class="phase phase--two"><i></i><strong>2n contacte</strong></article>
+                <article class="phase phase--three"><i></i><strong>Màxim - totalitat</strong></article>
+                <article class="phase phase--four"><i></i><strong>3r contacte</strong></article>
+                <article class="phase phase--five"><i></i><strong>4r contacte</strong></article>
+              </div>
+              <div class="wide phase-time">
+                <span>Parcialitat: 80 min</span>
+                <span>Totalitat: 2 min</span>
+                <span>Parcialitat: 80 min</span>
+              </div>
+            </div>
+          </section>
+
+          <div class="narrow prose">
+            <p>Tot i que al món es produeix un eclipsi total aproximadament cada any i mig, la franja des d'on és visible és molt estreta. Per això, des d'un mateix indret de la terra només se'n pot observar un, de mitjana, cada 350 anys. Aquesta excepcionalitat explica l'enorme interès científic i social que desperta l'eclipsi d'enguany.</p>
+          </div>
+
+          <section class="narrow section-head">
+            <h2>Com observar-lo amb seguretat</h2>
+            <p>Un eclipsi solar és un espectacle fascinant, però també exigeix precaució. Mirar el sol directament sense la protecció adequada pot provocar lesions oculars greus i irreversibles.</p>
+            <p>Aquest risc existeix durant totes les fases de l'eclipsi, excepte durant els breus minuts de totalitat i només dins la franja on el sol queda completament ocult. A les zones on l'eclipsi serà parcial, cal utilitzar protecció durant tota l'observació.</p>
+          </section>
+
+          <figure class="wide photo">
+            <img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/foto-dreta.jpg" alt="Persona observant un eclipsi amb ulleres homologades" />
+          </figure>
+
+          <section class="wide safety-columns" aria-label="Recomanacions de seguretat per observar l'eclipsi">
+            <div class="safety-list is-safe">
+              <h2>PER GAUDIR DE L'ECLIPSI<br />AMB SEGURETAT</h2>
+              <p>Fer servir <strong>ulleres amb filtre solar homologades</strong>, certificades segons la norma ISO 12312-2.</p>
+              <p>Utilitzar telescopis o prismàtics únicament si disposen de <strong>filtres solars específics</strong>.</p>
+              <p>Optar per mètodes d'observació indirecta, com el <strong>pinhole</strong>, que permet projectar la imatge del sol sobre una superfície sense mirar-lo directament.</p>
+            </div>
+            <div class="safety-list is-danger">
+              <h2>MÈTODES D'OBSERVACIÓ NO<br />SEGURS I QUE NO S'HAN D'USAR*</h2>
+              <p>Ulleres de sol</p>
+              <p>Pel·lícules de fotografia analògica velades</p>
+              <p>Radiografies, encara que observem a través de les zones fosques</p>
+              <p>Qualsevol mètode del qual no es tingui la certesa que és 100% segur</p>
+            </div>
+          </section>
+
+          <div class="narrow note">
+            <p><span>*</span> Cap d'aquests objectes és segur perquè no filtren la radiació solar de manera adequada.<br />Tampoc s'ha de mirar el sol a través de cap instrument òptic (càmera de fotos o binocles, per exemple) si no compta amb el filtre adequat, que s'ha de situar sempre davant de l'objectiu.</p>
+          </div>
+
+          <section class="narrow split-video">
+            <div>
+              <h2>On es podrà veure?</h2>
+              <p>El Govern de la Generalitat, conjuntament amb els municipis situats dins la franja de totalitat de l'eclipsi, ha identificat diversos emplaçaments que compleixen els criteris de seguretat, accessibilitat i capacitat necessaris per acollir un gran nombre de persones.</p>
+              <p>Són espais amplis, amb bones condicions de visibilitat, accessos segurs, serveis mínims i una mobilitat adaptada a l'afluència prevista, alhora que garanteixen la protecció del medi natural.</p>
+            </div>
+            <div class="video-reel">
+              <video playsinline preload="metadata">
+                <source src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/reel-eclipse-2.mp4" type="video/mp4" />
+              </video>
+              <button type="button" aria-label="Reproduir vídeo"><span></span></button>
+            </div>
+          </section>
+
+          <section class="wide points-panel">
+            <h2>ELS PUNTS D'OBSERVACIÓ RECOMANATS SÓN</h2>
+            <div class="points-grid">
+              <p><strong>ALCANAR</strong><br />Plaça de Bous</p>
+              <p><strong>LES BORGES BLANQUES</strong><br />Zona esportiva</p>
+              <p><strong>ALTAFULLA</strong><br />Font del Mirador.</p>
+              <p><strong>LLEIDA</strong><br />Magraners</p>
+              <p><strong>AMPOSTA</strong><br />Polígon industrial l'Oriola</p>
+              <p><strong>MONTBRIÓ DEL CAMP</strong><br />Les Palomeres / Granja Gira-Sol</p>
+              <p><strong>CAMARLES</strong><br />Pla de Camarles</p>
+              <p><strong>MÓRA LA NOVA</strong><br />Carrer Tortosa</p>
+              <p><strong>CAMBRILS</strong><br />Cooperativa Agrícola de Cambrils</p>
+              <p><strong>REUS</strong><br />Barri Immaculada</p>
+              <p><strong>CONSTANTÍ</strong><br />Carrer de Joan Miró</p>
+              <p><strong>SANTA BÀRBARA</strong><br />Carretera de la Galera, zona esportiva</p>
+              <p><strong>GANDESA</strong><br />Polígon industrial la Plana</p>
+              <p><strong>TARRAGONA</strong><br />L'Anella Mediterrània</p>
+              <p><strong>L'ALDEA</strong><br />Can Gironès</p>
+              <p><strong>TORREDEMBARRA</strong><br />Polígon industrial de Roques Planes</p>
+              <p><strong>L'AMETLLA DE MAR</strong><br />Punt d'observació habilitat pel municipi</p>
+              <p><strong>VALLS</strong><br />Carrer Fuster, polígon industrial de Valls</p>
+            </div>
+            <button class="pill" type="button" data-modal-open>Més informació</button>
+          </section>
+
+          <div class="narrow">
+            <h2 class="rule-title tips-heading">CONSELLS PER GAUDIR DE L'ECLIPSI</h2>
+          </div>
+          <section class="tips dark">
+            <div class="wide tips-layout">
+              <div class="tips-intro">
+                <p>L'eclipsi del 12 d'agost serà una oportunitat única que atraurà milers de persones a les comarques del sud de Catalunya. Per viure l'experiència amb seguretat i comoditat, convé tenir presents aquestes recomanacions:</p>
+              </div>
+              <div class="tips-grid">
+                <article class="tip-card" tabindex="0">
+                  <div class="tip-card__inner">
+                    <div class="tip-card__face tip-card__front"><img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/picto-1.png" alt="" /><h3>Planifica</h3><i></i></div>
+                    <div class="tip-card__face tip-card__back"><p>Planifica el <strong>desplaçament amb antelació</strong> i preveu possibles retencions a la xarxa viària.</p></div>
+                  </div>
+                </article>
+                <article class="tip-card" tabindex="0">
+                  <div class="tip-card__inner">
+                    <div class="tip-card__face tip-card__front"><img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/picto-2.png" alt="" /><h3>Escull</h3><i></i></div>
+                    <div class="tip-card__face tip-card__back"><p>Escull un indret amb <strong>bona visibilitat</strong> cap a l'horitzó oest, sense obstacles que impedeixin observar el sol.</p></div>
+                  </div>
+                </article>
+                <article class="tip-card" tabindex="0">
+                  <div class="tip-card__inner">
+                    <div class="tip-card__face tip-card__front"><img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/picto-3.png" alt="" /><h3>Porta</h3><i></i></div>
+                    <div class="tip-card__face tip-card__back"><p>Porta <strong>aigua, gorra o barret i protecció solar</strong>, ja que l'observació tindrà lloc en ple estiu i durant les hores de calor.</p></div>
+                  </div>
+                </article>
+                <article class="tip-card" tabindex="0">
+                  <div class="tip-card__inner">
+                    <div class="tip-card__face tip-card__front"><img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/picto-4.png" alt="" /><h3>Consulta</h3><i></i></div>
+                    <div class="tip-card__face tip-card__back"><p>Consulta els <strong>punts d'observació oficials</strong>, preparats per garantir una millor gestió de la mobilitat i de la seguretat.</p></div>
+                  </div>
+                </article>
+                <article class="tip-card" tabindex="0">
+                  <div class="tip-card__inner">
+                    <div class="tip-card__face tip-card__front"><img src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/img/picto-5.png" alt="" /><h3>Comprova</h3><i></i></div>
+                    <div class="tip-card__face tip-card__back"><p>Comprova que disposes d'unes <strong>ulleres homologades</strong> abans de sortir de casa.</p></div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="narrow closing">
+            <p>També és important seguir en tot moment les indicacions dels serveis d'emergència, dels cossos de seguretat i del personal que hi haurà als diferents espais d'observació. La col·laboració de tothom contribuirà a fer compatible el gaudi d'aquest fenomen excepcional amb la seguretat de les persones i el respecte per l'entorn.</p>
+            <a class="pill" href="https://eclipsicatalunya.cat/" target="_blank" rel="noreferrer nofollow">Per saber-ne més</a>
+          
+          </section>
+        </article>
+      </main>
+
+      <footer>
+        <h2>Crèdits</h2>
+        <p>Producció: Edicions Clariana | Coordinació: Martí Palma | Redacció: Gemma Martí | Disseny: Marta Sagarra | Maquetació: Enric Abad</p>
+        <p>Un projecte de Brandslab. Godó Nexus</p>
+      </footer>
+
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+        <div class="modal__panel">
+          <button class="modal__close" type="button" aria-label="Tancar finestra">x</button>
+          <h2 id="modal-title">Punts d'observació recomanats</h2>
+          <p>Els espais oficials han estat seleccionats per facilitar una observació ordenada, amb criteris de seguretat, accessibilitat, capacitat i protecció del medi natural.</p>
+          <p>Consulta abans de sortir les indicacions actualitzades de mobilitat, aparcament i accessos de cada municipi. L'afluència prevista pot provocar retencions i canvis en la circulació.</p>
+          <a class="pill" href="https://eclipsicatalunya.cat/" target="_blank" rel="noreferrer nofollow">Més informació</a>
+        </div>
+      </div>
+    </div>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+    <script src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/js/eclipse-interactive.js?v=20260806-1"></script>
+    <script src="https://brandedcontentgrupogodo.github.io/edicionsclariana/20260806-generalitat-brl/assets/js/main.js?v=20260806-3"></script>
+  </body>
+</html>
