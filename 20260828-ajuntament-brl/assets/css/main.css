@@ -137,6 +137,7 @@ a {
 }
 .article-header {
   padding: 48px 0 52px;
+      width: revert-rule !important;
 }
 .standfirst {
   font-size: 25px;
@@ -671,6 +672,7 @@ a {
 }
 .credits-bcn {
   padding: 42px var(--pad) 56px;
+      background: white !important;
 }
 .credits-bcn__inner {
   max-width: 1180px;
