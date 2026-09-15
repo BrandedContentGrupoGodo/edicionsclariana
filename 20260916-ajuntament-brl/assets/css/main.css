@@ -686,6 +686,101 @@ a {
   font-family: var(--font);
 }
 
+main > article > .article-header.text-column,
+main > article > .text-column {
+  width: min(var(--column), calc(100% - (var(--pad) * 2))) !important;
+  max-width: var(--column) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  float: none !important;
+  display: block !important;
+}
+
+main > article > .article-header.text-column {
+  padding-top: 58px !important;
+  padding-bottom: 30px !important;
+  text-align: left !important;
+}
+
+main > article > .article-header--compact.text-column {
+  padding-top: 24px !important;
+}
+
+main > article > .article-header .standfirst {
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 0 44px !important;
+  padding: 0 !important;
+  color: var(--muted) !important;
+  font-family: var(--font) !important;
+  font-size: 25px !important;
+  line-height: 1.22 !important;
+  font-weight: 300 !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+}
+
+main > article > .article-header .byline {
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  color: var(--text) !important;
+  font-family: var(--font) !important;
+  font-size: 16px !important;
+  line-height: 1.25 !important;
+  font-weight: 400 !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+}
+
+main > article > .article-header .byline strong,
+main > article > .article-header .byline span {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: var(--font) !important;
+  line-height: 1.25 !important;
+}
+
+main > article > .article-header .byline strong {
+  font-weight: 900 !important;
+}
+
+.article-header.text-column,
+.text-column.prose,
+.schools-section.text-column {
+  width: min(var(--column), calc(100% - (var(--pad) * 2))) !important;
+  max-width: var(--column) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  float: none !important;
+}
+
+.article-header.text-column {
+  display: block !important;
+  text-align: left !important;
+}
+
+.article-header.article-header--compact.text-column {
+  padding-top: 38px !important;
+  padding-bottom: 30px !important;
+}
+
+.article-header.text-column .standfirst {
+  width: 100% !important;
+  max-width: var(--column) !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.nursery-hero h2 {
+  margin-top: 82px !important;
+}
+
 @media (max-width: 760px) {
   :is(.topbar-ajuntament, .hero-bcn, article, .credits-bcn) {
     --pad: 18px;
@@ -697,6 +792,23 @@ a {
 
   .topbar-ajuntament__logo img {
     height: 39px;
+  }
+
+  main > article > .article-header.text-column {
+    padding-top: 42px !important;
+    padding-bottom: 28px !important;
+  }
+
+  main > article > .article-header .standfirst {
+    font-size: 22px !important;
+  }
+
+  .article-header.article-header--compact.text-column {
+    padding-top: 32px !important;
+  }
+
+  .nursery-hero h2 {
+    margin-top: 46px !important;
   }
 }
 
