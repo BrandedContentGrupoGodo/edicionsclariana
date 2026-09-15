@@ -1,0 +1,629 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --red: #ff2929;
+  --taupe: #7f6b66;
+  --soft: #e5e1e0;
+  --text: #080808;
+  --muted: #797979;
+  --column: 700px;
+  --wide: 860px;
+  --pad: 22px;
+  --font: "Roboto", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #fff;
+  color: var(--text);
+  font-family: var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.topbar-ajuntament {
+  position: relative;
+  z-index: 20;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+}
+
+.topbar-ajuntament__inner {
+  position: relative;
+  max-width: 1180px;
+  min-height: 80px;
+  margin: auto;
+  padding: 14px var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.topbar-ajuntament__logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topbar-ajuntament__logo img {
+  width: auto;
+  height: 50px;
+}
+
+.topbar-ajuntament__lang {
+  display: flex;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.topbar-ajuntament__lang a {
+  opacity: 0.4;
+}
+
+.topbar-ajuntament__lang a.is-active {
+  opacity: 1;
+}
+
+.hero-bcn {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+  height: min(64vw, 760px);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.hero-bcn__media {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-bcn__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-bcn__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 28px var(--pad) 32px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.64);
+      bottom: 30px;
+}
+
+.hero-bcn__kicker {
+  margin-bottom: 9px;
+  color: var(--red);
+  font-size: clamp(20px, 2.2vw, 30px);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.hero-bcn h1,
+.hero-bcn h2 {
+  max-width: 920px;
+  margin: auto;
+  font-size: clamp(42px, 5.2vw, 68px);
+  line-height: 1.08;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.text-column {
+  width: min(var(--column), calc(100% - (var(--pad) * 2)));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wide-block,
+.wide-figure {
+  width: min(var(--wide), calc(100% - (var(--pad) * 2)));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.article-header {
+  padding: 58px 0 30px;
+}
+
+.article-header--compact {
+  padding-top: 24px;
+}
+
+.standfirst {
+
+  color: var(--muted);
+  font-size: 25px;
+  line-height: 1.22;
+  font-weight: 300;
+  margin-bottom: 44px;
+}
+
+.byline {
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.byline strong,
+.byline span {
+  display: block;
+}
+
+.prose {
+  padding: 0 0 30px;
+}
+
+.prose p {
+  font-size: 18px;
+  line-height: 1.43;
+  margin-bottom: 26px;
+}
+
+.prose h2 {
+  margin: 8px 0 18px;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.wide-figure {
+  margin-top: 22px;
+  margin-bottom: 60px;
+}
+
+.wide-figure img {
+  width: 100%;
+  height: auto;
+}
+
+.wide-figure figcaption {
+  margin-top: 6px;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+.video-highlight {
+  width: min(var(--wide), calc(100% - (var(--pad) * 2)));
+  margin: 14px auto 64px;
+  display: grid;
+  grid-template-columns: minmax(130px, 180px) minmax(260px, 340px);
+  gap: 58px;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-highlight .pull-note {
+  position: static;
+  transform: none;
+}
+
+.video-highlight .pull-note p {
+  width: 150px;
+  font-size: 20px;
+}
+
+.vertical-reel {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 0;
+  background: #111;
+  display: block;
+}
+
+.numbers-band {
+  margin-top: 24px;
+  margin-bottom: 52px;
+  padding: 22px 44px 28px;
+  border-radius: 18px;
+  background: var(--soft);
+  text-align: center;
+}
+
+.numbers-band h2 {
+  max-width: 620px;
+  margin: 0 auto 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #111;
+  font-size: 21px;
+  line-height: 1.1;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.numbers-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 22px;
+  align-items: start;
+}
+
+.numbers-grid--five {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.number-item strong {
+  display: block;
+  color: var(--red);
+  font-size: clamp(40px, 5vw, 52px);
+  line-height: 0.95;
+  font-weight: 500;
+}
+
+.number-item span {
+  display: block;
+  max-width: 150px;
+  margin: 7px auto 0;
+  font-size: 14px;
+  line-height: 1.05;
+  font-weight: 700;
+}
+
+.postal-section {
+  position: relative;
+  width: min(var(--column), calc(100% - (var(--pad) * 2)));
+  margin: 0 auto 34px;
+}
+
+.postal-section__copy {
+  width: 100%;
+  padding-bottom: 0;
+}
+
+.pull-note {
+  position: absolute;
+  top: 50%;
+  left: -215px;
+  transform: translateY(-50%);
+}
+
+.pull-note p {
+  width: 170px;
+  padding-top: 14px;
+  border-top: 4px solid var(--red);
+  font-size: 20px;
+  line-height: 1.08;
+  font-weight: 900;
+}
+
+.transition-copy {
+  padding-top: 8px;
+  padding-bottom: 92px;
+}
+
+.nursery-hero {
+  margin: 24px 0 0;
+  text-align: center;
+}
+
+.nursery-hero img {
+  width: 100%;
+  height: clamp(300px, 46vw, 550px);
+  object-fit: cover;
+  object-position: center;
+}
+
+.nursery-hero h2 {
+  width: min(980px, calc(100% - (var(--pad) * 2)));
+  margin: 58px auto 44px;
+  font-size: clamp(38px, 4.45vw, 55px);
+  line-height: 1.16;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.nursery-copy {
+  margin-top: 20px;
+  margin-bottom: 74px;
+}
+
+.schools-section {
+  padding: 34px 0 70px;
+}
+
+.schools-section h2 {
+  margin-bottom: 18px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #111;
+  color: var(--red);
+  font-size: 20px;
+  line-height: 1.1;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.school-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.school-card {
+  position: relative;
+  min-height: 205px;
+  border-radius: 18px;
+  isolation: isolate;
+  cursor: pointer;
+  perspective: 1000px;
+  outline: 0;
+}
+
+.school-card__inner {
+  position: relative;
+  width: 100%;
+  min-height: 205px;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s ease;
+}
+
+.school-card.is-flipped .school-card__inner {
+  transform: rotateY(180deg);
+}
+
+.school-card__face {
+  position: absolute;
+  inset: 0;
+  min-height: 205px;
+  border-radius: 18px;
+  overflow: hidden;
+  backface-visibility: hidden;
+}
+
+.school-card__front:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.48);
+}
+
+.school-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  inset: 0;
+}
+
+.school-card span {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1.08;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.school-card__back {
+  padding: 20px 18px;
+  background: var(--soft);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+.school-card__back p {
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.school-card__back p + p {
+  margin-top: 10px;
+}
+
+.school-card__back strong {
+  font-weight: 900;
+}
+
+.school-card:focus-visible .school-card__face {
+  outline: 3px solid var(--red);
+  outline-offset: 4px;
+}
+
+.school-card--center {
+  grid-column: 1 / -1;
+  width: min(310px, 100%);
+  justify-self: center;
+}
+
+.final-copy {
+  padding-bottom: 86px;
+}
+
+.credits-bcn {
+  padding: 42px var(--pad) 56px;
+}
+
+.credits-bcn__inner {
+  max-width: 1180px;
+  margin: auto;
+  text-align: center;
+}
+
+.credits-bcn hr {
+  margin-bottom: 28px;
+}
+
+.credits-bcn p {
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+@media (min-width: 1061px) {
+  .postal-section {
+    transform: translateX(34px);
+  }
+}
+
+@media (max-width: 1060px) {
+  .postal-section {
+    display: grid;
+    gap: 20px;
+  }
+
+  .video-highlight {
+    grid-template-columns: 1fr;
+    width: min(420px, calc(100% - (var(--pad) * 2)));
+    gap: 22px;
+    justify-items: start;
+  }
+
+  .pull-note {
+    position: static;
+    transform: none;
+  }
+
+  .pull-note p {
+    width: min(100%, 260px);
+    margin: 0 0 4px;
+    font-size: 18px;
+  }
+
+  .video-highlight .pull-note p {
+    width: min(100%, 260px);
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 760px) {
+  :root {
+    --pad: 18px;
+  }
+
+  .topbar-ajuntament__inner {
+    min-height: 66px;
+  }
+
+  .topbar-ajuntament__logo img {
+    height: 39px;
+  }
+
+  .hero-bcn {
+    min-height: 500px;
+    height: 72vh;
+  }
+
+  .hero-bcn__content {
+    padding: 24px 18px 28px;
+  }
+
+  .hero-bcn h1,
+  .hero-bcn h2 {
+    font-size: clamp(35px, 10vw, 50px);
+  }
+
+  .hero-bcn h1 br,
+  .hero-bcn h2 br {
+    display: none;
+  }
+
+  .nursery-hero h2 {
+    margin: 38px auto 30px;
+    font-size: clamp(32px, 8vw, 46px);
+  }
+
+  .nursery-hero img {
+    height: clamp(220px, 58vw, 320px);
+  }
+
+  .article-header {
+    padding: 42px 0 28px;
+  }
+
+  .standfirst {
+    font-size: 22px;
+  }
+
+  .prose p {
+    line-height: 1.5;
+  }
+
+  .wide-figure {
+    margin-bottom: 48px;
+  }
+
+  .numbers-band {
+    padding: 22px 18px 26px;
+  }
+
+  .numbers-grid,
+  .numbers-grid--five {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .number-item strong {
+    font-size: 42px;
+  }
+
+  .school-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .school-card--center {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 460px) {
+  .hero-bcn {
+    min-height: 460px;
+  }
+
+  .hero-bcn h1,
+  .hero-bcn h2 {
+    font-size: 36px;
+  }
+
+  .hero-bcn__kicker {
+    font-size: 19px;
+  }
+
+  .standfirst {
+    font-size: 21px;
+  }
+
+  .numbers-grid,
+  .numbers-grid--five {
+    grid-template-columns: 1fr;
+  }
+
+  .numbers-band h2,
+  .schools-section h2 {
+    font-size: 18px;
+  }
+}
