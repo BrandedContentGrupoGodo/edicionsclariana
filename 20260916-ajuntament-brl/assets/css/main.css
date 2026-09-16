@@ -369,6 +369,7 @@ a {
   isolation: isolate;
   cursor: pointer;
   perspective: 1000px;
+  -webkit-perspective: 1000px;
   outline: 0;
 }
 
@@ -378,11 +379,13 @@ a {
   min-height: 205px;
   height: 100%;
   transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transition: transform 0.55s ease;
 }
 
 .school-card.is-flipped .school-card__inner {
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
 }
 
 .school-card__face {
@@ -392,6 +395,24 @@ a {
   border-radius: 18px;
   overflow: hidden;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: visibility 0s linear 0.28s, opacity 0.18s ease;
+}
+
+.school-card__front {
+  z-index: 2;
+  opacity: 1;
+  visibility: visible;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
+}
+
+.school-card.is-flipped .school-card__front {
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0s;
 }
 
 .school-card__front:after {
@@ -408,6 +429,8 @@ a {
   object-fit: cover;
   position: absolute;
   inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .school-card span {
@@ -424,9 +447,12 @@ a {
   font-weight: 900;
   text-align: center;
   text-transform: uppercase;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .school-card__back {
+  z-index: 1;
   padding: 20px 18px;
   background: var(--soft);
   display: flex;
@@ -435,6 +461,18 @@ a {
   justify-content: center;
   text-align: center;
   transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.school-card.is-flipped .school-card__back {
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition-delay: 0s;
 }
 
 .school-card__back p {
