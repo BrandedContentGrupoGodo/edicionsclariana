@@ -878,3 +878,53 @@ main > article > .article-header .byline strong {
     font-size: 18px;
   }
 }
+
+@supports (-webkit-touch-callout: none) {
+  .school-card,
+  .school-card__inner,
+  .school-card__face {
+    perspective: none !important;
+    -webkit-perspective: none !important;
+    transform-style: flat !important;
+    -webkit-transform-style: flat !important;
+  }
+
+  .school-card__inner,
+  .school-card.is-flipped .school-card__inner,
+  .school-card__front,
+  .school-card__back {
+    transform: none !important;
+    -webkit-transform: none !important;
+  }
+
+  .school-card__face,
+  .school-card img,
+  .school-card span {
+    backface-visibility: visible !important;
+    -webkit-backface-visibility: visible !important;
+  }
+
+  .school-card__front {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+  }
+
+  .school-card__back {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+  }
+
+  .school-card.is-flipped .school-card__front {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+  }
+
+  .school-card.is-flipped .school-card__back {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto;
+  }
+}
