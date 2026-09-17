@@ -101,7 +101,12 @@ const historias = [
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap9.png",
     enlace: "https://www.lavanguardia.com/deportes/20260625/11573320/araceli-menduina-final-piraguismo-54-anos-constelaciones-streaming-brl.html"
   },
-  { locked: true },
+  {
+    nombre: "Martín de la Puente",
+    frase: "El primer bote de mi vida fue aceptar la discapacidad y normalizarla",
+    imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap10.png",
+    enlace: "https://www.lavanguardia.com/deportes/20260917/11636391/martin-puente-tenista-espanol-aprovecho-segundo-bote-bola-constelaciones-streaming-brl.html"
+  },
   { locked: true },
   { locked: true }
 ];
