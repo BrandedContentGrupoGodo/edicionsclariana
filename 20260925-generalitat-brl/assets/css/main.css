@@ -361,7 +361,7 @@ body {
   #salut-supplement .phase__body {
     padding: 22px 18px;
   }
-  #salut-supplement .infographic iframe {
+  #salut-supplement .infographic iframe[src*="-mob-"] {
     aspect-ratio: 774 / 1304;
   }
   #salut-supplement .tests li {
