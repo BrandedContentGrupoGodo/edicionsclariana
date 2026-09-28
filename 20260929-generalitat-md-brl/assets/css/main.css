@@ -255,6 +255,15 @@ body {
   margin-top: 28px;
 }
 
+#salut-supplement .test-list,
+#salut-supplement .test-list h2,
+#salut-supplement .test-list p,
+#salut-supplement .test-list ul,
+#salut-supplement .test-list li,
+#salut-supplement .test-list strong {
+  text-align: left !important;
+}
+
 #salut-supplement .test-list ul {
   padding: 0;
   list-style: none;
