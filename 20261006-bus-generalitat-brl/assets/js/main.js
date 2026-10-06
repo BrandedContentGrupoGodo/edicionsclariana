@@ -6,7 +6,7 @@
 
   const active = new Map();
   const numbers = new Map();
-  root.querySelectorAll(".bus-figure-row strong").forEach((element) => {
+  root.querySelectorAll(".bus-figure-row .bus-value").forEach((element) => {
     const node = [...element.childNodes].find(
       (child) =>
         child.nodeType === Node.TEXT_NODE && /\d/.test(child.textContent),
