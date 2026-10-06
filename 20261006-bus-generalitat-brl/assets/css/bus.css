@@ -53,7 +53,10 @@
   animation: bus-picto-enter 900ms cubic-bezier(0.2, 0.7, 0.2, 1)
     var(--bus-delay, 0ms) both;
 }
-#ev-supplement.bus-supplement .bus-figure-row .bus-value {
+#ev-supplement.bus-supplement
+  .bus-figure-row
+  > div
+  > :is(.bus-value, strong, b) {
   font-variant-numeric: tabular-nums;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -174,7 +177,10 @@
 #ev-supplement.bus-supplement .bus-cols-3 {
   grid-template-columns: 1fr 0.9fr 1fr;
 }
-#ev-supplement.bus-supplement .bus-figure-row .bus-value {
+#ev-supplement.bus-supplement
+  .bus-figure-row
+  > div
+  > :is(.bus-value, strong, b) {
   display: block;
   color: var(--green);
   font-size: 60px;
@@ -225,7 +231,10 @@
   #ev-supplement.bus-supplement .bus-figure-row {
     gap: 20px;
   }
-  #ev-supplement.bus-supplement .bus-figure-row .bus-value {
+  #ev-supplement.bus-supplement
+    .bus-figure-row
+    > div
+    > :is(.bus-value, strong, b) {
     font-size: clamp(38px, 8vw, 55px);
   }
   #ev-supplement.bus-supplement .bus-figure-row small {
@@ -288,7 +297,10 @@
   margin: 0 !important;
   padding: 0 !important;
 }
-#ev-supplement.bus-supplement .bus-figure-row .bus-value {
+#ev-supplement.bus-supplement
+  .bus-figure-row
+  > div
+  > :is(.bus-value, strong, b) {
   display: block !important;
   font-family: Arial, Helvetica, sans-serif !important;
   color: #ff847c !important;
@@ -300,19 +312,30 @@
   padding: 0 !important;
   white-space: nowrap;
 }
-#ev-supplement.bus-supplement .bus-value > span {
+#ev-supplement.bus-supplement
+  .bus-figure-row
+  > div
+  > :is(.bus-value, strong, b)
+  > span {
   font: inherit !important;
   color: inherit !important;
   letter-spacing: inherit !important;
 }
-#ev-supplement.bus-supplement .bus-value > small {
+#ev-supplement.bus-supplement
+  .bus-figure-row
+  > div
+  > :is(.bus-value, strong, b)
+  > small {
   font: inherit !important;
   font-size: 0.5em !important;
   color: inherit !important;
   letter-spacing: normal !important;
 }
 @media (max-width: 700px) {
-  #ev-supplement.bus-supplement .bus-figure-row .bus-value {
+  #ev-supplement.bus-supplement
+    .bus-figure-row
+    > div
+    > :is(.bus-value, strong, b) {
     font-size: 44px !important;
   }
   #ev-supplement.bus-supplement .bus-figure-row p {
@@ -331,7 +354,10 @@
   #ev-supplement.bus-supplement .bus-cols-3 > div:last-child {
     grid-column: 1 / -1;
   }
-  #ev-supplement.bus-supplement .bus-figure-row .bus-value {
+  #ev-supplement.bus-supplement
+    .bus-figure-row
+    > div
+    > :is(.bus-value, strong, b) {
     font-size: 44px !important;
   }
   #ev-supplement.bus-supplement .bus-figure-row p {
@@ -350,4 +376,12 @@
   #ev-supplement.bus-supplement .bus-cols-3 > div:last-child {
     grid-column: auto;
   }
+}
+
+/* The CMS may remove number classes or normalize b to strong. */
+#ev-supplement.bus-supplement .bus-figure-row p :is(b, strong) {
+  margin-right: 0.22em !important;
+}
+#ev-supplement.bus-supplement .bus-figure-row p br {
+  display: initial !important;
 }
