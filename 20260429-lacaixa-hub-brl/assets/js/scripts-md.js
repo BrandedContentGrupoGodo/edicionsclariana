@@ -107,7 +107,12 @@ const historias = [
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap10.png",
     enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260917/1004227901/martin-puente-tenista-espanol-aprovecho-segundo-bote-bola-constelaciones-streaming-brl.html"
   },
-  { locked: true },
+  {
+    nombre: "Isabel Fernández",
+    frase: "Cuando miro hacia Los Ángeles 2028, veo un sueño de vida",
+    imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap11.png",
+    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20261017/1004239420/isabel-fernandez-tiro-arco-deportista-paralimpico-juegos-angeles-2028-constelaciones-streaming-brl.html"
+  },
   { locked: true }
 ];
 
