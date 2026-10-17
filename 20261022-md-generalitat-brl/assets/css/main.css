@@ -10,6 +10,7 @@ body {
   --pad: 24px;
   background: #fff;
   color: #111;
+  text-align: left;
   font:
     18px/1.38 Arial,
     Helvetica,
