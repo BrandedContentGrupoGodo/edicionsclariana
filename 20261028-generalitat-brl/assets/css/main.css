@@ -1,0 +1,638 @@
+#vac-supplement {
+    --vac-teal: #36a3b4;
+    --vac-pale: #c3e3e9;
+    --vac-coral: #ff847c;
+    --vac-green: #7cb895;
+    --vac-dark: #4b4b4b;
+    --vac-gutter: 24px;
+    width: 100%;
+    overflow: clip;
+    background: #fff;
+    color: #111;
+    font: 18px/1.45 Arial, Helvetica, sans-serif;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+
+#vac-supplement,
+#vac-supplement * {
+    box-sizing: border-box;
+}
+
+#vac-supplement :is(p, h1, h2, h3, ul) {
+    margin: 0;
+}
+
+#vac-supplement img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#vac-supplement a {
+    color: inherit;
+}
+
+#vac-supplement :is(a, summary):focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 5px;
+}
+
+#vac-supplement .vac-narrow {
+    width: min(700px, calc(100% - var(--vac-gutter) * 2));
+    margin-inline: auto;
+}
+
+#vac-supplement .vac-wide {
+    width: min(850px, calc(100% - var(--vac-gutter) * 2));
+    margin-inline: auto;
+}
+
+#vac-supplement .lv-topbar__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 84px;
+    max-width: 1180px;
+    margin: auto;
+    padding: 20px var(--vac-gutter);
+    font-size: 14px;
+}
+
+#vac-supplement .lv-lang {
+    position: absolute;
+    right: var(--vac-gutter);
+}
+
+#vac-supplement .lv-lang a {
+    font-weight: 400;
+    text-decoration: none;
+    text-underline-offset: 3px;
+}
+
+#vac-supplement .lv-lang a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#vac-supplement .vac-hero {
+    position: relative;
+    height: clamp(460px, 50vw, 740px);
+    overflow: hidden;
+    background: #484944;
+}
+
+#vac-supplement .vac-hero > img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    animation: vac-hero-zoom 30s ease-out forwards;
+}
+
+#vac-supplement .vac-hero-shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 43%, rgb(0 0 0 / 85%) 100%);
+}
+
+#vac-supplement .vac-hero h1 {
+    position: absolute;
+    bottom: 38px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(100% - 40px, 1100px);
+    color: #fff;
+    font-size: clamp(38px, 4.7vw, 68px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.3px;
+    text-align: center;
+    text-wrap: balance;
+}
+
+#vac-supplement .vac-hero__term {
+    white-space: nowrap;
+}
+
+#vac-supplement .vac-intro {
+    padding: 28px var(--vac-gutter) 30px;
+    background: var(--vac-pale);
+    text-align: center;
+}
+
+#vac-supplement .vac-intro p {
+    max-width: 760px;
+    margin: auto;
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+#vac-supplement .vac-article {
+    padding: 52px 0 70px;
+}
+
+#vac-supplement .vac-byline {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    line-height: 1.25;
+}
+
+#vac-supplement .vac-byline strong {
+    font-size: 16px;
+}
+
+#vac-supplement .vac-byline time {
+    margin-top: 3px;
+    color: #888;
+    font-size: 13px;
+}
+
+#vac-supplement .vac-prose {
+    color: #454545;
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+#vac-supplement .vac-prose p + p {
+    margin-top: 26px;
+}
+
+#vac-supplement .vac-prose h2 {
+    margin-bottom: 18px;
+    color: #111;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+#vac-supplement .vac-stat {
+    position: relative;
+    margin-block: 46px 50px;
+}
+
+#vac-supplement .vac-stat__band {
+    position: absolute;
+    inset: 30% 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 18px;
+    background: rgb(0 0 0 / 65%);
+    color: #fff;
+    text-align: center;
+}
+
+#vac-supplement .vac-stat__band > strong {
+    font-size: clamp(48px, 5.8vw, 72px);
+    font-weight: 300;
+    line-height: 1;
+}
+
+#vac-supplement .vac-stat__band p {
+    margin-top: 4px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+#vac-supplement .vac-label {
+    margin-top: 48px;
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #444;
+    color: #222;
+    font-size: 21px;
+    line-height: 1.25;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+#vac-supplement .vac-recommendation {
+    position: relative;
+    margin-top: 52px;
+    margin-bottom: 50px;
+    padding: 44px 75px 30px;
+    background: var(--vac-dark);
+    color: #fff;
+    --vac-accent: var(--vac-teal);
+}
+
+#vac-supplement .vac-covid {
+    --vac-accent: var(--vac-coral);
+}
+
+#vac-supplement .vac-recommendation h3 {
+    position: absolute;
+    top: -23px;
+    left: 75px;
+    max-width: calc(100% - 40px);
+    padding: 12px 24px;
+    border-radius: 17px;
+    background: var(--vac-accent);
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+#vac-supplement .vac-list-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 35px;
+}
+
+#vac-supplement .vac-list-grid ul {
+    padding: 0;
+    list-style: none;
+}
+
+#vac-supplement .vac-list-grid .vac-list-note {
+    grid-column: 1 / -1;
+}
+
+#vac-supplement .vac-list-grid li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+#vac-supplement .vac-list-grid li + li {
+    margin-top: 16px;
+}
+
+#vac-supplement .vac-list-grid li::before {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--vac-accent);
+    content: "";
+}
+
+#vac-supplement .vac-reveal-list li {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity 550ms ease var(--vac-reveal-delay, 0ms),
+        transform 550ms ease var(--vac-reveal-delay, 0ms);
+}
+
+#vac-supplement .vac-reveal-list.is-revealed li {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#vac-supplement .vac-video {
+    margin-block: 44px 50px;
+    aspect-ratio: 16 / 9;
+    background: #eee;
+}
+
+#vac-supplement .vac-video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#vac-supplement .vac-video__play {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#vac-supplement .vac-video__play img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#vac-supplement .vac-video__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    padding-left: 5px;
+    transform: translate(-50%, -50%);
+    border: 5px solid rgb(255 255 255 / 80%);
+    border-radius: 50%;
+    background: rgb(255 255 255 / 15%);
+    color: #fff;
+    font-size: 36px;
+    line-height: 1;
+}
+
+#vac-supplement .vac-appointment {
+    padding: 32px 75px 40px;
+    background: var(--vac-dark);
+    color: #fff;
+}
+
+#vac-supplement .vac-appointment p + p {
+    margin-top: 20px;
+}
+
+#vac-supplement .vac-appointment h3 {
+    margin-block: 36px 22px;
+    font-size: 20px;
+    line-height: 1.35;
+}
+
+#vac-supplement .vac-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+}
+
+#vac-supplement .vac-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 18px 16px 10px;
+    border-radius: 17px;
+    background: var(--vac-teal);
+    color: #fff;
+    box-shadow: 9px 10px 7px rgb(0 0 0 / 45%);
+    text-align: center;
+    text-decoration: none;
+    line-height: 1.3;
+}
+
+#vac-supplement a.vac-card:hover {
+    filter: brightness(1.08);
+}
+
+#vac-supplement .vac-reveal-cards .vac-card {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition:
+        opacity 650ms ease,
+        transform 650ms ease;
+}
+
+#vac-supplement .vac-reveal-cards .vac-card:nth-child(2) {
+    transition-delay: 220ms;
+}
+
+#vac-supplement .vac-reveal-cards .vac-card:nth-child(3) {
+    transition-delay: 440ms;
+}
+
+#vac-supplement .vac-reveal-cards.is-revealed .vac-card {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#vac-supplement .vac-card strong {
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#vac-supplement .vac-card--booking {
+    background: var(--vac-coral);
+}
+
+#vac-supplement .vac-card--cap {
+    background: var(--vac-green);
+}
+
+#vac-supplement .vac-arrow {
+    margin-top: auto;
+    padding-top: 6px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+#vac-supplement .vac-faq__item {
+    margin-top: 22px;
+    background: var(--vac-dark);
+    color: #fff;
+    border-radius: 0 22px 22px 0;
+    box-shadow: 0 4px 7px rgb(0 0 0 / 30%);
+}
+
+#vac-supplement .vac-faq__item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 11px 16px;
+    cursor: pointer;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#vac-supplement .vac-reveal-faq .vac-faq__item {
+    opacity: 0;
+    transform: translateY(16px);
+    transition:
+        opacity 550ms ease var(--vac-faq-delay, 0ms),
+        transform 550ms ease var(--vac-faq-delay, 0ms);
+}
+
+#vac-supplement .vac-reveal-faq.is-revealed .vac-faq__item {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#vac-supplement .vac-faq__item summary::-webkit-details-marker {
+    display: none;
+}
+
+#vac-supplement .vac-faq__icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 32px;
+    height: 32px;
+    border-radius: 10px;
+    background: var(--vac-teal);
+    color: #fff;
+    font-size: 23px;
+    line-height: 1;
+    transform: rotate(90deg);
+    transition: transform 200ms ease;
+}
+
+#vac-supplement .vac-faq__item[open] .vac-faq__icon {
+    transform: rotate(-90deg);
+}
+
+#vac-supplement .vac-faq__answer {
+    padding: 6px 18px 22px;
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+#vac-supplement .vac-photo {
+    margin-block: 46px 35px;
+}
+
+#vac-supplement .vac-more {
+    margin-top: 35px;
+    text-align: center;
+}
+
+#vac-supplement .vac-more a {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 30px;
+    background: var(--vac-coral);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#vac-supplement .credits-block {
+    padding: 28px var(--vac-gutter);
+    background: #f2f2f2;
+    text-align: center;
+}
+
+#vac-supplement .credits-block h2 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+#vac-supplement .credits-block p {
+    margin-top: 4px;
+    font-size: 12px;
+}
+
+@keyframes vac-hero-zoom {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.14);
+    }
+}
+
+@media (max-width: 760px) {
+    #vac-supplement .vac-recommendation {
+        padding-inline: 28px;
+    }
+
+    #vac-supplement .vac-recommendation h3 {
+        left: 28px;
+    }
+
+    #vac-supplement .vac-appointment {
+        padding-inline: 28px;
+    }
+
+    #vac-supplement .vac-cards {
+        gap: 16px;
+    }
+
+    #vac-supplement .vac-card {
+        padding-inline: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #vac-supplement {
+        --vac-gutter: 20px;
+    }
+
+    #vac-supplement .lv-topbar__inner {
+        min-height: 64px;
+        justify-content: flex-start;
+        font-size: 12px;
+    }
+
+    #vac-supplement .vac-hero {
+        height: 490px;
+    }
+
+    #vac-supplement .vac-hero > img {
+        object-position: 48% center;
+    }
+
+    #vac-supplement .vac-hero h1 {
+        bottom: 30px;
+        font-size: clamp(28px, 7.6vw, 44px);
+        letter-spacing: -0.8px;
+    }
+
+    #vac-supplement .vac-desktop-break {
+        display: none;
+    }
+
+    #vac-supplement .vac-intro p {
+        font-size: 21px;
+    }
+
+    #vac-supplement .vac-article {
+        padding-top: 40px;
+    }
+
+    #vac-supplement .vac-prose h2 {
+        font-size: 24px;
+    }
+
+    #vac-supplement .vac-stat > img {
+        min-height: 310px;
+        object-fit: cover;
+    }
+
+    #vac-supplement .vac-stat__band {
+        inset: 22% 0 12%;
+        padding: 12px;
+    }
+
+    #vac-supplement .vac-stat__band p {
+        font-size: 18px;
+    }
+
+    #vac-supplement .vac-list-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    #vac-supplement .vac-recommendation h3 {
+        left: 20px;
+        padding-inline: 15px;
+        font-size: 16px;
+    }
+
+    #vac-supplement .vac-cards {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    #vac-supplement .vac-card {
+        min-height: 180px;
+        padding: 22px;
+    }
+
+    #vac-supplement .vac-card--cap {
+        min-height: 145px;
+    }
+
+    #vac-supplement .vac-faq__item summary {
+        padding-inline: 12px;
+        gap: 10px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #vac-supplement *,
+    #vac-supplement *::before,
+    #vac-supplement *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
