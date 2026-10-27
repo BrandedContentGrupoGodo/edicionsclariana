@@ -8,7 +8,8 @@
     const band = root.querySelector(".fashion-models");
     const cells = Array.from(band.querySelectorAll(".fashion-model"));
     const collection = cells.map((cell) => ({
-        src: cell.querySelector("img").getAttribute("src"),
+        src: cell.querySelector("img").getAttribute("data-src")
+            || cell.querySelector("img").getAttribute("src"),
         alt: cell.querySelector("img").alt,
         name: cell.querySelector("p").textContent,
     }));
