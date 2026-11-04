@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="bo-picto-lamp" x="0px" y="0px" viewBox="0 0 239.9 530.6" class="bo-picto bo-picto--lamp" aria-hidden="true" focusable="false">
+    <g id="bo-lamp-XMLID_13_">
+        <defs>
+            <rect id="bo-lamp-XMLID_4_" x="2.9" y="21.3" width="237" height="509.3" />
+        </defs>
+        <clipPath id="bo-lamp-XMLID_37_">
+            <use xlink:href="#bo-lamp-XMLID_4_" style="overflow:visible;" />
+        </clipPath>
+        <path id="bo-lamp-XMLID_7_" d="M223.4,486.4c0,6.9-45.7,12.5-102.1,12.5c-56.4,0-102.1-5.6-102.1-12.5   c0-6.9,45.7-12.5,102.1-12.5C177.7,473.9,223.4,479.5,223.4,486.4" clip-path="url(#bo-lamp-XMLID_37_)" fill="#5C6BA5" />
+        <path id="bo-lamp-XMLID_6_" d="M167.3,484.7c0,25.4-20.6,45.9-45.9,45.9c-25.4,0-45.9-20.6-45.9-45.9s20.6-45.9,45.9-45.9   C146.7,438.8,167.3,459.3,167.3,484.7" clip-path="url(#bo-lamp-XMLID_37_)" fill="#E2B686" class="bo-picto__light" />
+        <path id="bo-lamp-XMLID_5_" d="M121.4,302.2L121.4,302.2C56.2,302.2,2.9,350.2,2.9,409v23.3c0,19.7,6,38.2,16.4,54   c0.1-6.9,45.8-12.4,102.1-12.4c56.3,0,101.9,5.6,102.1,12.4c10.4-15.9,16.4-34.4,16.4-54V409C239.9,350.2,186.5,302.2,121.4,302.2" clip-path="url(#bo-lamp-XMLID_37_)" fill="#737EBC" />
+    </g>
+    <rect id="bo-lamp-XMLID_3_" x="109.2" y="0" width="18.6" height="234.5" fill="#5C6BA5" />
+    <g id="bo-lamp-XMLID_9_">
+        <defs>
+            <rect id="bo-lamp-XMLID_1_" x="0" y="0" width="237" height="509.3" />
+        </defs>
+        <clipPath id="bo-lamp-XMLID_38_">
+            <use xlink:href="#bo-lamp-XMLID_1_" style="overflow:visible;" />
+        </clipPath>
+        <path id="bo-lamp-XMLID_2_" d="M120.5,374.5h-4.1c-27.1,0-49.3-22.2-49.3-49.3v-56.1c0-27.1,22.2-49.3,49.3-49.3h4.1   c27.1,0,49.3,22.2,49.3,49.3v56.1C169.8,352.3,147.6,374.5,120.5,374.5" clip-path="url(#bo-lamp-XMLID_38_)" fill="#737EBC" />
+    </g>
+</svg>

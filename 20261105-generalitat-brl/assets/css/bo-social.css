@@ -1,0 +1,679 @@
+#bo-supplement {
+    --bo-cream: #fbf3ea;
+    --bo-sand: #e2b076;
+    --bo-salmon: #ef7e8b;
+    --bo-coral: #ed6c77;
+    --bo-blue: #737ebc;
+    --bo-indigo: #5c6ba5;
+    --bo-gutter: 24px;
+    width: 100%;
+    overflow: clip;
+    color: #111;
+    background: white;
+    font: 18px/1.45 Arial, Helvetica, sans-serif;
+    text-align: left;
+    -webkit-text-size-adjust: 100%;
+}
+#bo-supplement, #bo-supplement * {
+    box-sizing: border-box;
+}
+#bo-supplement :is(p, h1, h2, h3) {
+    margin: 0;
+}
+#bo-supplement :is(button, summary) {
+    font-family: inherit;
+}
+#bo-supplement img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#bo-supplement a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+#bo-supplement :is(a, button, summary):focus-visible {
+    outline: 3px solid #111;
+    outline-offset: 5px;
+}
+#bo-supplement .bo-narrow, #bo-supplement .bo-wide {
+    width: min(700px, calc(100% - var(--bo-gutter) * 2));
+    margin-inline: auto;
+}
+#bo-supplement .lv-topbar__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 84px;
+    max-width: 1180px;
+    margin: auto;
+    padding: 20px var(--bo-gutter);
+    font-size: 14px;
+}
+#bo-supplement .lv-lang {
+    position: absolute;
+    right: var(--bo-gutter);
+}
+#bo-supplement .lv-lang a {
+    font-weight: 400;
+    text-decoration: none;
+}
+#bo-supplement .lv-lang a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+}
+#bo-supplement .bo-hero {
+    position: relative;
+    height: clamp(460px, 50vw, 740px);
+    overflow: hidden;
+    background: #75634b;
+}
+#bo-supplement .bo-hero video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#bo-supplement .bo-hero__shade {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent 40%, rgb(0 0 0 / 78%));
+}
+#bo-supplement .bo-hero h1 {
+    position: absolute;
+    bottom: 48px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1200px, calc(100% - 48px));
+    color: white;
+    font-size: clamp(36px, 4.2vw, 60px);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -1.3px;
+    text-align: center;
+    text-wrap: balance;
+}
+#bo-supplement .bo-motion {
+    position: absolute;
+    bottom: 14px;
+    right: 16px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    width: 34px;
+    height: 34px;
+    color: white;
+    background: #0008;
+    cursor: pointer;
+}
+#bo-supplement .bo-intro {
+    padding: 28px var(--bo-gutter) 30px;
+    background: var(--bo-salmon);
+    color: white;
+    text-align: center;
+}
+#bo-supplement .bo-intro p {
+    max-width: 700px;
+    margin: auto;
+    font-size: 24px;
+    line-height: 1.3;
+}
+#bo-supplement .bo-article {
+    background: var(--bo-cream);
+}
+#bo-supplement .bo-opening {
+    padding-block: 52px 60px;
+}
+#bo-supplement .bo-byline {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    line-height: 1.25;
+}
+#bo-supplement .bo-byline strong {
+    font-size: 16px;
+}
+#bo-supplement .bo-byline time {
+    margin-top: 3px;
+    color: #888;
+    font-size: 13px;
+}
+#bo-supplement .bo-prose {
+    color: #454545;
+}
+#bo-supplement .bo-prose p + p {
+    margin-top: 26px;
+}
+#bo-supplement .bo-prose a {
+    text-decoration: none;
+}
+#bo-supplement .bo-prose a:hover {
+    text-decoration: underline;
+}
+#bo-supplement .bo-video {
+    margin-top: 46px;
+    aspect-ratio: 16 / 9;
+    border: 1px solid #aaa;
+    background: #f2e9da;
+}
+#bo-supplement .bo-video__play {
+    position: relative;
+    display: block;
+    height: 100%;
+}
+#bo-supplement .bo-video__play img {
+    height: 100%;
+    object-fit: cover;
+}
+#bo-supplement .bo-video__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: grid;
+    place-items: center;
+    width: 62px;
+    height: 62px;
+    padding-left: 4px;
+    transform: translate(-50%, -50%);
+    border: 4px solid white;
+    border-radius: 50%;
+    color: white;
+    background: #ffffff25;
+    font-size: 30px;
+}
+#bo-supplement .bo-video iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+#bo-supplement .bo-band {
+    color: white;
+}
+#bo-supplement .bo-band__title {
+    padding-block: 18px;
+}
+#bo-supplement .bo-band__title h2 {
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+#bo-supplement .bo-band__body {
+    position: relative;
+    padding-block: 20px 36px;
+}
+#bo-supplement .bo-band__body > p + p {
+    margin-top: 26px;
+}
+#bo-supplement .bo-discount {
+    background: var(--bo-blue);
+}
+#bo-supplement .bo-discount .bo-band__title {
+    background: var(--bo-indigo);
+}
+#bo-supplement .bo-numbers {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 36px;
+    max-width: 750px;
+    margin-block: 16px 34px;
+}
+#bo-supplement .bo-number {
+    display: block;
+    color: var(--bo-sand);
+    font-size: clamp(52px, 6vw, 78px);
+    font-family: "Segoe UI", "Helvetica Neue", "Roboto", Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1.05;
+    font-variant-numeric: tabular-nums;
+}
+#bo-supplement .bo-numbers p {
+    font-weight: 700;
+    line-height: 1.3;
+}
+#bo-supplement .bo-category {
+    margin-bottom: 26px;
+}
+#bo-supplement .bo-picto-space {
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+}
+#bo-supplement .bo-picto-space--plug {
+    top: -66px;
+    width: 180px;
+    height: 280px;
+}
+#bo-supplement .bo-requirements {
+    padding-block: 38px 46px;
+}
+#bo-supplement :is(.bo-requirements, .bo-renewal, .bo-contract) h2 {
+    margin-bottom: 16px;
+    font-size: 25px;
+    line-height: 1.2;
+    font-weight: 800;
+    color: #111;
+}
+#bo-supplement .bo-faq {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+    gap: 28px 30px;
+    margin-block: 42px 46px;
+}
+#bo-supplement .bo-faq__column {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    min-width: 0;
+}
+#bo-supplement .bo-faq details {
+    min-width: 0;
+}
+#bo-supplement .bo-faq summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 50px;
+    padding: 12px 16px;
+    border-radius: 0 15px 15px 0;
+    background: var(--bo-sand);
+    box-shadow: 4px 5px 5px #0005;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 1.2;
+    list-style: none;
+    cursor: pointer;
+}
+#bo-supplement .bo-faq summary::-webkit-details-marker {
+    display: none;
+}
+#bo-supplement .bo-faq__arrow {
+    display: grid;
+    place-items: center;
+    flex: 0 0 29px;
+    height: 29px;
+    border-radius: 9px;
+    background: #111;
+    color: var(--bo-sand);
+    font-size: 25px;
+    transform: rotate(90deg);
+    transition: transform 200ms ease;
+}
+#bo-supplement .bo-faq details[open] .bo-faq__arrow {
+    transform: rotate(-90deg);
+}
+#bo-supplement .bo-faq__answer {
+    padding-top: 20px;
+    color: #454545;
+}
+#bo-supplement .bo-requirements h3 {
+    margin-top: 38px;
+    margin-bottom: 8px;
+    font-size: 21px;
+    line-height: 1.25;
+}
+#bo-supplement .bo-circumstances {
+    position: relative;
+    width: min(760px, 100%);
+    height: 450px;
+    margin: 28px auto 32px;
+}
+#bo-supplement .bo-case {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    padding: 30px 24px;
+    border-radius: 24px;
+    color: white;
+    box-shadow: 6px 7px 5px #0007;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+#bo-supplement .bo-case--family {
+    top: 55px;
+    left: 0;
+    width: 360px;
+    min-height: 180px;
+    background: var(--bo-sand);
+}
+#bo-supplement .bo-case--violence {
+    top: 0;
+    right: 0;
+    width: 310px;
+    min-height: 260px;
+    background: var(--bo-coral);
+}
+#bo-supplement .bo-case--disability {
+    top: 190px;
+    left: 165px;
+    width: 325px;
+    min-height: 230px;
+    background: var(--bo-indigo);
+}
+#bo-supplement .bo-apply {
+    background: var(--bo-salmon);
+}
+#bo-supplement .bo-apply .bo-band__title {
+    background: var(--bo-coral);
+}
+#bo-supplement .bo-apply__copy {
+    max-width: none;
+}
+#bo-supplement .bo-apply__copy p + p {
+    margin-top: 26px;
+}
+#bo-supplement .bo-picto-space--lamp {
+    top: -66px;
+    width: 200px;
+    height: 350px;
+}
+#bo-supplement .bo-renewal {
+    padding-block: 46px;
+}
+#bo-supplement .bo-thermal {
+    background: #e6b780;
+}
+#bo-supplement .bo-thermal .bo-band__title {
+    background: var(--bo-sand);
+}
+#bo-supplement .bo-thermal .bo-band__body {
+    display: block;
+    min-height: 230px;
+    padding-block: 28px;
+}
+#bo-supplement .bo-thermal .bo-band__body > p {
+    max-width: none;
+}
+#bo-supplement .bo-thermal a {
+    text-decoration: none;
+}
+#bo-supplement .bo-picto-space--heater {
+    top: -40px;
+    width: 240px;
+    height: 250px;
+}
+#bo-supplement .bo-ending {
+    padding-block: 84px 92px;
+}
+#bo-supplement .bo-more {
+    margin-top: 46px;
+    text-align: center;
+}
+#bo-supplement .bo-more a {
+    display: inline-block;
+    padding: 12px 32px;
+    border-radius: 30px;
+    background: var(--bo-coral);
+    color: white;
+    box-shadow: 4px 5px 6px #0003;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+}
+#bo-supplement .credits-block {
+    padding: 28px var(--bo-gutter);
+    background: #f2f2f2;
+    text-align: center;
+}
+#bo-supplement .credits-block h2 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+#bo-supplement .credits-block p {
+    max-width: 700px;
+    margin-inline: auto;
+    margin-top: 4px;
+    font-size: 12px;
+}
+#bo-supplement .bo-case.bo-will-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 600ms ease, transform 600ms ease;
+    transition-delay: var(--bo-delay, 0ms);
+}
+#bo-supplement .bo-case.is-visible {
+    opacity: 1;
+    transform: none;
+}
+/* Only the prongs, bulb and heat waves breathe; the pictogram bodies stay still. */
+#bo-supplement .bo-picto {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    filter: drop-shadow(5px 6px 3px rgb(0 0 0 / 30%));
+}
+#bo-supplement .bo-picto__light {
+    animation: bo-plug-light 3s ease-in-out infinite;
+}
+#bo-supplement .bo-picto--lamp .bo-picto__light {
+    animation-name: bo-bulb-light;
+    animation-duration: 3.2s;
+    animation-delay: -1.7s;
+}
+#bo-supplement .bo-picto--heater .bo-picto__light {
+    animation-name: bo-heat-light;
+    animation-duration: 3.8s;
+    animation-timing-function: ease-in-out;
+    animation-delay: -2.6s;
+}
+/* Uneven electrical pulses with softened rises and falls, then a quiet interval. */
+@keyframes bo-plug-light {
+    0%, 12.8%, 28.8%, 62.4%, 100% {
+        fill: #dea378;
+        filter: drop-shadow(0 0 0 rgb(255 225 133 / 0%));
+    }
+    6.4%, 20.8%, 38.4% {
+        fill: #fff0a6;
+        filter: drop-shadow(0 0 9px rgb(255 225 133 / 75%));
+    }
+}
+@keyframes bo-bulb-light {
+    0%, 15.1875%, 35.4375%, 72.5625%, 100% {
+        fill: #e2b686;
+        filter: drop-shadow(0 0 0 rgb(255 231 150 / 0%));
+    }
+    8.4375%, 25.3125%, 47.25% {
+        fill: #fff3b0;
+        filter: drop-shadow(0 0 12px rgb(255 231 150 / 80%));
+    }
+}
+/* Continuous colour changes within each flame's own gradient. */
+#bo-supplement .bo-flame-stop {
+    animation: bo-flame-base 3.8s ease-in-out infinite;
+    animation-delay: var(--bo-flame-delay, 0s);
+}
+#bo-supplement .bo-flame-stop--middle {
+    animation-name: bo-flame-middle;
+}
+#bo-supplement .bo-flame-stop--tip {
+    animation-name: bo-flame-tip;
+}
+@keyframes bo-flame-base {
+    0%, 100% { stop-color: #ffe693; }
+    45% { stop-color: #fff6c2; }
+    75% { stop-color: #ffc66c; }
+}
+@keyframes bo-flame-middle {
+    0%, 100% { stop-color: #ff9c4b; }
+    40% { stop-color: #ffd16f; }
+    72% { stop-color: #f87c53; }
+}
+@keyframes bo-flame-tip {
+    0%, 100% { stop-color: #ed6c77; }
+    48% { stop-color: #ffab62; }
+    78% { stop-color: #f17b57; }
+}
+@keyframes bo-heat-light {
+    0%, 100% { filter: drop-shadow(0 0 3px rgb(255 165 85 / 25%)); }
+    50% { filter: drop-shadow(0 0 8px rgb(255 192 105 / 65%)); }
+}
+@media (min-width: 1200px) {
+    #bo-supplement .bo-picto-space {
+        right: -250px;
+    }
+}
+@media (max-width: 1199px) and (min-width: 601px) {
+    #bo-supplement .bo-picto-space {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin: 0 0 24px auto;
+        width: 100px;
+        height: 150px;
+    }
+}
+@media (min-width: 601px) and (max-width: 800px) {
+    #bo-supplement .bo-case {
+        padding: 24px 18px;
+        font-size: 16px;
+    }
+    #bo-supplement .bo-case--family {
+        width: 48%;
+    }
+    #bo-supplement .bo-case--violence {
+        width: 42%;
+    }
+    #bo-supplement .bo-case--disability {
+        left: 22%;
+        width: 44%;
+    }
+}
+@media (max-width: 600px) {
+    #bo-supplement {
+        --bo-gutter: 20px;
+    }
+    #bo-supplement .lv-topbar__inner {
+        min-height: 64px;
+        justify-content: flex-start;
+        font-size: 12px;
+    }
+    #bo-supplement .bo-hero {
+        height: 490px;
+    }
+    #bo-supplement .bo-hero h1 {
+        bottom: 46px;
+        font-size: clamp(30px, 8vw, 44px);
+        letter-spacing: -.8px;
+    }
+    #bo-supplement .bo-desktop-break {
+        display: none;
+    }
+    #bo-supplement .bo-intro p {
+        font-size: 21px;
+    }
+    #bo-supplement .bo-opening {
+        padding-block: 40px;
+    }
+    #bo-supplement .bo-band__title h2 {
+        font-size: 22px;
+    }
+    #bo-supplement .bo-numbers {
+        grid-template-columns: 1fr;
+        gap: 26px;
+    }
+    #bo-supplement .bo-number {
+        font-size: 68px;
+    }
+    #bo-supplement .bo-faq {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        margin-block: 32px;
+    }
+    #bo-supplement .bo-faq__column {
+        gap: 24px;
+    }
+    #bo-supplement .bo-faq summary {
+        font-size: 16px;
+    }
+    #bo-supplement .bo-circumstances {
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        height: auto;
+        margin-block: 30px;
+    }
+    #bo-supplement .bo-case {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        min-height: 150px;
+        padding: 28px;
+    }
+    #bo-supplement .bo-apply__copy, #bo-supplement .bo-thermal .bo-band__body > p {
+        max-width: none;
+    }
+    #bo-supplement .bo-thermal .bo-band__body {
+        display: block;
+        min-height: 0;
+    }
+    #bo-supplement .bo-picto-space {
+        position: relative;
+        top: auto;
+        right: auto;
+        float: none;
+        width: 85px;
+        height: 145px;
+        margin: 0 0 18px auto;
+    }
+    #bo-supplement .bo-picto-space--plug {
+        margin-top: -20px;
+    }
+    #bo-supplement .bo-picto-space--lamp {
+        width: 90px;
+        height: 200px;
+        margin-top: 0;
+    }
+    #bo-supplement .bo-picto-space--heater {
+        width: 100px;
+        height: 125px;
+    }
+    #bo-supplement .bo-numbers {
+        clear: both;
+    }
+    #bo-supplement .bo-band__body::after {
+        display: block;
+        clear: both;
+        content: "";
+    }
+    #bo-supplement .bo-ending {
+        padding-block: 48px 60px;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    #bo-supplement *, #bo-supplement *::before, #bo-supplement *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media (min-width: 601px) {
+    html[lang="es"] #bo-supplement .bo-hero h1 {
+        font-size: clamp(36px, 3.8vw, 54px);
+    }
+}
+
+#bo-supplement .bo-contract {
+    padding-bottom: 46px;
+}
+#bo-supplement .bo-contract .bo-video {
+    margin-top: 0;
+    margin-bottom: 32px;
+}
+#bo-supplement .bo-contract__list {
+    margin-block: 18px 26px;
+    padding-left: 22px;
+    font-weight: 700;
+}
+#bo-supplement .bo-contract__list li + li {
+    margin-top: 8px;
+}
+#bo-supplement .bo-contract__list li::marker {
+    color: var(--bo-blue, #5c6ba5);
+}
