@@ -8,6 +8,20 @@
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
     const video = root.querySelector(".bo-hero video");
     const motionButton = root.querySelector(".bo-motion");
+    let manuallyPaused = false;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.playsInline = true;
+    video.loop = true;
+    video.controls = false;
+    video.preload = "auto";
+    video.setAttribute("webkit-playsinline", "");
+    video.setAttribute("disablepictureinpicture", "");
+    video.setAttribute("disableremoteplayback", "");
+    const startVideo = () => {
+        if (manuallyPaused || reducedMotion.matches || document.hidden) return;
+        video.play().catch(updateMotionButton);
+    };
     const updateMotionButton = () => {
         motionButton.textContent = video.paused ? "▶" : "Ⅱ";
         motionButton.setAttribute("aria-label", video.paused
@@ -22,10 +36,18 @@
     video.addEventListener("play", updateMotionButton);
     video.addEventListener("pause", updateMotionButton);
     motionButton.addEventListener("click", () => {
+        manuallyPaused = !video.paused;
         if (video.paused) video.play().catch(updateMotionButton);
         else video.pause();
     });
     updateMotionButton();
+    video.addEventListener("loadeddata", startVideo);
+    video.addEventListener("canplay", startVideo);
+    window.addEventListener("pageshow", startVideo);
+    document.addEventListener("visibilitychange", startVideo);
+    // Retry after a user gesture if the mobile browser blocked autoplay.
+    root.addEventListener("touchstart", startVideo, { passive: true });
+    startVideo();
 
     const videoLink = root.querySelector(".bo-video__play");
     videoLink.addEventListener("click", (event) => {
