@@ -1,12 +1,13 @@
 (() => {
   "use strict";
   document.querySelectorAll(".pd-supplement").forEach((root) => {
-    const hero = root.querySelector(".pd-hero");
     const article = root.querySelector(".pd-article");
     const sidebar = root.querySelector(".pd-sidebar");
     const credits = root.querySelector(".pd-credits");
     const top = root.querySelector(".pd-top");
     const progress = root.querySelector(".pd-progress");
+    const sidebarInner = sidebar.querySelector(".pd-sidebar-inner");
+    root.classList.add("pd-scroll-ready");
     const reduce = window.matchMedia("(prefers-reduced-motion: reduce)");
     if ("IntersectionObserver" in window && !reduce.matches) {
       const observer = new IntersectionObserver(
@@ -28,17 +29,16 @@
       scheduled = false;
       const barBottom = Math.max(0, top.getBoundingClientRect().bottom);
       const articleRect = article.getBoundingClientRect();
-      const bottomLimit = Math.min(
-        articleRect.bottom,
-        credits.getBoundingClientRect().top,
-      );
-      const canShow =
-        hero.getBoundingClientRect().bottom <= barBottom &&
-        bottomLimit >
-          Math.max(110, barBottom + 20) + sidebar.offsetHeight + 35 &&
-        credits.getBoundingClientRect().top > window.innerHeight;
-      sidebar.classList.toggle("pd-sidebar-visible", canShow);
-      sidebar.inert = !canShow;
+      // Move inside the article instead of relying on sticky positioning:
+      // publisher containers can establish their own overflow/scroll contexts.
+      const sidebarRect = sidebar.getBoundingClientRect();
+      const offset = Math.max(0, Math.min(
+        Math.max(110, barBottom + 20) - sidebarRect.top,
+        Math.min(articleRect.bottom, credits.getBoundingClientRect().top) -
+          sidebarRect.top - sidebarInner.offsetHeight - 35,
+      ));
+      sidebarInner.style.transform = window.innerWidth > 1100
+        ? `translateY(${offset}px)` : "";
       const distance =
         articleRect.height - Math.max(1, window.innerHeight - barBottom);
       const fraction = Math.min(
