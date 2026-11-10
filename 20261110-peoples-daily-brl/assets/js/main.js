@@ -1,7 +1,6 @@
 (() => {
   "use strict";
   document.querySelectorAll(".pd-supplement").forEach((root) => {
-    const hero = root.querySelector(".pd-hero");
     const article = root.querySelector(".pd-article");
     const sidebar = root.querySelector(".pd-sidebar");
     const credits = root.querySelector(".pd-credits");
@@ -28,17 +27,31 @@
       scheduled = false;
       const barBottom = Math.max(0, top.getBoundingClientRect().bottom);
       const articleRect = article.getBoundingClientRect();
-      const bottomLimit = Math.min(
-        articleRect.bottom,
-        credits.getBoundingClientRect().top,
-      );
-      const canShow =
-        hero.getBoundingClientRect().bottom <= barBottom &&
-        bottomLimit >
-          Math.max(110, barBottom + 20) + sidebar.offsetHeight + 35 &&
-        credits.getBoundingClientRect().top > window.innerHeight;
-      sidebar.classList.toggle("pd-sidebar-visible", canShow);
-      sidebar.inert = !canShow;
+      // Keep navigation available throughout the article, including its end.
+      // Fixed positioning avoids overflow containers in the publisher's layout
+      // preventing CSS sticky from following the viewport.
+      const desktop = window.matchMedia("(min-width: 1101px)").matches;
+      sidebar.inert = false;
+      if (desktop) {
+        const layout = root.querySelector(".pd-layout");
+        const layoutRect = layout.getBoundingClientRect();
+        const layoutStyle = getComputedStyle(layout);
+        const width = parseFloat(layoutStyle.gridTemplateColumns.split(" ").pop());
+        const right = parseFloat(layoutStyle.paddingRight) || 0;
+        const offset = Math.max(110, barBottom + 20);
+        sidebar.style.maxHeight = `${Math.max(120, window.innerHeight - offset - 20)}px`;
+        sidebar.style.position = "fixed";
+        sidebar.style.width = `${width}px`;
+        sidebar.style.left = `${layoutRect.right - right - width}px`;
+        sidebar.style.top = `${Math.min(
+          Math.max(articleRect.top, offset),
+          Math.min(articleRect.bottom, credits.getBoundingClientRect().top) - sidebar.offsetHeight - 20,
+        )}px`;
+      } else {
+        ["position", "width", "left", "top", "max-height"].forEach((property) =>
+          sidebar.style.removeProperty(property),
+        );
+      }
       const distance =
         articleRect.height - Math.max(1, window.innerHeight - barBottom);
       const fraction = Math.min(
