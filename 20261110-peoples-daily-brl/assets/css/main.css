@@ -222,14 +222,13 @@
 .pd-supplement .pd-sidebar {
   position: sticky;
   top: 110px;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition:
-    opacity 0.3s,
-    transform 0.4s,
-    visibility 0.3s;
-  pointer-events: none;
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  pointer-events: auto;
+  z-index: 20;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 .pd-supplement .pd-sidebar.pd-sidebar-visible {
   opacity: 1;
@@ -297,11 +296,14 @@
   font-size: 23px;
 }
 .pd-supplement .pd-credits {
+  background: #f5f1ea !important;
+  color: #181818 !important;
   border-top: 1px solid var(--pd-line);
   padding: 45px 24px 55px;
   text-align: center;
 }
 .pd-supplement .pd-credits h2 {
+  color: #181818 !important;
   font:
     400 25px/1.3 "DM Serif Display",
     Georgia,
@@ -310,11 +312,12 @@
 }
 .pd-supplement .pd-credits p {
   font-size: 12px;
-  color: #666;
+  color: #666 !important;
   max-width: 1000px;
   margin: 8px auto;
 }
 .pd-supplement .pd-credits a {
+  color: #181818 !important;
   display: inline-block;
   font-size: 12px;
   margin-top: 20px;
