@@ -51,69 +51,74 @@ const historias = [
     nombre: "Elena Congost",
     frase: "Los valores están por encima de cualquier podio",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap1.png",
-    enlace: "https://www.mundodeportivo.com/atletismo/20250908/1002525462/elena-congost-atleta-perdio-medalla-guia-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20250909/11009017/elena-congost-atleta-perdio-medalla-guia-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Sergio Garrote",
     frase: "Los rivales representan lo mejor de mí",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap2.png",
-    enlace: "https://www.mundodeportivo.com/ciclismo/20250922/1002534889/sergio-garrote-hand-bike-espanol-campeon-paralimpico-juega-vida-entrenamiento-leyenda-deporte-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20250922/11076618/sergio-garrote-hand-bike-espanol-campeon-paralimpico-juega-vida-entrenamiento-leyenda-deporte-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Toni Ponce",
     frase: "La medalla de oro son mis hijos",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap3.png",
-    enlace: "https://www.mundodeportivo.com/natacion/20251006/1002542064/toni-ponce-campeon-nada-hijos-promesa-madre-natacion-paralimpico-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20251006/11112328/toni-ponce-campeon-nada-hijos-promesa-madre-natacion-paralimpico-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Marta Arce",
     frase: "Cuando subo al pódium, lo hago representando a todas las personas que me han acompañado",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap4.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20251020/1002550228/marta-arce-judoka-espanola-volvio-tatami-47-anos-gano-medalla-juegos-judo-paralimpico-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20251020/11157098/marta-arce-judoka-espanola-volvio-tatami-47-anos-gano-medalla-juegos-judo-paralimpico-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Álvaro del Amo",
     frase: "El peso de la bola es un símbolo, la prueba tangible de que en esta vida nada es fácil",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap5.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20251103/1002559708/alvaro-amo-consejo-cambio-carrera-medallista-espanol-disco-peso-paralimpico-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20251103/11209503/alvaro-amo-consejo-cambio-carrera-medallista-espanol-disco-peso-paralimpico-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Ander Cepas",
     frase: "Soy un chaval normal, con mis aciertos y defectos, que siempre intenta estar de buen humor",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap6.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20251117/1002568983/ander-cepas-tenis-mesa-campeon-olvido-era-numero-uno-mundo-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20251117/11262846/ander-cepas-tenis-mesa-campeon-olvido-era-numero-uno-mundo-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Joel Martín",
-    frase: "Joel Martín: Del 'no llegarás a nada' a soñar con el oro en Los Ángeles 2028",
+    frase: "Del 'no llegarás a nada' a soñar con el oro en Los Ángeles 2028",
     imagen: "https://brandedcontentgrupogodo.github.io/edicionsclariana/20260429-lacaixa-hub-brl/assets/img/cap7.png",
-    enlace: "https://www.lavanguardia.com/deportes/20260430/11524756/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20260429/11524756/joel-martin-taekwondo-juegos-angeles-2028-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Judith Rodríguez",
     frase: "Al entrar el último tocado me entraron ganas de llorar al pensar en todo lo que había detrás de ese éxito",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap8.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260528/1004188252/judith-rodriguez-paralimpicos-esgrima-espana-medalla-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20260528/11548670/judith-rodriguez-paralimpicos-esgrima-espana-medalla-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Araceli Menduiña",
     frase: "En tierra no puedo correr ni saltar, pero en la piragua me siento libre",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap9.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260625/1004198507/araceli-menduina-final-piraguismo-54-anos-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20260625/11573320/araceli-menduina-final-piraguismo-54-anos-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Martín de la Puente",
     frase: "El primer bote de mi vida fue aceptar la discapacidad y normalizarla",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap10.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20260917/1004227901/martin-puente-tenista-espanol-aprovecho-segundo-bote-bola-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20260917/11636391/martin-puente-tenista-espanol-aprovecho-segundo-bote-bola-constelaciones-streaming-brl.html"
   },
   {
     nombre: "Isabel Fernández",
     frase: "Cuando miro hacia Los Ángeles 2028, veo un sueño de vida",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap11.png",
-    enlace: "https://www.mundodeportivo.com/juegos-olimpicos/20261017/1004239420/isabel-fernandez-tiro-arco-deportista-paralimpico-juegos-angeles-2028-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20261017/11660555/isabel-fernandez-tiro-arco-deportista-paralimpico-juegos-angeles-2028-constelaciones-streaming-brl.html"
   },
-  { locked: true }
+  {
+    nombre: "Javier Aguilar",
+    frase: "Caer significa aprender",
+    imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap12.png",
+    enlace: "https://www.lavanguardia.com/deportes/20261112/11680594/javier-aguilar-escalador-caer-aprender-caixabank-constelaciones-streaming-brl.html"
+  }
 ];
 
 const container = document.getElementById('constelacion');
