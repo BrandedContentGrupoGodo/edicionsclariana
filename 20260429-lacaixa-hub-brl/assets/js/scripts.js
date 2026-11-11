@@ -111,9 +111,14 @@ const historias = [
     nombre: "Isabel Fernández",
     frase: "Cuando miro hacia Los Ángeles 2028, veo un sueño de vida",
     imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap11.png",
-    enlace: "https://www.lavanguardia.com/deportes/20261018/11660555/isabel-fernandez-tiro-arco-deportista-paralimpico-juegos-angeles-2028-constelaciones-streaming-brl.html"
+    enlace: "https://www.lavanguardia.com/deportes/20261017/11660555/isabel-fernandez-tiro-arco-deportista-paralimpico-juegos-angeles-2028-constelaciones-streaming-brl.html"
   },
-  { locked: true }
+  {
+    nombre: "Javier Aguilar",
+    frase: "Caer significa aprender",
+    imagen: "https://brandedcontentgrupogodo.github.io/ext/caixabank-2025/01_09-07-25/assets/img/cap12.png",
+    enlace: "https://www.lavanguardia.com/deportes/20261112/11680594/javier-aguilar-escalador-caer-aprender-caixabank-constelaciones-streaming-brl.html"
+  }
 ];
 
 const container = document.getElementById('constelacion');
