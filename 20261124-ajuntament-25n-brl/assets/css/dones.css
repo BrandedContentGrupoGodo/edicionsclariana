@@ -1,0 +1,593 @@
+body {
+    margin: 0;
+}
+
+#suplement-dones {
+    --red: #ff2929;
+    --taupe: #7f6b66;
+    --soft: #e5e1e0;
+    --pad: 24px;
+    color: #080808;
+    background: #fff;
+    font: 400 18px/1.45 "Roboto", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow: clip;
+}
+
+#suplement-dones *,
+#suplement-dones *::before,
+#suplement-dones *::after {
+    box-sizing: border-box;
+}
+
+#suplement-dones :is(h1, h2, h3, p, figure) {
+    margin: 0;
+    padding: 0;
+    color: inherit;
+    font-family: inherit;
+    letter-spacing: normal;
+    float: none;
+}
+
+#suplement-dones img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+#suplement-dones a {
+    color: inherit;
+    text-underline-offset: 3px;
+}
+
+#suplement-dones :is(a, button, summary):focus-visible {
+    outline: 3px solid var(--taupe);
+    outline-offset: 5px;
+}
+
+#suplement-dones .text-column {
+    width: min(700px, calc(100% - var(--pad) * 2));
+    margin-inline: auto;
+}
+
+#suplement-dones .wide-block {
+    width: min(960px, calc(100% - var(--pad) * 2));
+    margin-inline: auto;
+}
+
+#suplement-dones .topbar-ajuntament {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+    padding: 14px 100px;
+    border-bottom: 1px solid #ddd;
+}
+
+#suplement-dones .topbar-ajuntament img {
+    height: 50px;
+    width: auto;
+}
+
+#suplement-dones .language {
+    position: absolute;
+    right: var(--pad);
+    display: flex;
+    gap: 7px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#suplement-dones .language a {
+    text-decoration: none;
+    opacity: 0.4;
+}
+
+#suplement-dones .language a[aria-current="page"],
+#suplement-dones .language a:hover {
+    opacity: 1;
+}
+
+#suplement-dones .hero-bcn {
+    position: relative;
+    height: clamp(480px, 56.7vw, 760px);
+    background: #35332d;
+}
+
+#suplement-dones .hero-bcn > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#suplement-dones .hero-bcn::after {
+    position: absolute;
+    inset: 50% 0 0;
+    content: "";
+    background: linear-gradient(transparent, #0007);
+}
+
+#suplement-dones .hero-content {
+    position: absolute;
+    z-index: 1;
+    inset: auto 24px 48px;
+    text-align: center;
+    color: #fff;
+    text-shadow: 0 2px 12px #0005;
+}
+
+#suplement-dones .hero-content > p {
+    margin-bottom: 10px;
+    color: var(--red);
+    font-size: 38px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+#suplement-dones h1 {
+    font-size: clamp(38px, 4.8vw, 66px);
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+#suplement-dones .article-intro {
+    padding-top: 54px;
+}
+
+#suplement-dones .standfirst {
+    margin-bottom: 58px;
+    color: #666;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+#suplement-dones .byline {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.25;
+}
+
+#suplement-dones .byline :is(strong, time) {
+    display: block;
+}
+
+#suplement-dones .prose p {
+    margin-bottom: 28px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.45;
+}
+
+#suplement-dones .prose h2 {
+    margin-bottom: 24px;
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+#suplement-dones .full-photo {
+    width: min(1200px, 100%);
+    margin: 50px auto 60px;
+}
+
+#suplement-dones .full-photo img {
+    width: 100%;
+    height: clamp(300px, 46vw, 620px);
+    object-fit: cover;
+}
+
+#suplement-dones figcaption {
+    padding-top: 8px;
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+#suplement-dones .services {
+    margin-block: 56px;
+}
+
+#suplement-dones .services-title {
+    margin-bottom: 24px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #999;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 1.25;
+}
+
+#suplement-dones .service {
+    margin-bottom: 20px;
+}
+
+#suplement-dones .service summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    min-height: 60px;
+    padding: 12px 20px;
+    border-radius: 15px;
+    background: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.3;
+    list-style: none;
+    cursor: pointer;
+    box-shadow: 0 3px 9px #0005;
+}
+
+#suplement-dones .service summary::-webkit-details-marker {
+    display: none;
+}
+
+#suplement-dones .chevron {
+    display: grid;
+    flex: 0 0 36px;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: #d90937;
+}
+
+#suplement-dones .chevron::before {
+    width: 17px;
+    height: 17px;
+    margin-top: -7px;
+    border-right: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+    content: "";
+    transform: rotate(45deg);
+}
+
+#suplement-dones details[open] .chevron::before {
+    margin-top: 7px;
+    transform: rotate(225deg);
+}
+
+#suplement-dones .service-body {
+    padding: 24px 8px 12px;
+}
+
+#suplement-dones .service-body p {
+    margin-bottom: 14px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.45;
+    overflow-wrap: anywhere;
+}
+
+#suplement-dones .service-body .service-description {
+    font-weight: 700;
+}
+
+#suplement-dones .service-body a {
+    color: var(--red);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+#suplement-dones .note-layout {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    gap: 44px;
+    align-items: center;
+    margin-block: 50px;
+}
+
+#suplement-dones .pull-note {
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.25;
+}
+
+#suplement-dones .pull-note::before {
+    display: block;
+    width: 120px;
+    margin: -20px 0 20px;
+    border-top: 4px solid var(--red);
+    content: "";
+}
+
+#suplement-dones .final-highlight {
+    margin-block: 36px 48px;
+}
+
+#suplement-dones .agenda-teaser {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 56px;
+    background: var(--soft);
+}
+
+#suplement-dones .agenda-teaser > img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+}
+
+#suplement-dones .agenda-teaser-copy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 34px;
+    text-align: center;
+}
+
+#suplement-dones .kicker {
+    margin-bottom: 10px;
+    color: var(--red);
+    font-size: 28px;
+    font-weight: 900;
+}
+
+#suplement-dones .agenda-teaser h2 {
+    margin-bottom: 32px;
+    color: var(--taupe);
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+#suplement-dones [data-dialog] {
+    display: inline-flex;
+    align-items: center;
+    gap: 30px;
+    overflow: hidden;
+    padding: 0 0 0 25px;
+    border: 0;
+    border-radius: 15px;
+    background: var(--red);
+    color: #fff;
+    font: 700 18px/1.3 "Roboto", Arial, sans-serif;
+    cursor: pointer;
+    box-shadow: 0 3px 8px #0005;
+}
+
+#suplement-dones [data-dialog] span {
+    padding-inline: 14px;
+    background: #b71922;
+    font-size: 38px;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+#suplement-dones .agenda-dialog {
+    position: fixed;
+    width: min(800px, calc(100% - 32px));
+    max-height: calc(100dvh - 48px);
+    padding: 64px 40px 40px;
+    border: 0;
+    background: var(--soft);
+    color: #111;
+    font: 400 18px/1.45 "Roboto", Arial, sans-serif;
+    overscroll-behavior: contain;
+}
+
+#suplement-dones .agenda-dialog::backdrop {
+    background: #0009;
+}
+
+#suplement-dones .dialog-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: var(--taupe);
+    color: #fff;
+    font: 300 32px/1 "Roboto", Arial, sans-serif;
+    cursor: pointer;
+}
+
+#suplement-dones .agenda-dialog > img {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+#suplement-dones .dialog-group {
+    margin-top: 28px;
+}
+
+#suplement-dones .dialog-group h3 {
+    margin-bottom: 16px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.3;
+}
+
+#suplement-dones .dialog-group h3::before {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 9px;
+    border-radius: 50%;
+    background: var(--red);
+    content: "";
+}
+
+#suplement-dones .dialog-event {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+#suplement-dones .event-time {
+    color: var(--red);
+    font-weight: 700;
+}
+
+#suplement-dones .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+}
+
+#suplement-dones .credits-bcn {
+    padding: 55px var(--pad);
+}
+
+#suplement-dones .credits-bcn__inner {
+    max-width: 1180px;
+    margin-inline: auto;
+    text-align: center;
+}
+
+#suplement-dones .credits-bcn hr {
+    margin: 0 0 28px;
+    border: 0;
+    border-top: 1px solid #111;
+}
+
+#suplement-dones .credits-bcn p {
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+#suplement-dones .reveal {
+    transition: opacity 700ms ease, transform 700ms ease;
+}
+
+#suplement-dones .is-pending {
+    opacity: 0;
+    transform: translateY(22px);
+}
+
+@media (min-width: 1600px) {
+    #suplement-dones .hero-bcn {
+        height: 680px;
+    }
+
+    #suplement-dones .full-photo img {
+        height: 560px;
+    }
+}
+
+@media (max-width: 700px) {
+    #suplement-dones {
+        --pad: 20px;
+    }
+
+    #suplement-dones .topbar-ajuntament {
+        min-height: 68px;
+        padding-inline: 90px;
+    }
+
+    #suplement-dones .topbar-ajuntament img {
+        height: auto;
+        max-height: 40px;
+    }
+
+    #suplement-dones .hero-bcn {
+        height: 560px;
+        max-height: 85svh;
+    }
+
+    #suplement-dones .hero-content {
+        inset-inline: 20px;
+        bottom: 30px;
+    }
+
+    #suplement-dones h1 {
+        font-size: clamp(32px, 8vw, 46px);
+    }
+
+    #suplement-dones h1 br {
+        display: none;
+    }
+
+    #suplement-dones .hero-content > p {
+        font-size: 30px;
+    }
+
+    #suplement-dones .article-intro {
+        padding-top: 36px;
+    }
+
+    #suplement-dones .standfirst {
+        margin-bottom: 40px;
+        font-size: 22px;
+    }
+
+    #suplement-dones .full-photo {
+        margin-block: 36px 42px;
+    }
+
+    #suplement-dones .full-photo img {
+        height: auto;
+        aspect-ratio: 1.55;
+    }
+
+    #suplement-dones figcaption {
+        padding-inline: var(--pad);
+    }
+
+    #suplement-dones .service summary {
+        padding: 12px 14px;
+        font-size: 17px;
+        gap: 12px;
+    }
+
+    #suplement-dones .chevron {
+        flex-basis: 30px;
+        width: 30px;
+        height: 30px;
+    }
+
+    #suplement-dones .note-layout {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    #suplement-dones .pull-note {
+        max-width: 340px;
+    }
+
+    #suplement-dones .agenda-teaser {
+        grid-template-columns: 1fr;
+    }
+
+    #suplement-dones .agenda-teaser > img {
+        min-height: 0;
+        height: auto;
+    }
+
+    #suplement-dones .agenda-teaser-copy {
+        padding: 35px 24px;
+    }
+
+    #suplement-dones .agenda-dialog {
+        padding: 60px 20px 28px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #suplement-dones .reveal {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Keep editorial links visible inside article paragraphs. */
+#suplement-dones p a[href] {
+    color: var(--red);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+#suplement-dones p a[href]:hover {
+    color: #b71922;
+    text-decoration-thickness: 2px;
+}
