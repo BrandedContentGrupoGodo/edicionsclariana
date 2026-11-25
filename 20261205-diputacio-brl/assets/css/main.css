@@ -1,0 +1,418 @@
+body {
+    margin: 0;
+}
+
+#diba-supplement {
+    --green-dark: #1a2f24;
+    --green: #90ad19;
+    --wide: min(1180px, calc(100% - 48px));
+    box-sizing: border-box;
+    width: 100%;
+    overflow: clip;
+    padding-bottom: 72px;
+    background: var(--green-dark);
+    color: #fff;
+    font: 300 18px/1.33 "Mukta Mahee", sans-serif;
+    text-align: center;
+}
+
+#diba-supplement *, #diba-supplement *::before, #diba-supplement *::after {
+    box-sizing: inherit;
+}
+
+#diba-supplement :is(p, h1, h2, figure, dl, dd) {
+    margin: 0;
+}
+
+#diba-supplement a {
+    color: inherit;
+}
+
+#diba-supplement a:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 5px;
+}
+
+#diba-supplement .masthead {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 52px;
+    padding: 10px 120px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+#diba-supplement .masthead nav {
+    position: absolute;
+    right: 4%;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#diba-supplement .masthead a {
+    display: grid;
+    place-items: center;
+    min-width: 34px;
+    min-height: 36px;
+    text-decoration: none;
+}
+
+#diba-supplement .masthead [aria-current] {
+    font-weight: 700;
+}
+
+#diba-supplement .cover {
+    position: relative;
+    display: grid;
+    align-items: end;
+    justify-items: center;
+    height: clamp(360px, 59.5vw, 760px);
+    padding-bottom: clamp(28px, 5vw, 112px);
+    isolation: isolate;
+    background: #263a2b;
+}
+
+#diba-supplement .cover video {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#diba-supplement .cover h1 {
+    width: 100%;
+    padding: .16em 20px .2em;
+    background: rgb(144 173 25 / 88%);
+    color: #101a14;
+    font-size: clamp(38px, 5.25vw, 76px);
+    font-weight: 800;
+    line-height: 1.04;
+    text-wrap: balance;
+}
+
+#diba-supplement .lead,
+#diba-supplement .copy {
+    width: min(780px, calc(100% - 48px));
+    margin-inline: auto;
+}
+
+#diba-supplement .lead {
+    padding-top: 42px;
+    color: #bad858;
+    font-size: clamp(23px, 2.35vw, 32px);
+    font-weight: 600;
+    line-height: 1.08;
+    text-wrap: balance;
+}
+
+#diba-supplement .lead strong {
+    display: block;
+    font-weight: inherit;
+}
+
+#diba-supplement .copy {
+    padding-block: 38px;
+    font-size: calc(19px + 2pt);
+}
+
+#diba-supplement .copy h2 {
+    margin-bottom: 10px;
+    font-size: calc(24px + 2pt);
+    line-height: 1.12;
+}
+
+#diba-supplement .wide {
+    width: var(--wide);
+    margin-inline: auto;
+}
+
+#diba-supplement .report-video {
+    aspect-ratio: 1307 / 728;
+    background: #101a14;
+}
+
+#diba-supplement .report-video :is(a, iframe, img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#diba-supplement .report-video a {
+    position: relative;
+}
+
+#diba-supplement .report-video img {
+    object-fit: cover;
+}
+
+#diba-supplement .play-icon {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    display: grid;
+    place-items: center;
+    width: 66px;
+    aspect-ratio: 1;
+    padding-left: 4px;
+    transform: translate(-50%, -50%);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background: rgb(26 47 36 / 54%);
+    font-size: 30px;
+}
+
+#diba-supplement .feature {
+    position: relative;
+    overflow: clip;
+    isolation: isolate;
+}
+
+#diba-supplement .feature img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#diba-supplement .feature figcaption {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 23% 1fr 37%;
+    align-items: start;
+    color: var(--green-dark);
+    text-align: left;
+}
+
+#diba-supplement .feature dl {
+    align-self: stretch;
+    padding: clamp(12px, 2.4vw, 38px) clamp(10px, 2vw, 32px);
+    background: rgb(144 173 25 / 88%);
+    font-size: calc(clamp(14px, 1.45vw, 22px) + 3pt);
+    font-weight: 500;
+    line-height: 1.08;
+}
+
+#diba-supplement .feature dt {
+    margin-bottom: 6px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+#diba-supplement .feature dl > div + div {
+    margin-top: 18px;
+}
+
+#diba-supplement .feature-quote {
+    grid-column: 3;
+    padding: clamp(12px, 2.4vw, 38px) clamp(10px, 2vw, 32px);
+    font-size: clamp(16px, 2.05vw, 32px);
+    font-weight: 800;
+    line-height: 1.07;
+    text-align: right;
+}
+
+#diba-supplement .feature--right figcaption {
+    grid-template-columns: 30% 1fr 23%;
+}
+
+#diba-supplement .feature--right dl {
+    grid-area: 1 / 3;
+}
+
+#diba-supplement .feature--right .feature-quote {
+    grid-area: 1 / 1;
+    color: #f1fab3;
+    text-align: left;
+    text-shadow: 0 1px 5px #101a14;
+}
+
+#diba-supplement .numbers {
+    padding-block: clamp(24px, 4vw, 62px);
+    background: url("../img/solar-xifres.jpg") center / auto 100% no-repeat;
+    color: #101a14;
+    font-size: clamp(17px, 1.65vw, 23px);
+    font-weight: 700;
+    line-height: 1.13;
+}
+
+#diba-supplement .numbers-panel {
+    padding: 24px clamp(18px, 5.5vw, 84px);
+    background: rgb(144 173 25 / 88%);
+}
+
+#diba-supplement .numbers-panel p {
+    max-width: 48ch;
+    margin-inline: auto;
+}
+
+#diba-supplement .numbers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    --numbers-gap: clamp(24px, 3.5vw, 52px);
+    --number-size: clamp(36px, 6.1vw, 86px);
+    gap: var(--numbers-gap);
+    margin-block: 18px;
+    color: #fff;
+    text-align: center;
+}
+
+#diba-supplement .numbers-grid strong {
+    display: block;
+    font-size: var(--number-size);
+    font-weight: 800;
+    line-height: 1;
+}
+
+#diba-supplement .numbers-grid > div {
+    position: relative;
+}
+
+#diba-supplement .numbers-grid > div + div::before {
+    position: absolute;
+    top: calc(var(--number-size) / 2);
+    left: calc(var(--numbers-gap) / -2);
+    transform: translate(-50%, -50%);
+    line-height: 1;
+    color: var(--green-dark);
+    content: "⟶";
+    font-size: clamp(22px, 3vw, 46px);
+}
+
+#diba-supplement .numbers-panel .portal-link {
+    display: inline-block;
+    padding: .13em .55em;
+    border-radius: .3em;
+    background: var(--green-dark);
+    color: #fff;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#diba-supplement .numbers-panel .portal-link:hover {
+    background: #101a14;
+}
+
+#diba-supplement .numbers-panel .portal-link:focus-visible {
+    outline-color: var(--green-dark);
+}
+
+#diba-supplement .ods {
+    width: min(690px, calc(100% - 48px));
+    margin: 30px auto 0;
+    padding: 16px 18px;
+    border-block: 1px solid #fff;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+@media (max-width: 700px) {
+    #diba-supplement {
+        --wide: calc(100% - 32px);
+    }
+
+    #diba-supplement .masthead {
+        justify-items: start;
+        padding-inline: 16px 105px;
+        font-size: 12px;
+        text-align: left;
+    }
+
+    #diba-supplement .cover {
+        height: clamp(320px, 100vw, 480px);
+    }
+
+    #diba-supplement .cover h1 {
+        font-size: clamp(30px, 8vw, 48px);
+    }
+
+    #diba-supplement .copy {
+        padding-block: 30px;
+        text-align: left;
+    }
+
+    #diba-supplement .feature figcaption {
+        position: static;
+        grid-template-columns: 1fr;
+        background: var(--green);
+    }
+
+    #diba-supplement .feature dl,
+    #diba-supplement .feature--right dl {
+        display: grid;
+        grid-area: auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        padding: 16px;
+    }
+
+    #diba-supplement .feature dl > div + div {
+        margin: 0;
+    }
+
+    #diba-supplement .feature .feature-quote {
+        grid-area: auto;
+        padding: 0 16px 16px;
+        color: var(--green-dark);
+        text-align: left;
+        text-shadow: none;
+    }
+
+    #diba-supplement .numbers-grid {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    #diba-supplement .numbers-grid strong {
+        font-size: clamp(27px, 8vw, 40px);
+    }
+
+    #diba-supplement .numbers-grid > div + div::before {
+        content: none;
+    }
+}
+
+#diba-supplement .diba-credits {
+    width: min(960px, calc(100% - 48px));
+    margin: 52px auto 0;
+    padding-top: 32px;
+    border-top: 1px solid rgb(255 255 255 / 25%);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+#diba-supplement .diba-credits h2 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+#diba-supplement .diba-credits__team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0 8px;
+    margin-bottom: 6px;
+}
+
+#diba-supplement .diba-credits__team span + span::before {
+    margin-right: 8px;
+    color: rgb(255 255 255 / 55%);
+    content: "|";
+}
+
+@media (max-width: 700px) {
+    #diba-supplement .diba-credits__team {
+        flex-direction: column;
+        gap: 4px;
+        margin-bottom: 12px;
+    }
+
+    #diba-supplement .diba-credits__team span + span::before {
+        content: none;
+    }
+}
