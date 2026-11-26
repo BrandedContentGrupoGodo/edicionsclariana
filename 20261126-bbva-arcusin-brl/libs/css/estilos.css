@@ -46,6 +46,9 @@ p a:hover {
   position: relative;
   padding: 14px 0;
 }
+.top-bar__title strong{
+    color: #fff !important;
+}
 .intro__inner figure {
   margin: 0;
 }
