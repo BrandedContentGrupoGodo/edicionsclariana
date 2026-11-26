@@ -247,6 +247,7 @@ a {
 }
 
 .credits-block {
+    margin-top: 50px;
     padding: 28px var(--gutter);
     background: #f2f2f2;
     text-align: center;
