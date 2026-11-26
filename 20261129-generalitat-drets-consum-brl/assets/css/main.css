@@ -1,0 +1,491 @@
+:root {
+    --coral: #f67280;
+    --green: #99b898;
+    --turquoise: #5cc6c0;
+    --charcoal: #4d4d4d;
+    --gutter: clamp(18px, 4vw, 32px);
+    color: #171717;
+    background: #fff;
+    font: 18px/1.45 Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.18em;
+}
+
+:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 4px;
+}
+
+.column,
+.feature-frame {
+    width: min(700px, 100% - 2 * var(--gutter));
+    margin-inline: auto;
+}
+
+.lv-topbar__inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 84px;
+    max-width: 1180px;
+    margin: auto;
+    padding: 20px var(--gutter);
+    font-size: 14px;
+}
+
+.lv-lang {
+    position: absolute;
+    right: var(--gutter);
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.lv-lang a {
+    text-decoration: none;
+}
+
+.lv-lang a[aria-current="page"] {
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.hero {
+    position: relative;
+    display: grid;
+    align-items: end;
+    justify-items: center;
+    min-height: clamp(420px, 50vw, 760px);
+    overflow: hidden;
+    isolation: isolate;
+    background: #2d2a28;
+}
+
+.hero img,
+.hero::after {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.hero img {
+    z-index: -2;
+    object-fit: cover;
+    object-position: center 37%;
+    animation: hero-zoom 28s ease-out both;
+}
+
+.hero::after {
+    z-index: -1;
+    background: linear-gradient(transparent 40%, rgb(0 0 0 / 94%));
+    content: "";
+}
+
+.hero h1 {
+    max-width: 1250px;
+    padding: 60px var(--gutter) clamp(32px, 5.2vw, 78px);
+    color: white;
+    font-size: clamp(34px, 4.3vw, 68px);
+    font-weight: 900;
+    line-height: 1.06;
+    letter-spacing: -0.025em;
+    text-align: center;
+    text-wrap: balance;
+}
+
+@media (min-width: 850px) {
+    .hero h1 span {
+        white-space: nowrap;
+    }
+}
+
+@keyframes hero-zoom {
+    to {
+        transform: scale(1.13);
+    }
+}
+
+.intro {
+    padding: clamp(24px, 3vw, 42px) 0;
+    background: var(--turquoise);
+    text-align: center;
+}
+
+.intro p {
+    color: white;
+    font-size: clamp(20px, 2.1vw, 24px);
+    font-weight: 700;
+    line-height: 1.3;
+    text-wrap: pretty;
+}
+
+.opening {
+    padding-top: clamp(44px, 7vw, 90px);
+}
+
+.byline {
+    display: grid;
+    gap: 2px;
+    margin-bottom: 26px;
+    font-size: 16px;
+    line-height: 1.2;
+}
+
+.byline time {
+    color: #656565;
+    font-size: 14px;
+}
+
+.feature-frame {
+    display: block;
+    width: min(850px, 100% - 2 * var(--gutter));
+    margin-block: 44px;
+    border: 0;
+}
+
+.frame-reel {
+    height: 640px;
+}
+
+.frame-help {
+    height: 440px;
+}
+
+.frame-video {
+    height: auto;
+    aspect-ratio: 1344 / 737;
+    margin-bottom: 64px;
+}
+
+.shopping p + p,
+.article-section p + p {
+    margin-top: 18px;
+}
+
+.checklist {
+    margin-top: 44px;
+}
+
+.checklist-title {
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.checklist-band,
+.help {
+    background: var(--charcoal);
+    color: white;
+}
+
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    padding-block: 26px 56px;
+}
+
+.checklist-grid img {
+    width: min(100%, 150px);
+    margin-bottom: 18px;
+    border-radius: 50%;
+}
+
+.checklist-grid > div:first-child img {
+    background: var(--green);
+}
+
+.checklist-grid h3 {
+    font-size: 18px;
+}
+
+.article-section {
+    margin-top: 50px;
+}
+
+.article-section h2,
+.feature-document h2 {
+    margin-bottom: 14px;
+    font-size: clamp(24px, 2.6vw, 30px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.02em;
+}
+
+.returns h3 {
+    margin-top: 22px;
+    color: #b8394c;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.credits-block {
+    padding: 28px var(--gutter);
+    background: #f2f2f2;
+    text-align: center;
+}
+
+.credits-block h2 {
+    margin-bottom: 8px;
+    font-size: 17px;
+}
+
+.credits-block p {
+    max-width: 700px;
+    margin: 4px auto 0;
+    font-size: 12px;
+}
+
+.feature-page {
+    overflow: hidden;
+}
+
+.feature-document {
+    overflow-wrap: break-word;
+}
+
+.discount {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.18fr);
+    align-items: center;
+    gap: clamp(22px, 5vw, 58px);
+    padding-inline: clamp(24px, 10vw, 88px);
+    background: linear-gradient(transparent 10%, var(--coral) 10% 90%, transparent 90%);
+    color: white;
+}
+
+.discount .media {
+    aspect-ratio: 513 / 934;
+}
+
+.discount-copy {
+    padding-block: 64px;
+}
+
+.help {
+    display: grid;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    grid-template-columns: 46fr 54fr;
+    align-items: stretch;
+}
+
+.help img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.help-copy {
+    align-self: center;
+    padding: clamp(24px, 4vw, 42px);
+}
+
+.media {
+    position: relative;
+    aspect-ratio: 1344 / 737;
+    background: #242424;
+    color: white;
+}
+
+.media-poster,
+.media iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.media-poster:focus-visible {
+    outline-offset: -5px;
+}
+
+.media-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.play {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    display: grid;
+    place-items: center;
+    width: 78px;
+    aspect-ratio: 1;
+    transform: translate(-50%, -50%);
+    border: 3px solid white;
+    border-radius: 50%;
+    background: rgb(0 0 0 / 91%);
+}
+
+.play::after {
+    margin-left: 5px;
+    border-block: 12px solid transparent;
+    border-left: 19px solid white;
+    content: "";
+}
+
+.media-fallback {
+    display: block;
+    margin-top: 6px;
+    color: #171717;
+    font-size: 14px;
+}
+
+.discount .media-fallback {
+    color: white;
+}
+
+@keyframes feature-in {
+    from {
+        opacity: 0;
+        transform: translate(var(--feature-enter-x, 0), 18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+
+.feature-visible {
+    animation: feature-in 650ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (min-width: 621px) {
+    .discount-copy,
+    .help > img {
+        --feature-enter-x: -20px;
+    }
+
+    .discount .media-group,
+    .help-copy {
+        --feature-enter-x: 20px;
+        animation-delay: 120ms;
+    }
+}
+
+@keyframes pictogram-in {
+    from {
+        opacity: 0.25;
+        transform: translateY(20px) scale(0.82);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.checklist-grid .pictogram-visible {
+    animation: pictogram-in 620ms cubic-bezier(0.22, 1, 0.36, 1) both;
+    animation-delay: var(--pictogram-delay, 0ms);
+}
+
+@media (max-width: 620px) {
+    .lv-topbar__inner {
+        min-height: 62px;
+        justify-content: flex-start;
+        padding-right: 88px;
+        font-size: 12px;
+    }
+
+    .hero {
+        min-height: clamp(380px, 104vw, 460px);
+    }
+
+    .hero img {
+        object-position: center 28%;
+    }
+
+    .checklist-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        padding-bottom: 34px;
+    }
+
+    .checklist-grid img {
+        width: 94px;
+        margin-bottom: 12px;
+    }
+
+    .discount,
+    .help {
+        grid-template-columns: 1fr;
+    }
+
+    .discount {
+        gap: 24px;
+        padding: 26px 22px;
+        background: var(--coral);
+    }
+
+    .discount-copy {
+        padding: 0;
+    }
+
+    .discount .media-group {
+        width: min(100%, 300px);
+        margin-inline: auto;
+    }
+
+    .help {
+        border-radius: 20px 20px 0 0;
+    }
+
+    .help img {
+        height: auto;
+        max-height: 400px;
+        border-radius: 0 0 18px 18px;
+        object-position: center 30%;
+    }
+
+    .frame-reel {
+        height: 980px;
+    }
+
+    .frame-help {
+        height: 650px;
+    }
+
+    .play {
+        width: clamp(55px, 12vw, 78px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero img,
+    .checklist-grid .pictogram-visible,
+    .feature-visible {
+        animation: none;
+    }
+}
