@@ -577,35 +577,11 @@ a {
     }
 
     .places-nav {
-        margin-block: 24px 18px;
+        display: none;
     }
 
-    .places-nav ul {
-        gap: 0 8px;
-    }
-
-    .places-nav ul + ul {
-        margin-top: 1px;
-    }
-
-    .places-nav li {
-        max-width: 100%;
-        padding-inline: 0;
-    }
-
-    .places-nav li + li {
-        border-inline-start: 0;
-    }
-
-    .places-nav ul a {
-        display: block;
-        min-height: 26px;
-        padding: 5px 3px;
-        font: 400 clamp(11px, 2.9vw, 13px)/1.25 Arial, Helvetica, sans-serif;
-    }
-
-    .places-nav ul a[aria-current="location"] {
-        font-weight: 700;
+    .places-nav + .place {
+        margin-block-start: 24px;
     }
 
     .place-layout {
